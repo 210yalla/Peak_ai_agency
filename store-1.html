@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<!-- PEAK AI Agency © 2025 | peakvault.com | All rights reserved -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="الرفوف السيادية — منتجات رقمية حصرية من PEAK AI Agency. أدوات AI، قوالب، كورسات، وحلول مخصصة بدفع كريبتو مباشر.">
+<meta name="author" content="PEAK AI Agency">
+<meta name="copyright" content="© 2025 PEAK AI Agency — peakvault.com">
+<meta property="og:title" content="الرفوف — PEAK AI Agency">
+<meta property="og:description" content="منتجات رقمية حصرية ودفع كريبتو مباشر">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050508">
+<title>الرفوف — PEAK AI Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PEAK AI Agency",
+  "url": "https://peakvault.com",
+  "founder": "Darm",
+  "copyrightYear": "2025"
+}
+</script>
+<style>
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+:root{
+  --void:#050508;--abyss:#07070e;--deep:#0a0a14;
+  --surface:#10101c;--card:#161626;--lift:#1e1e32;
+  --gold:#c8a45a;--gold-l:#e8c87a;--gold-d:#8a6835;
+  --gold-xs:rgba(200,164,90,.06);--gold-sm:rgba(200,164,90,.12);
+  --gold-md:rgba(200,164,90,.25);--gold-lg:rgba(200,164,90,.45);
+  --platinum:#e8e4dc;--silver:#a8a49c;--dust:#6a6660;
+  --neon-g:#00ff88;--neon-b:#0088ff;--neon-p:#8844ff;
+  --danger:#ff2244;--success:#00e676;--warning:#ffaa00;
+  --font-d:'Cinzel',serif;
+  --font-b:'Cormorant Garamond',serif;
+  --font-m:'Space Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-el:cubic-bezier(.175,.885,.32,1.275);
+  --fast:160ms;--mid:320ms;--slow:600ms;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  background:var(--void);color:var(--platinum);
+  font-family:var(--font-b);font-size:clamp(15px,1.1vw,17px);
+  line-height:1.7;overflow-x:hidden;cursor:none;
+}
+body.ltr{direction:ltr;text-align:left}
+::selection{background:var(--gold-md);color:var(--void)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:none;border:none;background:none;font:inherit;color:inherit}
+input,select,textarea{font:inherit;color:inherit}
+
+#cr,#cd{position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:opacity var(--fast)}
+#cr{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;
+  transition:width var(--mid) var(--ease),height var(--mid) var(--ease),border-color var(--mid),background var(--mid);
+  mix-blend-mode:screen}
+#cd{width:5px;height:5px;background:var(--gold);border-radius:50%}
+body.ch #cr{width:56px;height:56px;background:var(--gold-xs);border-color:var(--gold-l)}
+
+#grid{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(var(--gold-xs) 1px,transparent 1px),linear-gradient(90deg,var(--gold-xs) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);
+}
+#pc{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:2;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;
+}
+#app{position:relative;z-index:10}
+
+/* TICKER + NAVBAR */
+#ticker{position:fixed;top:0;left:0;right:0;z-index:199;height:30px;background:var(--gold);overflow:hidden;display:flex;align-items:center}
+.t-track{display:flex;gap:48px;white-space:nowrap;animation:tickR 38s linear infinite}
+body.ltr .t-track{animation-name:tickL}
+@keyframes tickR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes tickL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.t-item{font-family:var(--font-m);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--void);display:flex;align-items:center;gap:16px}
+.t-sep{opacity:.35;font-size:.45rem}
+
+#nav{
+  position:fixed;top:30px;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px clamp(20px,5vw,96px);
+  transition:background var(--mid),backdrop-filter var(--mid),padding var(--mid);
+  border-bottom:1px solid transparent;
+}
+#nav.sc{background:rgba(5,5,8,.88);backdrop-filter:blur(24px);border-bottom-color:var(--gold-xs);padding-top:10px;padding-bottom:10px}
+.logo{font-family:var(--font-d);font-size:clamp(1rem,1.8vw,1.3rem);font-weight:700;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo-mark{position:relative;width:30px;height:30px;display:grid;place-items:center;flex-shrink:0}
+.logo-mark svg{width:100%;height:100%}
+.logo-name{
+  background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,var(--gold-l) 50%,var(--gold) 70%,var(--gold-d) 100%);
+  background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 5s linear infinite;
+}
+@keyframes shimmer{from{background-position:200% center}to{background-position:-200% center}}
+@media(prefers-reduced-motion:reduce){.logo-name{animation:none;color:var(--gold)}}
+
+.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,56px);list-style:none}
+@media(max-width:768px){.nav-links{display:none}}
+.nav-links a{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);transition:color var(--fast);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--mid) var(--ease)}
+.nav-links a.on{color:var(--gold)}
+.nav-links a.on::after{transform:scaleX(1);transform-origin:left}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-sw{position:relative}
+.lang-btn{font-family:var(--font-m);font-size:.62rem;letter-spacing:.15em;padding:6px 10px;border:1px solid var(--gold-sm);color:var(--silver);transition:all var(--fast);text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lang-menu{position:absolute;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--gold-sm);min-width:140px;box-shadow:0 16px 48px rgba(0,0,0,.5);opacity:0;transform:translateY(-8px);pointer-events:none;transition:all var(--fast) var(--ease);z-index:250;max-height:260px;overflow-y:auto}
+body:not(.ltr) .lang-menu{left:0}
+body.ltr .lang-menu{right:0}
+.lang-menu.open{opacity:1;transform:translateY(0);pointer-events:all}
+.lang-opt{display:flex;align-items:center;gap:10px;width:100%;padding:10px 14px;font-size:.78rem;color:var(--silver);transition:all var(--fast);text-align:start}
+.lang-opt:hover{background:var(--gold-xs);color:var(--gold)}
+.lang-opt.on{color:var(--gold)}
+
+.burger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px}
+@media(max-width:768px){.burger{display:flex}}
+.burger span{display:block;height:1px;background:var(--gold);transition:all var(--mid) var(--ease)}
+.burger.on span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+#mmenu{position:fixed;inset:0;z-index:190;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateY(-100%);transition:transform var(--slow) var(--ease)}
+#mmenu.on{transform:translateY(0)}
+.mm-link{font-family:var(--font-d);font-size:clamp(1.6rem,6vw,2.8rem);letter-spacing:.2em;color:var(--silver);text-transform:uppercase;transition:color var(--fast)}
+.mm-link:hover,.mm-link.on{color:var(--gold)}
+
+/* PAGE HEADER */
+#page-header{position:relative;z-index:10;padding:calc(128px + 30px) clamp(20px,8vw,128px) 64px;text-align:center;overflow:hidden}
+.ph-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;width:clamp(280px,46vw,620px);height:clamp(280px,46vw,620px);background:radial-gradient(circle,rgba(200,164,90,.10),transparent 70%);top:-20%;right:-10%}
+.ph-eye{font-family:var(--font-m);font-size:clamp(.58rem,1.1vw,.72rem);letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:16px;opacity:0;animation:fsu var(--slow) var(--ease) .15s forwards}
+.ph-eye::before,.ph-eye::after{content:'';display:block;width:36px;height:1px;background:var(--gold-md)}
+.ph-ttl{font-family:var(--font-d);font-size:clamp(2.2rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-.01em;margin-bottom:18px;opacity:0;animation:fsu var(--slow) var(--ease) .3s forwards}
+.ph-ttl .glow-text{
+  background:linear-gradient(135deg,var(--gold),var(--gold-l),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  background-size:200% 100%;filter:drop-shadow(0 0 24px rgba(200,164,90,.3));
+  animation:gsh 4s linear infinite;
+}
+@keyframes gsh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.ph-ttl .glow-text{animation:none}}
+.ph-sub{font-family:var(--font-b);font-size:clamp(.95rem,1.8vw,1.2rem);font-weight:300;font-style:italic;color:var(--silver);max-width:600px;margin:0 auto;line-height:1.65;opacity:0;animation:fsu var(--slow) var(--ease) .45s forwards}
+
+/* FILTER BAR */
+#filter-section{position:relative;z-index:50;padding:0 clamp(20px,5vw,96px) 32px}
+#filter-bar{background:var(--surface);border:1px solid var(--gold-xs);padding:20px;display:flex;flex-wrap:wrap;gap:14px;align-items:stretch;opacity:0;animation:fsu var(--slow) var(--ease) .55s forwards}
+.f-group{display:flex;flex-direction:column;gap:6px;flex:1;min-width:140px}
+.f-label{font-family:var(--font-m);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dust)}
+.f-select,.f-search{background:var(--card);border:1px solid var(--gold-xs);color:var(--platinum);padding:10px 14px;font-size:.85rem;transition:border-color var(--fast);appearance:none;-webkit-appearance:none}
+.f-select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%23c8a45a' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-size:10px 7px;
+}
+body:not(.ltr) .f-select{background-position:left 12px center;padding-left:32px}
+body.ltr .f-select{background-position:right 12px center;padding-right:32px}
+.f-select:focus,.f-search:focus{outline:none;border-color:var(--gold-md)}
+.f-search-wrap{position:relative;flex:2;min-width:200px;display:flex;flex-direction:column;gap:6px}
+.f-search{width:100%;padding-inline-start:40px}
+.f-search-ico{position:absolute;bottom:10px;font-size:.85rem;color:var(--dust);pointer-events:none}
+body:not(.ltr) .f-search-ico{left:14px}
+body.ltr .f-search-ico{right:14px}
+.f-clear{align-self:flex-end;font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-sm);padding:10px 18px;transition:all var(--fast);white-space:nowrap}
+.f-clear:hover{background:var(--gold-xs);border-color:var(--gold)}
+
+/* PRODUCTS GRID */
+#products-section{position:relative;z-index:10;padding:0 clamp(20px,5vw,96px) clamp(80px,10vw,140px)}
+#results-info{font-family:var(--font-m);font-size:.65rem;letter-spacing:.15em;color:var(--dust);margin-bottom:20px;text-transform:uppercase}
+#results-info strong{color:var(--gold)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:12px}
+
+.pcard{position:relative;background:var(--card);border:1px solid var(--gold-xs);display:flex;flex-direction:column;overflow:hidden;
+  opacity:0;transform:translateY(16px);transition:transform var(--mid) var(--ease),border-color var(--mid),background var(--mid),box-shadow var(--mid)}
+.pcard.rv.on{opacity:1;transform:translateY(0)}
+.pcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--mid) var(--ease)}
+.pcard:hover{transform:translateY(-4px);border-color:var(--gold-md);background:var(--lift);box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px var(--gold-sm)}
+.pcard:hover::after{transform:scaleX(1);transform-origin:left}
+.pcard-media{height:140px;background:linear-gradient(135deg,var(--surface),var(--deep));display:flex;align-items:center;justify-content:center;font-size:2.4rem;position:relative;border-bottom:1px solid var(--gold-xs)}
+.pcard-badge{position:absolute;top:10px;font-family:var(--font-m);font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px}
+body:not(.ltr) .pcard-badge{right:10px}
+body.ltr .pcard-badge{left:10px}
+.pcard-badge.new{background:var(--neon-g);color:var(--void)}
+.pcard-badge.soon{background:var(--gold);color:var(--void)}
+.pcard-badge.contact{background:var(--surface);color:var(--gold);border:1px solid var(--gold-sm)}
+.pcard-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pcard-cat{font-family:var(--font-m);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dust)}
+.pcard-ttl{font-family:var(--font-d);font-size:1rem;font-weight:700;letter-spacing:.03em;color:var(--platinum)}
+.pcard-desc{font-size:.85rem;color:var(--dust);line-height:1.55;flex:1}
+.pcard-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+.pcard-price{font-family:var(--font-m);font-size:.9rem;letter-spacing:.05em;
+  background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,var(--gold-l) 50%,var(--gold) 70%,var(--gold-d) 100%);
+  background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite}
+@media(prefers-reduced-motion:reduce){.pcard-price{animation:none;-webkit-text-fill-color:var(--gold)}}
+.pcard-price.contact{font-size:.7rem;letter-spacing:.15em;-webkit-text-fill-color:var(--silver);animation:none;text-transform:uppercase}
+.pcard-btn{font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-sm);padding:9px 16px;transition:all var(--fast);white-space:nowrap}
+.pcard-btn:hover{background:var(--gold-xs);border-color:var(--gold)}
+
+/* Skeleton */
+.skeleton{background:var(--card);border:1px solid var(--gold-xs);display:flex;flex-direction:column;overflow:hidden}
+.sk-media{height:140px;background:var(--surface);position:relative;overflow:hidden}
+.sk-media::after,.sk-line::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--gold-xs),transparent);animation:shimmerSk 1.6s ease-in-out infinite}
+.sk-body{padding:20px;display:flex;flex-direction:column;gap:12px}
+.sk-line{height:12px;background:var(--surface);position:relative;overflow:hidden;width:100%}
+.sk-line.w60{width:60%}
+.sk-line.w40{width:40%}
+@keyframes shimmerSk{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@media(prefers-reduced-motion:reduce){.sk-media::after,.sk-line::after{animation:none}}
+
+/* Empty Shelf */
+.empty-shelf{grid-column:1 / -1;border:1px dashed var(--gold-sm);background:var(--card);padding:clamp(48px,8vw,96px) clamp(20px,5vw,64px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.empty-ico{width:64px;height:64px;border:1px solid var(--gold-xs);display:grid;place-items:center;color:var(--gold);font-size:2rem;opacity:.7}
+.empty-ttl{font-family:var(--font-d);font-size:1.3rem;font-weight:700;color:var(--platinum)}
+.empty-desc{font-size:.95rem;color:var(--dust);max-width:480px;line-height:1.7}
+.empty-btn{font-family:var(--font-m);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--void);background:var(--gold);padding:13px 32px;margin-top:8px;transition:all var(--mid) var(--ease)}
+.empty-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px var(--gold-md);background:var(--gold-l)}
+
+/* CART DRAWER */
+#cart-overlay{position:fixed;inset:0;z-index:280;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity var(--mid) var(--ease)}
+#cart-overlay.on{opacity:1;pointer-events:all}
+#cart-drawer{position:fixed;top:0;bottom:0;width:min(380px,100vw);background:var(--surface);border-inline-start:1px solid var(--gold-sm);z-index:281;display:flex;flex-direction:column;transform:translateX(100%);transition:transform var(--slow) var(--ease);box-shadow:-24px 0 80px rgba(0,0,0,.5);inset-inline-end:0}
+#cart-drawer.on{transform:translateX(0)}
+.cart-hd{padding:24px;border-bottom:1px solid var(--gold-xs);display:flex;align-items:center;justify-content:space-between}
+.cart-ttl{font-family:var(--font-d);font-size:1.1rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}
+.cart-x{color:var(--dust);font-size:1.3rem;transition:color var(--fast)}
+.cart-x:hover{color:var(--gold)}
+.cart-body{flex:1;overflow-y:auto;padding:16px 24px}
+.cart-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;text-align:center;color:var(--dust)}
+.cart-empty-ico{font-size:2.5rem;opacity:.4}
+.cart-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--gold-xs)}
+.cart-item-ico{width:48px;height:48px;background:var(--card);border:1px solid var(--gold-xs);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-ttl{font-size:.88rem;color:var(--platinum);margin-bottom:4px}
+.cart-item-price{font-family:var(--font-m);font-size:.78rem;color:var(--gold)}
+.cart-item-remove{color:var(--dust);font-size:1.1rem;transition:color var(--fast);flex-shrink:0}
+.cart-item-remove:hover{color:var(--danger)}
+.cart-foot{padding:24px;border-top:1px solid var(--gold-xs);display:flex;flex-direction:column;gap:14px}
+.cart-total{display:flex;align-items:center;justify-content:space-between;font-family:var(--font-m);font-size:.85rem;letter-spacing:.1em}
+.cart-total strong{color:var(--gold);font-size:1.1rem}
+
+/* FOOTER + FLOAT */
+#foot{position:relative;z-index:10;background:var(--abyss);border-top:1px solid var(--gold-xs);padding:clamp(64px,8vw,120px) clamp(20px,5vw,96px) 32px}
+.foot-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:48px;margin-bottom:48px}
+.foot-tag{font-family:var(--font-b);font-style:italic;font-size:.88rem;color:var(--dust);line-height:1.65;margin-top:16px}
+.fc-ttl{font-family:var(--font-m);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px}
+.flinks a{font-size:.83rem;color:var(--dust);transition:color var(--fast);display:flex;align-items:center;gap:8px}
+.flinks a:hover{color:var(--gold)}
+.foot-coins{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.coin{font-family:var(--font-m);font-size:.52rem;letter-spacing:.12em;padding:4px 8px;border:1px solid var(--gold-xs);color:var(--dust)}
+.foot-bot{border-top:1px solid var(--gold-xs);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot-cp{font-family:var(--font-m);font-size:.58rem;letter-spacing:.15em;color:var(--dust)}
+
+#float-stack{position:fixed;bottom:32px;z-index:300;display:flex;flex-direction:column;gap:12px}
+body:not(.ltr) #float-stack{left:32px}
+body.ltr #float-stack{right:32px}
+.float-btn{width:52px;height:52px;display:flex;align-items:center;justify-content:center;position:relative;font-size:1.3rem;transition:transform var(--mid) var(--ease-el),box-shadow var(--mid);box-shadow:0 8px 28px rgba(0,0,0,.4)}
+.float-btn:hover{transform:scale(1.1)}
+.float-wa{background:#25D366;color:#fff}
+.float-tg{background:#229ED9;color:#fff}
+.float-cart{background:var(--card);border:1px solid var(--gold-sm);color:var(--gold)}
+.float-cart-n{position:absolute;top:-6px;background:var(--gold);color:var(--void);font-family:var(--font-m);font-size:.6rem;font-weight:700;min-width:18px;height:18px;border-radius:50%;display:grid;place-items:center;padding:0 2px;transform:scale(0);transition:transform var(--ease-el) var(--mid)}
+body:not(.ltr) .float-cart-n{left:-6px}
+body.ltr .float-cart-n{right:-6px}
+.float-cart-n.on{transform:scale(1)}
+.float-ai{width:58px;height:58px;background:var(--gold);color:var(--void);box-shadow:0 8px 32px var(--gold-md)}
+.float-ai::before{content:'';position:absolute;inset:-4px;border:1px solid var(--gold-sm);animation:abp 3s ease-out infinite}
+@keyframes abp{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+.float-ai:hover{box-shadow:0 12px 48px var(--gold-lg)}
+.ai-ico{font-family:var(--font-d);font-size:.85rem;font-weight:700;letter-spacing:.1em}
+
+/* CONNECTION + SCROLL PROGRESS */
+#cbn{position:fixed;top:0;left:0;right:0;z-index:99999;padding:6px 16px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;transform:translateY(-100%);transition:transform var(--mid) var(--ease)}
+#cbn.on{transform:translateY(0)}
+#cbn.ol{background:var(--neon-g);color:var(--void)}
+#cbn.off{background:var(--warning);color:var(--void)}
+#scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:201;background:var(--gold);transform-origin:left;transform:scaleX(0);transition:transform 100ms linear;box-shadow:0 0 8px var(--gold-md)}
+body.ltr #scroll-progress{transform-origin:right}
+
+/* UTILS */
+@keyframes fsu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease)}
+.rv.on{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="cbn" role="status" aria-live="polite"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+<div id="cr" aria-hidden="true"></div>
+<div id="cd" aria-hidden="true"></div>
+<div id="grid" aria-hidden="true"></div>
+<canvas id="pc" aria-hidden="true"></canvas>
+
+<div id="ticker" aria-label="إعلانات" role="marquee">
+  <div class="t-track" id="tt"></div>
+</div>
+
+<nav id="mmenu" aria-label="قائمة الجوال">
+  <a href="index.html"    class="mm-link" data-i="nav.home">الرئيسية</a>
+  <a href="store.html"    class="mm-link on" data-i="nav.store">الرفوف</a>
+  <a href="vault.html"    class="mm-link" data-i="nav.vault">أعمالنا</a>
+  <a href="services.html" class="mm-link" data-i="nav.services">الخدمات</a>
+  <a href="about.html"    class="mm-link" data-i="nav.about">من نحن</a>
+</nav>
+
+<header id="nav" role="banner">
+  <a href="index.html" class="logo" aria-label="PEAK AI Agency">
+    <span class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/>
+        <path d="M20 4 L20 34" stroke="currentColor" stroke-width="1" opacity="0.4" style="color:var(--gold)"/>
+      </svg>
+    </span>
+    <span class="logo-name">PEAK AI</span>
+  </a>
+  <nav aria-label="رئيسي">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    data-i="nav.home">الرئيسية</a></li>
+      <li><a href="store.html" class="on" data-i="nav.store" aria-current="page">الرفوف</a></li>
+      <li><a href="vault.html"    data-i="nav.vault">أعمالنا</a></li>
+      <li><a href="services.html" data-i="nav.services">الخدمات</a></li>
+      <li><a href="about.html"    data-i="nav.about">من نحن</a></li>
+    </ul>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+        <span id="lang-cur">AR</span> ▾
+      </button>
+      <div class="lang-menu" id="lang-menu" role="menu"></div>
+    </div>
+    <button class="burger" id="burg" aria-label="القائمة" aria-expanded="false" aria-controls="mmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="app">
+
+<section id="page-header" aria-labelledby="phttl">
+  <div class="ph-orb" aria-hidden="true"></div>
+  <span class="ph-eye" data-i="ph.eye">الرفوف السيادية</span>
+  <h1 class="ph-ttl" id="phttl">
+    <span class="glow-text" data-i="ph.ttl">منتجاتنا الرقمية</span>
+  </h1>
+  <p class="ph-sub" data-i="ph.sub">
+    كل ما تراه هنا قابل للبناء أو التوسعة بالطلب —
+    تصفح، اسأل، أو اطلب ما تحتاجه بالضبط
+  </p>
+</section>
+
+<section id="filter-section" aria-label="فلترة المنتجات">
+  <div id="filter-bar">
+    <div class="f-group">
+      <label class="f-label" for="f-cat" data-i="f.category">الفئة</label>
+      <select class="f-select" id="f-cat"></select>
+    </div>
+    <div class="f-group">
+      <label class="f-label" for="f-type" data-i="f.type">النوع</label>
+      <select class="f-select" id="f-type"></select>
+    </div>
+    <div class="f-group">
+      <label class="f-label" for="f-price" data-i="f.price">السعر</label>
+      <select class="f-select" id="f-price"></select>
+    </div>
+    <div class="f-search-wrap">
+      <label class="f-label" for="f-search" data-i="f.search">بحث</label>
+      <input type="search" class="f-search" id="f-search" maxlength="80" placeholder="ابحث عن منتج...">
+      <span class="f-search-ico" aria-hidden="true">⌕</span>
+    </div>
+    <button class="f-clear" id="f-clear" data-i="f.clear">إعادة ضبط</button>
+  </div>
+</section>
+
+<section id="products-section" aria-label="المنتجات">
+  <div id="results-info"></div>
+  <div class="pgrid" id="pgrid"></div>
+</section>
+
+</main>
+
+<div id="cart-overlay"></div>
+<aside id="cart-drawer" aria-label="السلة" aria-hidden="true">
+  <div class="cart-hd">
+    <span class="cart-ttl" data-i="cart.ttl">السلة</span>
+    <button class="cart-x" id="cart-x" aria-label="إغلاق السلة">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-foot">
+    <div class="cart-total">
+      <span data-i="cart.total">الإجمالي</span>
+      <strong id="cart-total-amount">$0</strong>
+    </div>
+    <a href="#" class="empty-btn" id="cart-checkout" style="text-align:center" data-i="cart.checkout">
+      متابعة الدفع
+    </a>
+  </div>
+</aside>
+
+<footer id="foot" role="contentinfo">
+  <div class="foot-g">
+    <div>
+      <div class="logo"><span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/></svg>
+      </span><span class="logo-name">PEAK AI</span></div>
+      <p class="foot-tag" data-i="ft.tag">وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.</p>
+      <div class="foot-coins">
+        <span class="coin">USDT TRC-20</span>
+        <span class="coin">USDT BEP-20</span>
+        <span class="coin">BTC</span>
+        <span class="coin">ETH</span>
+        <span class="coin">BNB</span>
+      </div>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.platform">المنصة</span>
+      <ul class="flinks">
+        <li><a href="index.html"    data-i="nav.home">الرئيسية</a></li>
+        <li><a href="vault.html"    data-i="nav.vault">أعمالنا</a></li>
+      <li><a href="services.html" data-i="nav.services">الخدمات</a></li>
+        <li><a href="about.html"    data-i="nav.about">من نحن</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.lang">اللغة</span>
+      <ul class="flinks" id="foot-langs"></ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.contact">تواصل</span>
+      <ul class="flinks">
+        <li><a href="#" id="foot-wa">💬 WhatsApp</a></li>
+        <li><a href="#" id="foot-tg">✈ Telegram</a></li>
+        <li><a href="#" id="foot-tg-channel" data-i="ft.channel">قناة الإعلانات</a></li>
+        <li><a href="#" id="foot-wa-channel" data-i="ft.wa_channel">قناة واتساب</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span class="foot-cp" data-i="ft.copy">© 2025 PEAK AI Agency — جميع الحقوق محفوظة</span>
+    <span class="foot-cp" style="color:var(--gold);letter-spacing:.3em;font-size:.52rem">PEAKVAULT.COM</span>
+  </div>
+</footer>
+
+<div id="float-stack">
+  <a href="#" class="float-btn float-wa" id="float-wa" aria-label="واتساب">💬</a>
+  <a href="#" class="float-btn float-tg" id="float-tg" aria-label="تلجرام">✈</a>
+  <button class="float-btn float-cart" id="float-cart" aria-label="السلة">
+    🛒<span class="float-cart-n" id="float-cart-n">0</span>
+  </button>
+  <button class="float-btn float-ai" id="ai-btn" aria-label="فتح VAULT AI">
+    <span class="ai-ico" aria-hidden="true">AI</span>
+  </button>
+</div>
+
+<script>
+'use strict';
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+const CONTACT = Object.freeze({
+  whatsapp:   'https://wa.me/963996767062',
+  telegram:   'https://t.me/T963996767062',
+  tgChannel:  'https://t.me/+hx9uSnNasH40MzBh',
+  waChannel:  'https://whatsapp.com/channel/0029VbCmXviDJ6GsuDynlU3o',
+});
+
+function san(s,max=500){
+  return String(s??'')
+    .replace(/[<>"'`&]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;","&":"&amp;"}[c]||c))
+    .replace(/javascript:/gi,'').replace(/on\w+=?/gi,'')
+    .trim().slice(0,max);
+}
+const csrf=(()=>{
+  return ()=>{
+    let t=sessionStorage.getItem('pv_csrf');
+    if(typeof t!=='string'||t.length<32){
+      t=[...crypto.getRandomValues(new Uint8Array(24))].map(b=>b.toString(16).padStart(2,'0')).join('');
+      sessionStorage.setItem('pv_csrf',t);
+    }
+    return t;
+  };
+})();
+csrf();
+
+/* ══════════════════════════════════════════════
+   PRODUCT SCHEMA — empty shelves, ready to fill
+   ══════════════════════════════════════════════ */
+/*
+  Product object shape (documented for future additions):
+  {
+    id, name:{ar,en,...}, description:{ar,en,...},
+    category, type, price, currency, status,
+    deliveryMethod, tags:[], featured:bool, icon
+  }
+  status: 'available' | 'coming-soon' | 'contact-only'
+  type:   'digital-tool'|'template'|'course'|'pdf-guide'|
+          'saas'|'custom-build'|'consultation'
+  category: 'ai'|'web'|'automation'|'education'|'crypto'|'legal'|'marketing'|'other'
+*/
+const PRODUCTS = []; // Intentionally empty — shelves are smart by design
+
+const CATEGORIES = ['ai','web','automation','education','crypto','legal','marketing','other'];
+const TYPES = ['digital-tool','template','course','pdf-guide','saas','custom-build','consultation'];
+
+const LANGS=[
+  {code:'ar',label:'العربية',native:'AR',rtl:true},
+  {code:'en',label:'English',native:'EN',rtl:false},
+  {code:'fr',label:'Français',native:'FR',rtl:false},
+  {code:'es',label:'Español',native:'ES',rtl:false},
+  {code:'tr',label:'Türkçe',native:'TR',rtl:false},
+  {code:'de',label:'Deutsch',native:'DE',rtl:false},
+  {code:'zh',label:'中文',native:'ZH',rtl:false},
+];
+
+const CAT_LABELS={
+  ar:{ai:'ذكاء اصطناعي',web:'ويب وتطبيقات',automation:'أتمتة',education:'تعليم',crypto:'كريبتو',legal:'قانوني',marketing:'تسويق',other:'أخرى'},
+  en:{ai:'AI',web:'Web & Apps',automation:'Automation',education:'Education',crypto:'Crypto',legal:'Legal',marketing:'Marketing',other:'Other'},
+  fr:{ai:'IA',web:'Web & Apps',automation:'Automatisation',education:'Éducation',crypto:'Crypto',legal:'Juridique',marketing:'Marketing',other:'Autre'},
+  es:{ai:'IA',web:'Web y Apps',automation:'Automatización',education:'Educación',crypto:'Cripto',legal:'Legal',marketing:'Marketing',other:'Otro'},
+  tr:{ai:'Yapay Zeka',web:'Web & Uygulama',automation:'Otomasyon',education:'Eğitim',crypto:'Kripto',legal:'Hukuki',marketing:'Pazarlama',other:'Diğer'},
+  de:{ai:'KI',web:'Web & Apps',automation:'Automatisierung',education:'Bildung',crypto:'Krypto',legal:'Recht',marketing:'Marketing',other:'Andere'},
+  zh:{ai:'人工智能',web:'网站与应用',automation:'自动化',education:'教育',crypto:'加密货币',legal:'法律',marketing:'营销',other:'其他'},
+};
+const TYPE_LABELS={
+  ar:{'digital-tool':'أداة رقمية',template:'قالب',course:'كورس','pdf-guide':'دليل PDF',saas:'اشتراك SaaS','custom-build':'بناء مخصص',consultation:'استشارة'},
+  en:{'digital-tool':'Digital Tool',template:'Template',course:'Course','pdf-guide':'PDF Guide',saas:'SaaS Subscription','custom-build':'Custom Build',consultation:'Consultation'},
+  fr:{'digital-tool':'Outil numérique',template:'Modèle',course:'Cours','pdf-guide':'Guide PDF',saas:'Abonnement SaaS','custom-build':'Sur mesure',consultation:'Consultation'},
+  es:{'digital-tool':'Herramienta digital',template:'Plantilla',course:'Curso','pdf-guide':'Guía PDF',saas:'Suscripción SaaS','custom-build':'A medida',consultation:'Consultoría'},
+  tr:{'digital-tool':'Dijital Araç',template:'Şablon',course:'Kurs','pdf-guide':'PDF Kılavuz',saas:'SaaS Aboneliği','custom-build':'Özel Yapım',consultation:'Danışmanlık'},
+  de:{'digital-tool':'Digitales Tool',template:'Vorlage',course:'Kurs','pdf-guide':'PDF-Leitfaden',saas:'SaaS-Abo','custom-build':'Individuell',consultation:'Beratung'},
+  zh:{'digital-tool':'数字工具',template:'模板',course:'课程','pdf-guide':'PDF指南',saas:'SaaS订阅','custom-build':'定制开发',consultation:'咨询'},
+};
+
+const TR={
+  ar:{
+    'nav.home':'الرئيسية','nav.store':'الرفوف','nav.services':'الخدمات','nav.about':'من نحن',
+    'ph.eye':'الرفوف السيادية','ph.ttl':'منتجاتنا الرقمية',
+    'ph.sub':'كل ما تراه هنا قابل للبناء أو التوسعة بالطلب — تصفح، اسأل، أو اطلب ما تحتاجه بالضبط',
+    'f.category':'الفئة','f.type':'النوع','f.price':'السعر','f.search':'بحث',
+    'f.search_ph':'ابحث عن منتج...','f.clear':'إعادة ضبط',
+    'f.all':'الكل','f.free':'مجاني','f.paid':'مدفوع','f.contact':'تواصل للسعر',
+    'results.found':'منتج','results.none':'لا توجد نتائج مطابقة',
+    'empty.ttl':'الرف يُجهَّز الآن',
+    'empty.desc':'لا توجد منتجات هنا بعد — لكن هذا لا يعني أنه فارغ. صف ما تحتاجه ونبنيه لك، أو اطلب إشعاراً عند توفر منتجات جديدة.',
+    'empty.btn':'تواصل معنا',
+    'cart.ttl':'السلة','cart.total':'الإجمالي','cart.checkout':'متابعة الدفع',
+    'cart.empty.ttl':'السلة فارغة','cart.empty.desc':'أضف منتجات لتظهر هنا',
+    'ft.tag':'وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.',
+    'ft.platform':'المنصة','ft.lang':'اللغة','ft.contact':'تواصل',
+    'ft.channel':'قناة الإعلانات','ft.wa_channel':'قناة واتساب',
+    'ft.copy':'© 2025 PEAK AI Agency — جميع الحقوق محفوظة',
+    'tk.1':'⚡ نبني بالذكاء الاصطناعي في أيام',
+    'tk.2':'🔐 دفع مشفر مباشر — لا وسطاء',
+    'tk.3':'✦ بناء مخصص حسب طلبك بالضبط',
+    'tk.4':'◈ 7 لغات · 22 قطاعاً متخصصاً',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'أخبرني عند التوفر','pcard.inquire':'استفسر',
+    'pcard.addcart':'أضف للسلة','pcard.soon':'قريباً','pcard.new':'جديد',
+  },
+  en:{
+    'nav.home':'Home','nav.store':'Shelves','nav.services':'Services','nav.about':'About',
+    'ph.eye':'Sovereign Shelves','ph.ttl':'Our Digital Products',
+    'ph.sub':'Everything here can be built or extended on request — browse, ask, or request exactly what you need',
+    'f.category':'Category','f.type':'Type','f.price':'Price','f.search':'Search',
+    'f.search_ph':'Search products...','f.clear':'Reset',
+    'f.all':'All','f.free':'Free','f.paid':'Paid','f.contact':'Contact for price',
+    'results.found':'products','results.none':'No matching results',
+    'empty.ttl':'This shelf is being prepared',
+    'empty.desc':"There's nothing here yet — but that doesn't mean it's empty. Describe what you need and we'll build it, or ask to be notified when new products arrive.",
+    'empty.btn':'Contact Us',
+    'cart.ttl':'Cart','cart.total':'Total','cart.checkout':'Proceed to Payment',
+    'cart.empty.ttl':'Your cart is empty','cart.empty.desc':'Add products to see them here',
+    'ft.tag':'An AI agency that builds your digital products and systems — from idea to delivery.',
+    'ft.platform':'Platform','ft.lang':'Language','ft.contact':'Contact',
+    'ft.channel':'Announcements','ft.wa_channel':'WhatsApp Channel',
+    'ft.copy':'© 2025 PEAK AI Agency — All rights reserved',
+    'tk.1':'⚡ We build with AI in days',
+    'tk.2':'🔐 Direct crypto payment — no middlemen',
+    'tk.3':'✦ Custom-built exactly to your request',
+    'tk.4':'◈ 7 languages · 22 specialized sectors',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'Notify Me','pcard.inquire':'Inquire',
+    'pcard.addcart':'Add to Cart','pcard.soon':'Soon','pcard.new':'New',
+  },
+  fr:{
+    'nav.home':'Accueil','nav.store':'Étagères','nav.services':'Services','nav.about':'À propos',
+    'ph.eye':'Étagères souveraines','ph.ttl':'Nos produits numériques',
+    'ph.sub':'Tout peut être construit ou étendu sur demande — parcourez, demandez, ou décrivez exactement ce dont vous avez besoin',
+    'f.category':'Catégorie','f.type':'Type','f.price':'Prix','f.search':'Recherche',
+    'f.search_ph':'Rechercher...','f.clear':'Réinitialiser',
+    'f.all':'Tout','f.free':'Gratuit','f.paid':'Payant','f.contact':'Sur devis',
+    'results.found':'produits','results.none':'Aucun résultat',
+    'empty.ttl':'Cette étagère se prépare',
+    'empty.desc':"Rien ici pour le moment — décrivez votre besoin et nous le construisons, ou demandez à être notifié.",
+    'empty.btn':'Contactez-nous',
+    'cart.ttl':'Panier','cart.total':'Total','cart.checkout':'Procéder au paiement',
+    'cart.empty.ttl':'Panier vide','cart.empty.desc':'Ajoutez des produits pour les voir ici',
+    'ft.tag':'Une agence IA qui construit vos produits et systèmes numériques.',
+    'ft.platform':'Plateforme','ft.lang':'Langue','ft.contact':'Contact',
+    'ft.channel':'Annonces','ft.wa_channel':'Canal WhatsApp',
+    'ft.copy':'© 2025 PEAK AI Agency — Tous droits réservés',
+    'tk.1':'⚡ Construction par IA en quelques jours',
+    'tk.2':'🔐 Paiement crypto direct — sans intermédiaires',
+    'tk.3':'✦ Sur mesure, exactement selon vos besoins',
+    'tk.4':'◈ 7 langues · 22 secteurs spécialisés',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'Me notifier','pcard.inquire':'Renseigner',
+    'pcard.addcart':'Ajouter au panier','pcard.soon':'Bientôt','pcard.new':'Nouveau',
+  },
+  es:{
+    'nav.home':'Inicio','nav.store':'Estantes','nav.services':'Servicios','nav.about':'Nosotros',
+    'ph.eye':'Estantes soberanos','ph.ttl':'Nuestros productos digitales',
+    'ph.sub':'Todo aquí puede construirse o ampliarse por encargo — explora, pregunta o pide exactamente lo que necesitas',
+    'f.category':'Categoría','f.type':'Tipo','f.price':'Precio','f.search':'Buscar',
+    'f.search_ph':'Buscar productos...','f.clear':'Restablecer',
+    'f.all':'Todo','f.free':'Gratis','f.paid':'Pago','f.contact':'Consultar precio',
+    'results.found':'productos','results.none':'Sin resultados',
+    'empty.ttl':'Este estante se está preparando',
+    'empty.desc':'Nada aquí todavía — describe lo que necesitas y lo construimos, o pide que te avisemos.',
+    'empty.btn':'Contáctanos',
+    'cart.ttl':'Carrito','cart.total':'Total','cart.checkout':'Proceder al pago',
+    'cart.empty.ttl':'Carrito vacío','cart.empty.desc':'Añade productos para verlos aquí',
+    'ft.tag':'Una agencia de IA que construye tus productos y sistemas digitales.',
+    'ft.platform':'Plataforma','ft.lang':'Idioma','ft.contact':'Contacto',
+    'ft.channel':'Anuncios','ft.wa_channel':'Canal de WhatsApp',
+    'ft.copy':'© 2025 PEAK AI Agency — Todos los derechos reservados',
+    'tk.1':'⚡ Construcción con IA en días',
+    'tk.2':'🔐 Pago cripto directo — sin intermediarios',
+    'tk.3':'✦ Hecho a medida exactamente para ti',
+    'tk.4':'◈ 7 idiomas · 22 sectores especializados',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'Notificarme','pcard.inquire':'Consultar',
+    'pcard.addcart':'Añadir al carrito','pcard.soon':'Pronto','pcard.new':'Nuevo',
+  },
+  tr:{
+    'nav.home':'Anasayfa','nav.store':'Raflar','nav.services':'Hizmetler','nav.about':'Hakkımızda',
+    'ph.eye':'Egemen Raflar','ph.ttl':'Dijital Ürünlerimiz',
+    'ph.sub':'Buradaki her şey talebe göre yapılabilir veya genişletilebilir — göz atın, sorun veya tam istediğinizi talep edin',
+    'f.category':'Kategori','f.type':'Tür','f.price':'Fiyat','f.search':'Ara',
+    'f.search_ph':'Ürün ara...','f.clear':'Sıfırla',
+    'f.all':'Tümü','f.free':'Ücretsiz','f.paid':'Ücretli','f.contact':'Fiyat için iletişim',
+    'results.found':'ürün','results.none':'Sonuç bulunamadı',
+    'empty.ttl':'Bu raf hazırlanıyor',
+    'empty.desc':'Henüz burada bir şey yok — ihtiyacınızı tanımlayın, sizin için yapalım, ya da bildirim isteyin.',
+    'empty.btn':'Bize Ulaşın',
+    'cart.ttl':'Sepet','cart.total':'Toplam','cart.checkout':'Ödemeye Geç',
+    'cart.empty.ttl':'Sepetiniz boş','cart.empty.desc':'Ürün ekleyin, burada görünsün',
+    'ft.tag':'Dijital ürün ve sistemlerinizi inşa eden bir yapay zeka ajansı.',
+    'ft.platform':'Platform','ft.lang':'Dil','ft.contact':'İletişim',
+    'ft.channel':'Duyurular','ft.wa_channel':'WhatsApp Kanalı',
+    'ft.copy':'© 2025 PEAK AI Agency — Tüm hakları saklıdır',
+    'tk.1':'⚡ Yapay zeka ile günler içinde inşa',
+    'tk.2':'🔐 Doğrudan kripto ödeme — aracısız',
+    'tk.3':'✦ Tam isteğinize özel inşa',
+    'tk.4':'◈ 7 dil · 22 uzman sektör',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'Bana Bildir','pcard.inquire':'Bilgi Al',
+    'pcard.addcart':'Sepete Ekle','pcard.soon':'Yakında','pcard.new':'Yeni',
+  },
+  de:{
+    'nav.home':'Start','nav.store':'Regale','nav.services':'Leistungen','nav.about':'Über uns',
+    'ph.eye':'Souveräne Regale','ph.ttl':'Unsere digitalen Produkte',
+    'ph.sub':'Alles hier kann auf Anfrage gebaut oder erweitert werden — stöbern, fragen oder genau das anfordern, was du brauchst',
+    'f.category':'Kategorie','f.type':'Typ','f.price':'Preis','f.search':'Suche',
+    'f.search_ph':'Produkte suchen...','f.clear':'Zurücksetzen',
+    'f.all':'Alle','f.free':'Kostenlos','f.paid':'Kostenpflichtig','f.contact':'Preis erfragen',
+    'results.found':'Produkte','results.none':'Keine Ergebnisse',
+    'empty.ttl':'Dieses Regal wird vorbereitet',
+    'empty.desc':'Hier ist noch nichts — beschreibe, was du brauchst, und wir bauen es, oder lass dich benachrichtigen.',
+    'empty.btn':'Kontaktiere uns',
+    'cart.ttl':'Warenkorb','cart.total':'Gesamt','cart.checkout':'Zur Zahlung',
+    'cart.empty.ttl':'Warenkorb ist leer','cart.empty.desc':'Füge Produkte hinzu, um sie hier zu sehen',
+    'ft.tag':'Eine KI-Agentur, die deine digitalen Produkte und Systeme baut.',
+    'ft.platform':'Plattform','ft.lang':'Sprache','ft.contact':'Kontakt',
+    'ft.channel':'Ankündigungen','ft.wa_channel':'WhatsApp-Kanal',
+    'ft.copy':'© 2025 PEAK AI Agency — Alle Rechte vorbehalten',
+    'tk.1':'⚡ KI-Aufbau in wenigen Tagen',
+    'tk.2':'🔐 Direkte Kryptozahlung — ohne Vermittler',
+    'tk.3':'✦ Maßgeschneidert genau nach Wunsch',
+    'tk.4':'◈ 7 Sprachen · 22 Fachbereiche',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'Benachrichtigen','pcard.inquire':'Anfragen',
+    'pcard.addcart':'In den Warenkorb','pcard.soon':'Demnächst','pcard.new':'Neu',
+  },
+  zh:{
+    'nav.home':'首页','nav.store':'货架','nav.services':'服务','nav.about':'关于我们',
+    'ph.eye':'主权货架','ph.ttl':'我们的数字产品',
+    'ph.sub':'这里的一切都可以根据要求构建或扩展 — 浏览、咨询，或准确请求你需要的内容',
+    'f.category':'类别','f.type':'类型','f.price':'价格','f.search':'搜索',
+    'f.search_ph':'搜索产品...','f.clear':'重置',
+    'f.all':'全部','f.free':'免费','f.paid':'付费','f.contact':'联系询价',
+    'results.found':'产品','results.none':'没有匹配结果',
+    'empty.ttl':'此货架正在准备中',
+    'empty.desc':'这里暂时还没有内容 — 但这并不意味着它是空的。描述你的需求，我们为你构建，或要求在新产品上架时通知你。',
+    'empty.btn':'联系我们',
+    'cart.ttl':'购物车','cart.total':'总计','cart.checkout':'前往支付',
+    'cart.empty.ttl':'购物车为空','cart.empty.desc':'添加产品以在此处查看',
+    'ft.tag':'一家为你构建数字产品与系统的人工智能机构。',
+    'ft.platform':'平台','ft.lang':'语言','ft.contact':'联系',
+    'ft.channel':'公告频道','ft.wa_channel':'WhatsApp频道',
+    'ft.copy':'© 2025 PEAK AI Agency — 版权所有',
+    'tk.1':'⚡ AI驱动，数天交付',
+    'tk.2':'🔐 直接加密支付 — 无中间商',
+    'tk.3':'✦ 完全按你的需求定制',
+    'tk.4':'◈ 7种语言 · 22个专业领域',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'pcard.notify':'通知我','pcard.inquire':'咨询',
+    'pcard.addcart':'加入购物车','pcard.soon':'即将推出','pcard.new':'新品',
+  },
+};
+
+let lang=localStorage.getItem('pv_lang')||'ar';
+function T(k){return TR[lang]?.[k]||TR.ar[k]||k}
+
+let currentFilters={cat:'all',type:'all',price:'all',search:''};
+
+/* ══════════════════════════════════════════════
+   LANGUAGE SYSTEM
+   ══════════════════════════════════════════════ */
+function applyLang(l){
+  if(!TR[l])l='ar';
+  lang=l;
+  const meta=LANGS.find(x=>x.code===l);
+  const rtl=meta?.rtl??(l==='ar');
+  document.documentElement.lang=l;
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.body.classList.toggle('ltr',!rtl);
+
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(TR[l]?.[k]||TR.ar[k]) el.textContent=T(k);
+  });
+
+  const search=document.getElementById('f-search');
+  if(search) search.placeholder=T('f.search_ph');
+
+  document.getElementById('lang-cur').textContent=meta?.native||'AR';
+  localStorage.setItem('pv_lang',l);
+
+  buildTicker();
+  buildFilterOptions();
+  renderProducts();
+  renderCart();
+}
+
+function buildLangMenu(){
+  const menu=document.getElementById('lang-menu');
+  const footList=document.getElementById('foot-langs');
+  menu.textContent='';footList.textContent='';
+  LANGS.forEach(m=>{
+    const btn=document.createElement('button');
+    btn.className='lang-opt'+(m.code===lang?' on':'');
+    btn.setAttribute('role','menuitem');
+    btn.textContent=`${m.native} — ${m.label}`;
+    btn.addEventListener('click',()=>{
+      applyLang(m.code);
+      menu.classList.remove('open');
+      document.getElementById('lang-btn').setAttribute('aria-expanded','false');
+      buildLangMenu();
+    });
+    menu.appendChild(btn);
+
+    const li=document.createElement('li');
+    const a=document.createElement('a');
+    a.href='#';a.textContent=m.native;
+    a.addEventListener('click',e=>{e.preventDefault();applyLang(m.code);buildLangMenu()});
+    li.appendChild(a);footList.appendChild(li);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   TICKER
+   ══════════════════════════════════════════════ */
+function buildTicker(){
+  const tt=document.getElementById('tt');
+  if(!tt)return;
+  const keys=['tk.1','tk.2','tk.3','tk.4','tk.5'];
+  const items=keys.map(k=>T(k));
+  const all=[...items,...items,...items];
+  tt.textContent='';
+  all.forEach((txt,i)=>{
+    const sp=document.createElement('span');
+    sp.className='t-item';sp.textContent=txt;
+    if(i<all.length-1){
+      const sep=document.createElement('span');
+      sep.className='t-sep';sep.textContent='✦';
+      sp.appendChild(sep);
+    }
+    tt.appendChild(sp);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   FILTER BAR
+   ══════════════════════════════════════════════ */
+function buildFilterOptions(){
+  const catSel=document.getElementById('f-cat');
+  const typeSel=document.getElementById('f-type');
+  const priceSel=document.getElementById('f-price');
+
+  catSel.textContent='';typeSel.textContent='';priceSel.textContent='';
+
+  const allOpt=(text)=>{const o=document.createElement('option');o.value='all';o.textContent=text;return o};
+  catSel.appendChild(allOpt(T('f.all')));
+  CATEGORIES.forEach(c=>{
+    const o=document.createElement('option');
+    o.value=c;o.textContent=CAT_LABELS[lang]?.[c]||CAT_LABELS.ar[c];
+    catSel.appendChild(o);
+  });
+
+  typeSel.appendChild(allOpt(T('f.all')));
+  TYPES.forEach(t=>{
+    const o=document.createElement('option');
+    o.value=t;o.textContent=TYPE_LABELS[lang]?.[t]||TYPE_LABELS.ar[t];
+    typeSel.appendChild(o);
+  });
+
+  priceSel.appendChild(allOpt(T('f.all')));
+  [['free',T('f.free')],['paid',T('f.paid')],['contact',T('f.contact')]].forEach(([v,t])=>{
+    const o=document.createElement('option');o.value=v;o.textContent=t;priceSel.appendChild(o);
+  });
+
+  catSel.value=currentFilters.cat;
+  typeSel.value=currentFilters.type;
+  priceSel.value=currentFilters.price;
+}
+
+function initFilters(){
+  const params=new URLSearchParams(window.location.search);
+  currentFilters.cat=params.get('cat')||'all';
+  currentFilters.type=params.get('type')||'all';
+  currentFilters.price=params.get('price')||'all';
+  currentFilters.search=params.get('q')||'';
+
+  const catSel=document.getElementById('f-cat');
+  const typeSel=document.getElementById('f-type');
+  const priceSel=document.getElementById('f-price');
+  const search=document.getElementById('f-search');
+  const clearBtn=document.getElementById('f-clear');
+
+  search.value=currentFilters.search;
+
+  function updateURL(){
+    const p=new URLSearchParams();
+    if(currentFilters.cat!=='all')p.set('cat',currentFilters.cat);
+    if(currentFilters.type!=='all')p.set('type',currentFilters.type);
+    if(currentFilters.price!=='all')p.set('price',currentFilters.price);
+    if(currentFilters.search)p.set('q',currentFilters.search);
+    const qs=p.toString();
+    const newUrl=window.location.pathname+(qs?'?'+qs:'');
+    history.replaceState(null,'',newUrl);
+  }
+
+  catSel.addEventListener('change',()=>{currentFilters.cat=catSel.value;updateURL();renderProducts()});
+  typeSel.addEventListener('change',()=>{currentFilters.type=typeSel.value;updateURL();renderProducts()});
+  priceSel.addEventListener('change',()=>{currentFilters.price=priceSel.value;updateURL();renderProducts()});
+
+  let debounceTimer;
+  search.addEventListener('input',()=>{
+    clearTimeout(debounceTimer);
+    debounceTimer=setTimeout(()=>{
+      currentFilters.search=san(search.value,80);
+      updateURL();renderProducts();
+    },300);
+  });
+
+  clearBtn.addEventListener('click',()=>{
+    currentFilters={cat:'all',type:'all',price:'all',search:''};
+    catSel.value='all';typeSel.value='all';priceSel.value='all';search.value='';
+    updateURL();renderProducts();
+  });
+}
+
+/* ══════════════════════════════════════════════
+   PRODUCT RENDERING — Smart Empty Shelves
+   ══════════════════════════════════════════════ */
+function filterProducts(){
+  return PRODUCTS.filter(p=>{
+    if(currentFilters.cat!=='all'&&p.category!==currentFilters.cat)return false;
+    if(currentFilters.type!=='all'&&p.type!==currentFilters.type)return false;
+    if(currentFilters.price==='free'&&p.price!==0)return false;
+    if(currentFilters.price==='paid'&&(p.price===0||p.price==='contact'))return false;
+    if(currentFilters.price==='contact'&&p.price!=='contact')return false;
+    if(currentFilters.search){
+      const q=currentFilters.search.toLowerCase();
+      const name=(p.name?.[lang]||p.name?.ar||'').toLowerCase();
+      const desc=(p.description?.[lang]||p.description?.ar||'').toLowerCase();
+      if(!name.includes(q)&&!desc.includes(q))return false;
+    }
+    return true;
+  });
+}
+
+function renderProducts(){
+  const grid=document.getElementById('pgrid');
+  const info=document.getElementById('results-info');
+  if(!grid)return;
+  grid.textContent='';
+
+  const filtered=filterProducts();
+  const hasActiveFilters=currentFilters.cat!=='all'||currentFilters.type!=='all'||
+                          currentFilters.price!=='all'||currentFilters.search!=='';
+
+  if(PRODUCTS.length===0){
+    // Fully empty store — always show the smart empty state
+    info.textContent='';
+    renderEmptyShelf(grid,false);
+    return;
+  }
+
+  if(filtered.length===0){
+    info.textContent=T('results.none');
+    renderEmptyShelf(grid,hasActiveFilters);
+    return;
+  }
+
+  info.textContent='';
+  const strong=document.createElement('strong');
+  strong.textContent=String(filtered.length);
+  info.appendChild(strong);
+  info.appendChild(document.createTextNode(' '+T('results.found')));
+
+  filtered.forEach(p=>{
+    grid.appendChild(buildProductCard(p));
+  });
+
+  document.querySelectorAll('.pcard.rv').forEach(el=>obs.observe(el));
+}
+
+function renderEmptyShelf(grid,filtered){
+  const wrap=document.createElement('div');
+  wrap.className='empty-shelf rv';
+
+  const ico=document.createElement('div');
+  ico.className='empty-ico';ico.setAttribute('aria-hidden','true');
+  ico.textContent='◇';
+
+  const ttl=document.createElement('h2');
+  ttl.className='empty-ttl';
+  ttl.textContent=T('empty.ttl');
+
+  const desc=document.createElement('p');
+  desc.className='empty-desc';
+  desc.textContent=T('empty.desc');
+
+  const btn=document.createElement('button');
+  btn.className='empty-btn';
+  btn.textContent=T('empty.btn');
+  btn.addEventListener('click',()=>{
+    let msg;
+    if(filtered){
+      const parts=[];
+      if(currentFilters.search) parts.push(currentFilters.search);
+      if(currentFilters.cat!=='all') parts.push(CAT_LABELS[lang]?.[currentFilters.cat]||currentFilters.cat);
+      if(currentFilters.type!=='all') parts.push(TYPE_LABELS[lang]?.[currentFilters.type]||currentFilters.type);
+      const detail=parts.join(' / ');
+      msg=lang==='ar'
+        ? `أبحث عن منتج: ${detail || 'غير محدد'} — هل يمكنكم بناؤه لي؟`
+        : `Looking for: ${detail || 'unspecified'} — can you build this for me?`;
+    } else {
+      msg=lang==='ar'
+        ? 'أرجو إشعاري عند توفر منتجات جديدة على الرفوف'
+        : 'Please notify me when new products are added to the shelves';
+    }
+    openWA(msg);
+  });
+
+  wrap.append(ico,ttl,desc,btn);
+  grid.appendChild(wrap);
+  obs.observe(wrap);
+}
+
+function buildProductCard(p){
+  const card=document.createElement('article');
+  card.className='pcard rv';
+  card.setAttribute('role','listitem');
+
+  const media=document.createElement('div');
+  media.className='pcard-media';
+  media.setAttribute('aria-hidden','true');
+  media.textContent=p.icon||'◈';
+
+  if(p.status==='coming-soon'){
+    const badge=document.createElement('span');
+    badge.className='pcard-badge soon';
+    badge.textContent=T('pcard.soon');
+    media.appendChild(badge);
+  } else if(p.featured){
+    const badge=document.createElement('span');
+    badge.className='pcard-badge new';
+    badge.textContent=T('pcard.new');
+    media.appendChild(badge);
+  } else if(p.status==='contact-only'){
+    const badge=document.createElement('span');
+    badge.className='pcard-badge contact';
+    badge.textContent=T('f.contact');
+    media.appendChild(badge);
+  }
+
+  const body=document.createElement('div');
+  body.className='pcard-body';
+
+  const cat=document.createElement('span');
+  cat.className='pcard-cat';
+  cat.textContent=(CAT_LABELS[lang]?.[p.category]||p.category)+' · '+(TYPE_LABELS[lang]?.[p.type]||p.type);
+
+  const ttl=document.createElement('h3');
+  ttl.className='pcard-ttl';
+  ttl.textContent=p.name?.[lang]||p.name?.ar||'';
+
+  const desc=document.createElement('p');
+  desc.className='pcard-desc';
+  desc.textContent=p.description?.[lang]||p.description?.ar||'';
+
+  const foot=document.createElement('div');
+  foot.className='pcard-foot';
+
+  const price=document.createElement('span');
+  if(p.price==='contact'||p.status==='contact-only'){
+    price.className='pcard-price contact';
+    price.textContent=T('f.contact');
+  } else if(p.price===0){
+    price.className='pcard-price';
+    price.textContent=T('f.free');
+  } else {
+    price.className='pcard-price';
+    price.textContent='$'+p.price;
+  }
+
+  const btn=document.createElement('button');
+  btn.className='pcard-btn';
+
+  if(p.status==='coming-soon'){
+    btn.textContent=T('pcard.notify');
+    btn.addEventListener('click',()=>{
+      const name=p.name?.[lang]||p.name?.ar||'';
+      openWA(lang==='ar'
+        ? `أرجو إشعاري عند توفر: ${name}`
+        : `Please notify me when available: ${name}`);
+    });
+  } else if(p.status==='contact-only'||p.price==='contact'){
+    btn.textContent=T('pcard.inquire');
+    btn.addEventListener('click',()=>{
+      const name=p.name?.[lang]||p.name?.ar||'';
+      openWA(lang==='ar'
+        ? `مرحباً، أريد الاستفسار عن: ${name}`
+        : `Hello, I'd like to inquire about: ${name}`);
+    });
+  } else {
+    btn.textContent=T('pcard.addcart');
+    btn.addEventListener('click',()=>addToCart(p));
+  }
+
+  foot.append(price,btn);
+  body.append(cat,ttl,desc,foot);
+  card.append(media,body);
+  return card;
+}
+
+/* ══════════════════════════════════════════════
+   CART — localStorage based
+   ══════════════════════════════════════════════ */
+function getCart(){
+  /* ══ Cart Validation: يمنع حقن بيانات خبيثة من localStorage ══
+     Layer 4: localStorage يمكن تعديله من أي امتداد متصفح أو كود
+     آخر على نفس الـ origin. التحقق هنا خط الدفاع الأول قبل
+     استخدام البيانات في حسابات مالية أو عرضها للمستخدم.
+     Layer 5: الثقة بالمخزن المحلي تماماً كالثقة بالمستخدم — كلاهما
+     مصدر خارجي يجب التحقق منه دائماً. */
+  try{
+    const raw=localStorage.getItem('pv_cart');
+    const arr=JSON.parse(raw||'[]');
+    if(!Array.isArray(arr))return [];
+    return arr.filter(item=>{
+      if(!item||typeof item!=='object')return false;
+      // id: alphanumeric + dash/underscore, 1-64 chars
+      if(typeof item.id!=='string'||!/^[a-zA-Z0-9_-]{1,64}$/.test(item.id))return false;
+      // price: positive finite number ≤ 100,000
+      const p=Number(item.price);
+      if(!Number.isFinite(p)||p<0||p>100000)return false;
+      // name: string, max 200 chars
+      if(typeof item.name!=='string'||item.name.length>200)return false;
+      return true;
+    }).map(item=>({
+      id:     String(item.id).slice(0,64),
+      name:   String(item.name).slice(0,200),
+      price:  Math.max(0,Math.min(100000,Number(item.price))),
+      icon:   typeof item.icon==='string'?item.icon.slice(0,4):'◈',
+    }));
+  }catch{return []}
+}
+function setCart(items){
+  localStorage.setItem('pv_cart',JSON.stringify(items));
+  updateCartBadge();
+}
+function addToCart(p){
+  const cart=getCart();
+  if(!cart.find(i=>i.id===p.id)){
+    cart.push({
+      id:p.id,
+      name:p.name?.[lang]||p.name?.ar||'',
+      price:typeof p.price==='number'?p.price:0,
+      icon:p.icon||'◈',
+    });
+    setCart(cart);
+    renderCart();
+    showToastMsg(lang==='ar'?'أُضيف للسلة':'Added to cart');
+  }
+}
+function removeFromCart(id){
+  setCart(getCart().filter(i=>i.id!==id));
+  renderCart();
+}
+function updateCartBadge(){
+  const cart=getCart();
+  const n=document.getElementById('float-cart-n');
+  if(!n)return;
+  n.textContent=String(cart.length);
+  n.classList.toggle('on',cart.length>0);
+}
+function renderCart(){
+  const body=document.getElementById('cart-body');
+  const totalEl=document.getElementById('cart-total-amount');
+  if(!body)return;
+  const cart=getCart();
+  body.textContent='';
+
+  if(cart.length===0){
+    const empty=document.createElement('div');
+    empty.className='cart-empty';
+    const ico=document.createElement('div');ico.className='cart-empty-ico';ico.textContent='🛒';
+    const ttl=document.createElement('div');ttl.textContent=T('cart.empty.ttl');ttl.style.color='var(--platinum)';ttl.style.fontFamily='var(--font-d)';
+    const desc=document.createElement('div');desc.textContent=T('cart.empty.desc');desc.style.fontSize='.85rem';
+    empty.append(ico,ttl,desc);
+    body.appendChild(empty);
+    totalEl.textContent='$0';
+    return;
+  }
+
+  let total=0;
+  cart.forEach(item=>{
+    total+=item.price;
+    const row=document.createElement('div');
+    row.className='cart-item';
+
+    const ico=document.createElement('div');ico.className='cart-item-ico';ico.setAttribute('aria-hidden','true');ico.textContent=item.icon;
+
+    const info=document.createElement('div');info.className='cart-item-info';
+    const ttl=document.createElement('div');ttl.className='cart-item-ttl';ttl.textContent=item.name;
+    const price=document.createElement('div');price.className='cart-item-price';price.textContent='$'+item.price;
+    info.append(ttl,price);
+
+    const rm=document.createElement('button');rm.className='cart-item-remove';rm.setAttribute('aria-label','حذف');rm.textContent='✕';
+    rm.addEventListener('click',()=>removeFromCart(item.id));
+
+    row.append(ico,info,rm);
+    body.appendChild(row);
+  });
+  totalEl.textContent='$'+total;
+}
+
+function initCartDrawer(){
+  const overlay=document.getElementById('cart-overlay');
+  const drawer=document.getElementById('cart-drawer');
+  const openBtn=document.getElementById('float-cart');
+  const closeBtn=document.getElementById('cart-x');
+  const checkout=document.getElementById('cart-checkout');
+
+  function open(){
+    drawer.classList.add('on');overlay.classList.add('on');
+    drawer.setAttribute('aria-hidden','false');
+    renderCart();
+  }
+  function close(){
+    drawer.classList.remove('on');overlay.classList.remove('on');
+    drawer.setAttribute('aria-hidden','true');
+  }
+  openBtn?.addEventListener('click',open);
+  closeBtn?.addEventListener('click',close);
+  overlay?.addEventListener('click',close);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&drawer.classList.contains('on'))close();
+  });
+  checkout?.addEventListener('click',e=>{
+    e.preventDefault();
+    const cart=getCart();
+    if(cart.length===0)return;
+    window.location.href='payment.html';
+  });
+
+  // open via hash
+  if(window.location.hash==='#cart')open();
+
+  updateCartBadge();
+}
+
+/* ══════════════════════════════════════════════
+   OBSERVER
+   ══════════════════════════════════════════════ */
+let obs;
+function initObserver(){
+  obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      e.target.classList.add('on');
+      obs.unobserve(e.target);
+    });
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+}
+
+/* ══════════════════════════════════════════════
+   NAVBAR SCROLL + PROGRESS
+   ══════════════════════════════════════════════ */
+function initNav(){
+  const nav=document.getElementById('nav');
+  const bar=document.getElementById('scroll-progress');
+  let tick=false;
+  window.addEventListener('scroll',()=>{
+    if(tick)return;
+    requestAnimationFrame(()=>{
+      nav.classList.toggle('sc',window.scrollY>60);
+      const max=document.documentElement.scrollHeight-window.innerHeight;
+      const ratio=max>0?window.scrollY/max:0;
+      bar.style.transform=`scaleX(${ratio})`;
+      tick=false;
+    });
+    tick=true;
+  },{passive:true});
+}
+
+/* ══════════════════════════════════════════════
+   HAMBURGER + LANG MENU
+   ══════════════════════════════════════════════ */
+function initBurger(){
+  const btn=document.getElementById('burg');
+  const menu=document.getElementById('mmenu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',()=>{
+    const open=menu.classList.toggle('on');
+    btn.classList.toggle('on',open);
+    btn.setAttribute('aria-expanded',String(open));
+    document.body.style.overflow=open?'hidden':'';
+  });
+  menu.querySelectorAll('.mm-link').forEach(l=>{
+    l.addEventListener('click',()=>{
+      menu.classList.remove('on');btn.classList.remove('on');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&menu.classList.contains('on')){
+      menu.classList.remove('on');btn.classList.remove('on');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';btn.focus();
+    }
+  });
+}
+function initLangMenu(){
+  const btn=document.getElementById('lang-btn');
+  const menu=document.getElementById('lang-menu');
+  btn.addEventListener('click',()=>{
+    const open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',String(open));
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.lang-sw')){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+}
+
+/* ══════════════════════════════════════════════
+   CUSTOM CURSOR
+   ══════════════════════════════════════════════ */
+function initCursor(){
+  const ring=document.getElementById('cr');
+  const dot=document.getElementById('cd');
+  if(!ring||!dot)return;
+  if(window.matchMedia('(pointer:coarse)').matches){
+    ring.style.display=dot.style.display='none';
+    document.body.style.cursor='auto';
+    document.querySelectorAll('a,button').forEach(el=>el.style.cursor='pointer');
+    return;
+  }
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX;my=e.clientY;
+    dot.style.left=mx+'px';dot.style.top=my+'px';
+  },{passive:true});
+  (function tick(){
+    rx+=(mx-rx)*.12;ry+=(my-ry)*.12;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(tick);
+  })();
+  document.addEventListener('mouseover',e=>{
+    document.body.classList.toggle('ch',!!e.target.closest('a,button,.pcard,.empty-shelf,select,input'));
+  });
+}
+
+/* ══════════════════════════════════════════════
+   WEBGL PARTICLES (lightweight)
+   ══════════════════════════════════════════════ */
+function initParticles(){
+  const cv=document.getElementById('pc');
+  if(!cv)return;
+  const gl=cv.getContext('webgl',{alpha:true})||cv.getContext('experimental-webgl',{alpha:true});
+  if(!gl)return;
+  const resize=()=>{cv.width=innerWidth;cv.height=innerHeight;gl.viewport(0,0,cv.width,cv.height)};
+  resize();window.addEventListener('resize',resize,{passive:true});
+  const N=window.matchMedia('(pointer:coarse)').matches?40:80;
+  const pos=new Float32Array(N*2),vel=new Float32Array(N*2),
+        life=new Float32Array(N),maxL=new Float32Array(N);
+  for(let i=0;i<N;i++){
+    pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;
+    vel[i*2]=(Math.random()-.5)*.0006;vel[i*2+1]=(Math.random()-.5)*.0006;
+    life[i]=Math.random();maxL[i]=.5+Math.random()*1.4;
+  }
+  const vs=`attribute vec2 a;attribute float l;varying float v;
+    void main(){gl_Position=vec4(a,0,1);gl_PointSize=mix(1.,3.,l);v=l;}`;
+  const fs=`precision mediump float;varying float v;
+    void main(){float d=distance(gl_PointCoord,vec2(.5));if(d>.5)discard;
+    gl_FragColor=vec4(.784,.643,.353,v*(1.-d*2.)*.6);}`;
+  const mk=(t,src)=>{const s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);return s};
+  const prog=gl.createProgram();
+  gl.attachShader(prog,mk(gl.VERTEX_SHADER,vs));
+  gl.attachShader(prog,mk(gl.FRAGMENT_SHADER,fs));
+  gl.linkProgram(prog);gl.useProgram(prog);
+  const aL=gl.getAttribLocation(prog,'a'),lL=gl.getAttribLocation(prog,'l');
+  const pb=gl.createBuffer(),lb=gl.createBuffer();
+  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);
+  (function f(){
+    for(let i=0;i<N;i++){
+      pos[i*2]+=vel[i*2];pos[i*2+1]+=vel[i*2+1];life[i]+=.003;
+      if(life[i]>maxL[i]||Math.abs(pos[i*2])>1.2||Math.abs(pos[i*2+1])>1.2){
+        pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;
+        vel[i*2]=(Math.random()-.5)*.0006;vel[i*2+1]=(Math.random()-.5)*.0006;
+        life[i]=0;maxL[i]=.5+Math.random()*1.4;
+      }
+    }
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.bindBuffer(gl.ARRAY_BUFFER,pb);gl.bufferData(gl.ARRAY_BUFFER,pos,gl.DYNAMIC_DRAW);
+    gl.enableVertexAttribArray(aL);gl.vertexAttribPointer(aL,2,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,lb);gl.bufferData(gl.ARRAY_BUFFER,life,gl.DYNAMIC_DRAW);
+    gl.enableVertexAttribArray(lL);gl.vertexAttribPointer(lL,1,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.POINTS,0,N);requestAnimationFrame(f);
+  })();
+}
+
+/* ══════════════════════════════════════════════
+   CONNECTION MONITOR
+   ══════════════════════════════════════════════ */
+function initConn(){
+  const bn=document.getElementById('cbn');if(!bn)return;
+  let timer=null;
+  function show(online){
+    clearTimeout(timer);
+    bn.textContent=online
+      ?(lang==='ar'?'✅ الاتصال عاد — جاري المزامنة...':'✅ Connection restored — syncing...')
+      :(lang==='ar'?'📴 لا إنترنت — يعمل محلياً':'📴 Offline — running locally');
+    bn.className=`on ${online?'ol':'off'}`;
+    if(online)timer=setTimeout(()=>bn.classList.remove('on'),3000);
+  }
+  window.addEventListener('online', ()=>show(true));
+  window.addEventListener('offline',()=>show(false));
+}
+
+/* ══════════════════════════════════════════════
+   CONTACT LINKS
+   ══════════════════════════════════════════════ */
+function openWA(prefix=''){
+  const msg=encodeURIComponent(san(prefix,200));
+  window.open(`${CONTACT.whatsapp}?text=${msg}`,'_blank','noopener,noreferrer');
+}
+function initContactLinks(){
+  ['float-wa','foot-wa'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.href=CONTACT.whatsapp;el.target='_blank';el.rel='noopener noreferrer';
+  });
+  ['float-tg','foot-tg'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.href=CONTACT.telegram;el.target='_blank';el.rel='noopener noreferrer';
+  });
+  const tgChan=document.getElementById('foot-tg-channel');
+  if(tgChan){tgChan.href=CONTACT.tgChannel;tgChan.target='_blank';tgChan.rel='noopener noreferrer'}
+  const waChan=document.getElementById('foot-wa-channel');
+  if(waChan){waChan.href=CONTACT.waChannel;waChan.target='_blank';waChan.rel='noopener noreferrer'}
+}
+
+/* ══════════════════════════════════════════════
+   TOAST (simple, reused pattern)
+   ══════════════════════════════════════════════ */
+function showToastMsg(msg){
+  let toast=document.getElementById('simple-toast');
+  if(!toast){
+    toast=document.createElement('div');
+    toast.id='simple-toast';
+    Object.assign(toast.style,{
+      position:'fixed',bottom:'32px',left:'50%',
+      transform:'translate(-50%,120%)',
+      background:'var(--card)',border:'1px solid var(--gold-sm)',
+      padding:'12px 24px',fontSize:'.8rem',color:'var(--platinum)',
+      zIndex:'999',transition:'transform 320ms cubic-bezier(.16,1,.3,1)',
+      boxShadow:'0 16px 48px rgba(0,0,0,.5)',
+    });
+    document.body.appendChild(toast);
+  }
+  toast.textContent=san(msg,100);
+  requestAnimationFrame(()=>{toast.style.transform='translate(-50%,0)'});
+  clearTimeout(toast._t);
+  toast._t=setTimeout(()=>{toast.style.transform='translate(-50%,120%)'},2200);
+}
+
+/* ══════════════════════════════════════════════
+   TICKER PAUSE ON HOVER
+   ══════════════════════════════════════════════ */
+function initTickerPause(){
+  const bar=document.getElementById('ticker');
+  const trk=document.getElementById('tt');
+  if(!bar||!trk)return;
+  bar.addEventListener('mouseenter',()=>{trk.style.animationPlayState='paused'});
+  bar.addEventListener('mouseleave',()=>{trk.style.animationPlayState='running'});
+}
+
+/* ══════════════════════════════════════════════
+   AI BUTTON — links to VAULT AI on index (placeholder open WA fallback)
+   ══════════════════════════════════════════════ */
+function initAIButton(){
+  const btn=document.getElementById('ai-btn');
+  if(!btn)return;
+  btn.addEventListener('click',()=>{
+    window.location.href='index.html#ai';
+  });
+}
+
+/* ══════════════════════════════════════════════
+   INIT
+   ══════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded',()=>{
+  initFilters();
+  applyLang(lang);
+  buildLangMenu();
+  initObserver();
+  initNav();
+  initBurger();
+  initLangMenu();
+  initCursor();
+  initParticles();
+  initConn();
+  initContactLinks();
+  initCartDrawer();
+  initTickerPause();
+  initAIButton();
+});
+</script>
+</body>
+</html>

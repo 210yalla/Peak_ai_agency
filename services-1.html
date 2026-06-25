@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<!-- PEAK AI Agency © 2025 | peakvault.com | All rights reserved -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="خدمات PEAK AI Agency — نبني أدوات الذكاء الاصطناعي، المواقع، التطبيقات، وأنظمة الأتمتة بالطلب. من فكرة إلى تسليم في أيام.">
+<meta name="author" content="PEAK AI Agency">
+<meta name="copyright" content="© 2025 PEAK AI Agency — peakvault.com">
+<meta property="og:title" content="الخدمات — PEAK AI Agency">
+<meta property="og:description" content="نبني ما تحلم به بالذكاء الاصطناعي — خدمات مخصصة بالطلب">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050508">
+<title>الخدمات — PEAK AI Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PEAK AI Agency",
+  "url": "https://peakvault.com",
+  "founder": "Darm",
+  "copyrightYear": "2025",
+  "offers": [
+    {"@type":"Offer","name":"Custom AI Tools","price":"300","priceCurrency":"USD"},
+    {"@type":"Offer","name":"Web & App Development","price":"500","priceCurrency":"USD"},
+    {"@type":"Offer","name":"Automation Systems","price":"400","priceCurrency":"USD"}
+  ]
+}
+</script>
+<style>
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+:root{
+  --void:#050508;--abyss:#07070e;--deep:#0a0a14;
+  --surface:#10101c;--card:#161626;--lift:#1e1e32;
+  --gold:#c8a45a;--gold-l:#e8c87a;--gold-d:#8a6835;
+  --gold-xs:rgba(200,164,90,.06);--gold-sm:rgba(200,164,90,.12);
+  --gold-md:rgba(200,164,90,.25);--gold-lg:rgba(200,164,90,.45);
+  --platinum:#e8e4dc;--silver:#a8a49c;--dust:#6a6660;
+  --neon-g:#00ff88;--neon-b:#0088ff;--neon-p:#8844ff;
+  --danger:#ff2244;--success:#00e676;--warning:#ffaa00;
+  --font-d:'Cinzel',serif;--font-b:'Cormorant Garamond',serif;--font-m:'Space Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);--ease-el:cubic-bezier(.175,.885,.32,1.275);
+  --fast:160ms;--mid:320ms;--slow:600ms;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--void);color:var(--platinum);font-family:var(--font-b);font-size:clamp(15px,1.1vw,17px);line-height:1.7;overflow-x:hidden;cursor:none}
+body.ltr{direction:ltr;text-align:left}
+::selection{background:var(--gold-md);color:var(--void)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:none;border:none;background:none;font:inherit;color:inherit}
+
+#cr,#cd{position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:opacity var(--fast)}
+#cr{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;transition:width var(--mid) var(--ease),height var(--mid) var(--ease),border-color var(--mid),background var(--mid);mix-blend-mode:screen}
+#cd{width:5px;height:5px;background:var(--gold);border-radius:50%}
+body.ch #cr{width:56px;height:56px;background:var(--gold-xs);border-color:var(--gold-l)}
+
+#grid{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--gold-xs) 1px,transparent 1px),linear-gradient(90deg,var(--gold-xs) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+#pc{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px)}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+#app{position:relative;z-index:10}
+
+/* TICKER + NAVBAR shared */
+#ticker{position:fixed;top:0;left:0;right:0;z-index:199;height:30px;background:var(--gold);overflow:hidden;display:flex;align-items:center}
+.t-track{display:flex;gap:48px;white-space:nowrap;animation:tickR 38s linear infinite}
+body.ltr .t-track{animation-name:tickL}
+@keyframes tickR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes tickL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.t-item{font-family:var(--font-m);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--void);display:flex;align-items:center;gap:16px}
+.t-sep{opacity:.35;font-size:.45rem}
+
+#nav{position:fixed;top:30px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,5vw,96px);transition:background var(--mid),backdrop-filter var(--mid),padding var(--mid);border-bottom:1px solid transparent}
+#nav.sc{background:rgba(5,5,8,.88);backdrop-filter:blur(24px);border-bottom-color:var(--gold-xs);padding-top:10px;padding-bottom:10px}
+.logo{font-family:var(--font-d);font-size:clamp(1rem,1.8vw,1.3rem);font-weight:700;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo-mark{width:30px;height:30px;display:grid;place-items:center;flex-shrink:0}
+.logo-mark svg{width:100%;height:100%}
+.logo-name{background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,var(--gold-l) 50%,var(--gold) 70%,var(--gold-d) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite}
+@keyframes shimmer{from{background-position:200% center}to{background-position:-200% center}}
+@media(prefers-reduced-motion:reduce){.logo-name{animation:none;color:var(--gold)}}
+
+.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,56px);list-style:none}
+@media(max-width:768px){.nav-links{display:none}}
+.nav-links a{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);transition:color var(--fast);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--mid) var(--ease)}
+.nav-links a.on{color:var(--gold)}
+.nav-links a.on::after{transform:scaleX(1);transform-origin:left}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-sw{position:relative}
+.lang-btn{font-family:var(--font-m);font-size:.62rem;letter-spacing:.15em;padding:6px 10px;border:1px solid var(--gold-sm);color:var(--silver);transition:all var(--fast);text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lang-menu{position:absolute;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--gold-sm);min-width:140px;box-shadow:0 16px 48px rgba(0,0,0,.5);opacity:0;transform:translateY(-8px);pointer-events:none;transition:all var(--fast) var(--ease);z-index:250;max-height:260px;overflow-y:auto}
+body:not(.ltr) .lang-menu{left:0}
+body.ltr .lang-menu{right:0}
+.lang-menu.open{opacity:1;transform:translateY(0);pointer-events:all}
+.lang-opt{display:flex;align-items:center;gap:10px;width:100%;padding:10px 14px;font-size:.78rem;color:var(--silver);transition:all var(--fast);text-align:start}
+.lang-opt:hover{background:var(--gold-xs);color:var(--gold)}
+.lang-opt.on{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px}
+@media(max-width:768px){.burger{display:flex}}
+.burger span{display:block;height:1px;background:var(--gold);transition:all var(--mid) var(--ease)}
+.burger.on span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+#mmenu{position:fixed;inset:0;z-index:190;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateY(-100%);transition:transform var(--slow) var(--ease)}
+#mmenu.on{transform:translateY(0)}
+.mm-link{font-family:var(--font-d);font-size:clamp(1.6rem,6vw,2.8rem);letter-spacing:.2em;color:var(--silver);text-transform:uppercase;transition:color var(--fast)}
+.mm-link:hover,.mm-link.on{color:var(--gold)}
+
+/* PAGE HEADER */
+#page-header{position:relative;z-index:10;padding:calc(128px + 30px) clamp(20px,8vw,128px) 80px;text-align:center;overflow:hidden}
+.ph-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;width:clamp(300px,50vw,700px);height:clamp(300px,50vw,700px);background:radial-gradient(circle,rgba(200,164,90,.10),transparent 70%);top:-15%;right:-10%}
+.ph-eye{font-family:var(--font-m);font-size:clamp(.58rem,1.1vw,.72rem);letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:16px;opacity:0;animation:fsu var(--slow) var(--ease) .2s forwards}
+.ph-eye::before,.ph-eye::after{content:'';display:block;width:36px;height:1px;background:var(--gold-md)}
+.ph-ttl{font-family:var(--font-d);font-size:clamp(2rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-.01em;margin-bottom:20px;opacity:0;animation:fsu var(--slow) var(--ease) .35s forwards}
+.ph-ttl .glow{background:linear-gradient(135deg,var(--gold),var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 100%;filter:drop-shadow(0 0 24px rgba(200,164,90,.3));animation:gsh 4s linear infinite}
+@keyframes gsh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.ph-ttl .glow{animation:none}}
+.ph-sub{font-family:var(--font-b);font-size:clamp(.95rem,1.8vw,1.2rem);font-weight:300;font-style:italic;color:var(--silver);max-width:600px;margin:0 auto;line-height:1.65;opacity:0;animation:fsu var(--slow) var(--ease) .5s forwards}
+
+/* SECTION SHARED */
+section.sec{position:relative;z-index:10;padding:clamp(80px,10vw,140px) clamp(20px,5vw,96px)}
+.sec-eye{font-family:var(--font-m);font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.sec-ttl{font-family:var(--font-d);font-size:clamp(1.7rem,4.5vw,3rem);font-weight:700;letter-spacing:.04em;color:var(--platinum);line-height:1.1;margin-bottom:16px}
+.sec-sub{font-family:var(--font-b);font-style:italic;font-size:clamp(.95rem,1.6vw,1.1rem);color:var(--silver);line-height:1.6;max-width:560px}
+
+/* SERVICES GRID */
+#services-grid{position:relative;z-index:10;padding:0 clamp(20px,5vw,96px) clamp(80px,10vw,140px)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.svc-card{position:relative;background:var(--card);border:1px solid var(--gold-xs);padding:36px 28px;overflow:hidden;opacity:0;transform:translateY(16px);transition:transform var(--mid) var(--ease),border-color var(--mid),background var(--mid),box-shadow var(--mid)}
+.svc-card.rv.on{opacity:1;transform:translateY(0)}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--mid) var(--ease)}
+.svc-card:hover{transform:translateY(-4px);border-color:var(--gold-md);background:var(--lift);box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px var(--gold-sm)}
+.svc-card:hover::after{transform:scaleX(1);transform-origin:left}
+.svc-ico{font-size:2rem;margin-bottom:16px;display:block}
+.svc-ttl{font-family:var(--font-d);font-size:1.1rem;font-weight:700;letter-spacing:.04em;color:var(--platinum);margin-bottom:12px}
+.svc-desc{font-size:.9rem;color:var(--dust);line-height:1.65;margin-bottom:20px}
+.svc-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.svc-features li{font-size:.82rem;color:var(--silver);display:flex;align-items:flex-start;gap:10px}
+.svc-features li::before{content:'✦';color:var(--gold);font-size:.65rem;margin-top:4px;flex-shrink:0}
+.svc-price-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--gold-xs)}
+.svc-price{font-family:var(--font-m);font-size:1rem;letter-spacing:.05em;background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,var(--gold-l) 60%,var(--gold) 80%,var(--gold-d) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
+@media(prefers-reduced-motion:reduce){.svc-price{animation:none;-webkit-text-fill-color:var(--gold)}}
+.svc-cta{font-family:var(--font-m);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-sm);padding:10px 18px;transition:all var(--fast)}
+.svc-cta:hover{background:var(--gold-xs);border-color:var(--gold)}
+
+/* HOW IT WORKS */
+#how{background:var(--deep);border-top:1px solid var(--gold-xs);border-bottom:1px solid var(--gold-xs)}
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px;margin-top:48px}
+.how-step{display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(16px)}
+.how-step.rv.on{opacity:1;transform:translateY(0)}
+.how-num{font-family:var(--font-d);font-size:clamp(2.5rem,5vw,4rem);font-weight:900;color:var(--gold-xs);-webkit-text-stroke:1px var(--gold-sm);line-height:1}
+.how-ttl{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--platinum)}
+.how-desc{font-size:.88rem;color:var(--dust);line-height:1.6}
+
+/* PRICING TABLE */
+#pricing{padding:clamp(80px,10vw,140px) clamp(20px,5vw,96px)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px;margin-top:48px}
+.price-card{background:var(--card);border:1px solid var(--gold-xs);padding:32px 24px;display:flex;flex-direction:column;gap:16px;opacity:0;transform:translateY(16px)}
+.price-card.rv.on{opacity:1;transform:translateY(0)}
+.price-card.featured{border-color:var(--gold-sm);background:linear-gradient(135deg,var(--card),var(--surface));position:relative}
+.price-card.featured::before{content:'الأكثر طلباً';position:absolute;top:-1px;left:50%;transform:translateX(-50%);font-family:var(--font-m);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--void);padding:4px 16px}
+body.ltr .price-card.featured::before{content:'Most Popular'}
+.price-tier{font-family:var(--font-m);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.price-amount{font-family:var(--font-d);font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--platinum);line-height:1}
+.price-amount sup{font-size:.5em;vertical-align:top;margin-top:.4em}
+.price-from{font-family:var(--font-m);font-size:.58rem;letter-spacing:.15em;color:var(--dust);text-transform:uppercase;margin-bottom:4px}
+.price-desc{font-size:.88rem;color:var(--silver);line-height:1.6}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:10px;flex:1}
+.price-features li{font-size:.85rem;color:var(--platinum);display:flex;align-items:flex-start;gap:10px}
+.price-features li::before{content:'✓';color:var(--neon-g);font-size:.7rem;margin-top:3px;flex-shrink:0;font-family:var(--font-m)}
+.price-features li.na{color:var(--dust)}
+.price-features li.na::before{content:'×';color:var(--dust)}
+.price-btn{font-family:var(--font-m);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--void);background:var(--gold);padding:14px;text-align:center;transition:all var(--mid) var(--ease);display:block}
+.price-btn:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 10px 32px var(--gold-md)}
+.price-card:not(.featured) .price-btn{background:transparent;color:var(--gold);border:1px solid var(--gold-sm)}
+.price-card:not(.featured) .price-btn:hover{background:var(--gold-xs);border-color:var(--gold)}
+
+/* FAQ */
+#faq{background:var(--surface);border-top:1px solid var(--gold-xs)}
+.faq-list{margin-top:40px;display:flex;flex-direction:column;gap:2px}
+.faq-item{background:var(--card);border:1px solid var(--gold-xs);overflow:hidden;opacity:0;transform:translateY(12px)}
+.faq-item.rv.on{opacity:1;transform:translateY(0)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-family:var(--font-d);font-size:.95rem;letter-spacing:.02em;color:var(--platinum);text-align:start;gap:12px;transition:color var(--fast)}
+.faq-q:hover{color:var(--gold)}
+.faq-q.open{color:var(--gold)}
+.faq-arrow{font-size:1.1rem;color:var(--gold);transition:transform var(--mid) var(--ease);flex-shrink:0}
+.faq-q.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height var(--slow) var(--ease)}
+.faq-a.open{max-height:200px}
+.faq-a-inner{padding:0 24px 20px;font-size:.9rem;color:var(--dust);line-height:1.7}
+
+/* CTA BAND */
+#cta-band{position:relative;z-index:10;background:linear-gradient(135deg,var(--card),var(--surface));border-top:1px solid var(--gold-sm);border-bottom:1px solid var(--gold-sm);padding:clamp(64px,8vw,120px) clamp(20px,8vw,128px);text-align:center;overflow:hidden}
+.cta-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;width:clamp(200px,40vw,600px);height:clamp(200px,40vw,600px);background:radial-gradient(circle,rgba(200,164,90,.09),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-ttl{font-family:var(--font-d);font-size:clamp(1.6rem,4vw,3rem);font-weight:700;color:var(--platinum);margin-bottom:14px;position:relative}
+.cta-sub{font-family:var(--font-b);font-style:italic;color:var(--silver);font-size:clamp(.95rem,1.6vw,1.1rem);margin-bottom:36px;position:relative}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-p{position:relative;font-family:var(--font-m);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--void);background:var(--gold);padding:14px clamp(24px,3vw,40px);overflow:hidden;transition:transform var(--mid) var(--ease),box-shadow var(--mid);display:inline-block}
+.btn-p::before{content:'';position:absolute;inset:0;background:var(--gold-l);transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px var(--gold-md)}
+.btn-p:hover::before{transform:scaleX(1)}
+.btn-p span{position:relative;z-index:1}
+.btn-s{font-family:var(--font-m);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);padding:13px clamp(22px,3vw,38px);border:1px solid var(--gold-sm);position:relative;overflow:hidden;transition:all var(--mid) var(--ease);display:inline-block}
+.btn-s::before{content:'';position:absolute;inset:0;background:var(--gold-xs);transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.btn-s:hover{border-color:var(--gold);transform:translateY(-2px)}
+.btn-s:hover::before{transform:scaleX(1)}
+.btn-s span{position:relative;z-index:1}
+
+/* FOOTER */
+#foot{position:relative;z-index:10;background:var(--abyss);border-top:1px solid var(--gold-xs);padding:clamp(64px,8vw,120px) clamp(20px,5vw,96px) 32px}
+.foot-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:48px;margin-bottom:48px}
+.foot-tag{font-family:var(--font-b);font-style:italic;font-size:.88rem;color:var(--dust);line-height:1.65;margin-top:16px}
+.fc-ttl{font-family:var(--font-m);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px}
+.flinks a{font-size:.83rem;color:var(--dust);transition:color var(--fast)}
+.flinks a:hover{color:var(--gold)}
+.foot-coins{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.coin{font-family:var(--font-m);font-size:.52rem;letter-spacing:.12em;padding:4px 8px;border:1px solid var(--gold-xs);color:var(--dust)}
+.foot-bot{border-top:1px solid var(--gold-xs);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot-cp{font-family:var(--font-m);font-size:.58rem;letter-spacing:.15em;color:var(--dust)}
+
+/* FLOAT ACTIONS */
+#float-stack{position:fixed;bottom:32px;z-index:300;display:flex;flex-direction:column;gap:12px}
+body:not(.ltr) #float-stack{left:32px}
+body.ltr #float-stack{right:32px}
+.float-btn{width:52px;height:52px;display:flex;align-items:center;justify-content:center;position:relative;font-size:1.3rem;transition:transform var(--mid) var(--ease-el),box-shadow var(--mid);box-shadow:0 8px 28px rgba(0,0,0,.4)}
+.float-btn:hover{transform:scale(1.1)}
+.float-wa{background:#25D366;color:#fff}
+.float-tg{background:#229ED9;color:#fff}
+.float-ai{width:58px;height:58px;background:var(--gold);color:var(--void);box-shadow:0 8px 32px var(--gold-md)}
+.float-ai::before{content:'';position:absolute;inset:-4px;border:1px solid var(--gold-sm);animation:abp 3s ease-out infinite}
+@keyframes abp{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+.ai-ico{font-family:var(--font-d);font-size:.85rem;font-weight:700;letter-spacing:.1em}
+
+/* BANNER + PROGRESS */
+#cbn{position:fixed;top:0;left:0;right:0;z-index:99999;padding:6px 16px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;transform:translateY(-100%);transition:transform var(--mid) var(--ease)}
+#cbn.on{transform:translateY(0)}
+#cbn.ol{background:var(--neon-g);color:var(--void)}
+#cbn.off{background:var(--warning);color:var(--void)}
+#scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:201;background:var(--gold);transform-origin:left;transform:scaleX(0);transition:transform 100ms linear;box-shadow:0 0 8px var(--gold-md)}
+body.ltr #scroll-progress{transform-origin:right}
+
+/* UTILS */
+@keyframes fsu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease)}
+.rv.on{opacity:1;transform:translateY(0)}
+.text-center{text-align:center}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="cbn" role="status" aria-live="polite"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+<div id="cr" aria-hidden="true"></div>
+<div id="cd" aria-hidden="true"></div>
+<div id="grid" aria-hidden="true"></div>
+<canvas id="pc" aria-hidden="true"></canvas>
+
+<div id="ticker" aria-label="إعلانات" role="marquee"><div class="t-track" id="tt"></div></div>
+
+<nav id="mmenu" aria-label="قائمة الجوال">
+  <a href="index.html"    class="mm-link" data-i="nav.home">الرئيسية</a>
+  <a href="store.html"    class="mm-link" data-i="nav.store">الرفوف</a>
+  <a href="services.html" class="mm-link on" data-i="nav.services">الخدمات</a>
+  <a href="about.html"    class="mm-link" data-i="nav.about">من نحن</a>
+</nav>
+
+<header id="nav" role="banner">
+  <a href="index.html" class="logo" aria-label="PEAK AI Agency">
+    <span class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/>
+        <path d="M20 4 L20 34" stroke="currentColor" stroke-width="1" opacity="0.4" style="color:var(--gold)"/>
+      </svg>
+    </span>
+    <span class="logo-name">PEAK AI</span>
+  </a>
+  <nav aria-label="رئيسي">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    data-i="nav.home">الرئيسية</a></li>
+      <li><a href="store.html"    data-i="nav.store">الرفوف</a></li>
+      <li><a href="services.html" class="on" data-i="nav.services" aria-current="page">الخدمات</a></li>
+      <li><a href="about.html"    data-i="nav.about">من نحن</a></li>
+    </ul>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+        <span id="lang-cur">AR</span> ▾
+      </button>
+      <div class="lang-menu" id="lang-menu" role="menu"></div>
+    </div>
+    <button class="burger" id="burg" aria-label="القائمة" aria-expanded="false" aria-controls="mmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="app">
+
+<!-- PAGE HEADER -->
+<section id="page-header" aria-labelledby="phttl">
+  <div class="ph-orb" aria-hidden="true"></div>
+  <span class="ph-eye" data-i="ph.eye">ما نبنيه لك</span>
+  <h1 class="ph-ttl" id="phttl">
+    <span class="glow" data-i="ph.ttl">خدماتنا</span>
+  </h1>
+  <p class="ph-sub" data-i="ph.sub">من فكرة إلى منتج جاهز في أيام — بالذكاء الاصطناعي وبدون تعقيد</p>
+</section>
+
+<!-- SERVICES GRID -->
+<section id="services-grid" aria-label="الخدمات">
+  <div class="svc-grid" id="svc-grid" role="list"></div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="how" aria-labelledby="how-ttl">
+  <div>
+    <span class="sec-eye" data-i="how.eye">كيف نعمل</span>
+    <h2 class="sec-ttl" id="how-ttl" data-i="how.ttl">المسار الكامل</h2>
+    <p class="sec-sub" data-i="how.sub">لا تعقيد، لا انتظار طويل — بساطة مطلقة من البداية للنهاية</p>
+  </div>
+  <div class="how-grid" id="how-grid"></div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="pricing" aria-labelledby="pricing-ttl">
+  <div class="text-center">
+    <span class="sec-eye" data-i="pricing.eye">الأسعار</span>
+    <h2 class="sec-ttl" id="pricing-ttl" data-i="pricing.ttl">شفافية كاملة</h2>
+    <p class="sec-sub" style="margin:0 auto" data-i="pricing.sub">لا مفاجآت في الأسعار — كل شيء واضح من البداية</p>
+  </div>
+  <div class="pricing-grid" id="pricing-grid"></div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" aria-labelledby="faq-ttl">
+  <span class="sec-eye" data-i="faq.eye">أسئلة شائعة</span>
+  <h2 class="sec-ttl" id="faq-ttl" data-i="faq.ttl">الأسئلة الشائعة</h2>
+  <div class="faq-list" id="faq-list" role="list"></div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta-band" aria-labelledby="cta-ttl">
+  <div class="cta-orb" aria-hidden="true"></div>
+  <h2 class="cta-ttl rv" id="cta-ttl" data-i="cta.ttl">جاهز لتبدأ مشروعك؟</h2>
+  <p class="cta-sub rv" data-i="cta.sub">تحدث معنا الآن — نقدّر وقتك ونبدأ فوراً</p>
+  <div class="cta-btns rv">
+    <a href="#" class="btn-p" id="cta-wa"><span data-i="cta.wa">واتساب</span></a>
+    <a href="#" class="btn-s" id="cta-tg"><span data-i="cta.tg">تلجرام</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="foot" role="contentinfo">
+  <div class="foot-g">
+    <div>
+      <div class="logo"><span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/></svg>
+      </span><span class="logo-name">PEAK AI</span></div>
+      <p class="foot-tag" data-i="ft.tag">وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.</p>
+      <div class="foot-coins"><span class="coin">USDT TRC-20</span><span class="coin">USDT BEP-20</span><span class="coin">BTC</span><span class="coin">ETH</span><span class="coin">BNB</span></div>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.platform">المنصة</span>
+      <ul class="flinks">
+        <li><a href="index.html" data-i="nav.home">الرئيسية</a></li>
+        <li><a href="store.html" data-i="nav.store">الرفوف</a></li>
+        <li><a href="about.html" data-i="nav.about">من نحن</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.lang">اللغة</span>
+      <ul class="flinks" id="foot-langs"></ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.contact">تواصل</span>
+      <ul class="flinks">
+        <li><a href="#" id="foot-wa">💬 WhatsApp</a></li>
+        <li><a href="#" id="foot-tg">✈ Telegram</a></li>
+        <li><a href="#" id="foot-tg-ch" data-i="ft.channel">قناة الإعلانات</a></li>
+        <li><a href="#" id="foot-wa-ch" data-i="ft.wa_channel">قناة واتساب</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span class="foot-cp" data-i="ft.copy">© 2025 PEAK AI Agency — جميع الحقوق محفوظة</span>
+    <span class="foot-cp" style="color:var(--gold);letter-spacing:.3em;font-size:.52rem">PEAKVAULT.COM</span>
+  </div>
+</footer>
+
+<!-- FLOATING ACTIONS -->
+<div id="float-stack">
+  <a href="#" class="float-btn float-wa" id="float-wa" aria-label="واتساب">💬</a>
+  <a href="#" class="float-btn float-tg" id="float-tg" aria-label="تلجرام">✈</a>
+  <a href="index.html#ai" class="float-btn float-ai" aria-label="VAULT AI">
+    <span class="ai-ico" aria-hidden="true">AI</span>
+  </a>
+</div>
+
+<script>
+'use strict';
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+const CONTACT=Object.freeze({
+  whatsapp:'https://wa.me/963996767062',
+  telegram:'https://t.me/T963996767062',
+  tgChannel:'https://t.me/+hx9uSnNasH40MzBh',
+  waChannel:'https://whatsapp.com/channel/0029VbCmXviDJ6GsuDynlU3o',
+});
+
+function san(s,max=500){
+  return String(s??'').replace(/[<>"'`&]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;","&":"&amp;"}[c]||c)).replace(/javascript:/gi,'').replace(/on\w+=?/gi,'').trim().slice(0,max);
+}
+
+const LANGS=[
+  {code:'ar',label:'العربية',native:'AR',rtl:true},
+  {code:'en',label:'English',native:'EN',rtl:false},
+  {code:'fr',label:'Français',native:'FR',rtl:false},
+  {code:'es',label:'Español',native:'ES',rtl:false},
+  {code:'tr',label:'Türkçe',native:'TR',rtl:false},
+  {code:'de',label:'Deutsch',native:'DE',rtl:false},
+  {code:'zh',label:'中文',native:'ZH',rtl:false},
+];
+
+const TR={
+  ar:{
+    'nav.home':'الرئيسية','nav.store':'الرفوف','nav.vault':'أعمالنا','nav.services':'الخدمات','nav.about':'من نحن',
+    'ph.eye':'ما نبنيه لك','ph.ttl':'خدماتنا','ph.sub':'من فكرة إلى منتج جاهز في أيام — بالذكاء الاصطناعي وبدون تعقيد',
+    'how.eye':'كيف نعمل','how.ttl':'المسار الكامل','how.sub':'لا تعقيد، لا انتظار طويل — بساطة مطلقة من البداية للنهاية',
+    'pricing.eye':'الأسعار','pricing.ttl':'شفافية كاملة','pricing.sub':'لا مفاجآت في الأسعار — كل شيء واضح من البداية',
+    'faq.eye':'أسئلة شائعة','faq.ttl':'الأسئلة الشائعة',
+    'cta.ttl':'جاهز لتبدأ مشروعك؟','cta.sub':'تحدث معنا الآن — نقدّر وقتك ونبدأ فوراً',
+    'cta.wa':'واتساب','cta.tg':'تلجرام',
+    'ft.tag':'وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية.','ft.platform':'المنصة','ft.lang':'اللغة','ft.contact':'تواصل',
+    'ft.channel':'قناة الإعلانات','ft.wa_channel':'قناة واتساب','ft.copy':'© 2025 PEAK AI Agency — جميع الحقوق محفوظة',
+    'tk.1':'⚡ نبني بالذكاء الاصطناعي في أيام',
+    'tk.2':'🔐 دفع مشفر مباشر — لا وسطاء',
+    'tk.3':'✦ بناء مخصص حسب طلبك بالضبط',
+    'tk.4':'◈ 7 لغات · 22 قطاعاً متخصصاً',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'inquire':'استفسر الآن','popular':'الأكثر طلباً','start':'ابدأ الآن',
+  },
+  en:{
+    'nav.home':'Home','nav.store':'Shelves','nav.vault':'Our Work','nav.services':'Services','nav.about':'About',
+    'ph.eye':'What We Build','ph.ttl':'Our Services','ph.sub':'From idea to ready product in days — with AI and zero complexity',
+    'how.eye':'How We Work','how.ttl':'The Full Journey','how.sub':'No complexity, no long waits — pure simplicity from start to finish',
+    'pricing.eye':'Pricing','pricing.ttl':'Full Transparency','pricing.sub':'No surprises — everything is clear from the start',
+    'faq.eye':'FAQ','faq.ttl':'Frequently Asked Questions',
+    'cta.ttl':'Ready to Start Your Project?','cta.sub':'Talk to us now — we respect your time and start immediately',
+    'cta.wa':'WhatsApp','cta.tg':'Telegram',
+    'ft.tag':'An AI agency that builds your digital products and systems.','ft.platform':'Platform','ft.lang':'Language','ft.contact':'Contact',
+    'ft.channel':'Announcements','ft.wa_channel':'WhatsApp Channel','ft.copy':'© 2025 PEAK AI Agency — All rights reserved',
+    'tk.1':'⚡ We build with AI in days',
+    'tk.2':'🔐 Direct crypto payment — no middlemen',
+    'tk.3':'✦ Custom-built exactly to your request',
+    'tk.4':'◈ 7 languages · 22 specialized sectors',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'inquire':'Inquire Now','popular':'Most Popular','start':'Start Now',
+  },
+};
+// Minimal translations for other languages (inherit from en)
+['fr','es','tr','de','zh'].forEach(l=>{TR[l]={...TR.en,...{
+  fr:{'ph.ttl':'Nos Services','cta.ttl':'Prêt à démarrer?','cta.wa':'WhatsApp','cta.tg':'Telegram','inquire':'Demander','start':'Commencer'},
+  es:{'ph.ttl':'Nuestros Servicios','cta.ttl':'¿Listo para empezar?','cta.wa':'WhatsApp','cta.tg':'Telegram','inquire':'Consultar','start':'Empezar'},
+  tr:{'ph.ttl':'Hizmetlerimiz','cta.ttl':'Projenize başlamaya hazır mısınız?','cta.wa':'WhatsApp','cta.tg':'Telegram','inquire':'Bilgi Al','start':'Başla'},
+  de:{'ph.ttl':'Unsere Leistungen','cta.ttl':'Bereit, dein Projekt zu starten?','cta.wa':'WhatsApp','cta.tg':'Telegram','inquire':'Anfragen','start':'Starten'},
+  zh:{'ph.ttl':'我们的服务','cta.ttl':'准备好开始你的项目了吗？','cta.wa':'WhatsApp','cta.tg':'Telegram','inquire':'咨询','start':'开始'},
+}[l]}});
+
+let lang=localStorage.getItem('pv_lang')||'ar';
+function T(k){return TR[lang]?.[k]||TR.ar[k]||k}
+
+/* SERVICES DATA */
+const SERVICES_DATA=[
+  {
+    ico:'🤖',
+    ttl:{ar:'أدوات AI مخصصة',en:'Custom AI Tools',fr:'Outils IA sur mesure',es:'Herramientas IA a medida',tr:'Özel AI Araçları',de:'Individuelle KI-Tools',zh:'定制AI工具'},
+    desc:{ar:'أدوات ذكاء اصطناعي مصممة لمهمتك بالضبط — من المحادثة الذكية إلى الأتمتة الكاملة وتحليل البيانات.',en:'AI tools designed exactly for your task — from smart chat to full automation and data analysis.'},
+    features:{
+      ar:['واجهة عربية/إنجليزية كاملة','تكامل مع بيانات عملك','تدريب على بياناتك الخاصة','واجهة ويب أو بوت تلجرام','دعم ونشر كامل'],
+      en:['Full Arabic/English interface','Integration with your business data','Training on your own data','Web interface or Telegram bot','Full support and deployment'],
+    },
+    price:{ar:'من 300$',en:'From $300',fr:'À partir de 300$',es:'Desde $300',tr:'300$\'dan başlar',de:'Ab 300$',zh:'起价$300'},
+  },
+  {
+    ico:'💻',
+    ttl:{ar:'مواقع وتطبيقات',en:'Websites & Apps',fr:'Sites & Applications',es:'Sitios y Aplicaciones',tr:'Web Sitesi & Uygulama',de:'Websites & Apps',zh:'网站与应用'},
+    desc:{ar:'مواقع وتطبيقات ويب كاملة — سريعة، آمنة، جميلة، وجاهزة للنشر فوراً بأفضل المعايير التقنية.',en:'Complete web apps — fast, secure, beautiful, ready to deploy with top technical standards.'},
+    features:{
+      ar:['تصميم حصري غير متكرر','Mobile First من 320px','SEO متقدم','لوحة تحكم مخصصة','دفع إلكتروني مدمج'],
+      en:['Unique exclusive design','Mobile First from 320px','Advanced SEO','Custom admin panel','Integrated electronic payment'],
+    },
+    price:{ar:'من 500$',en:'From $500',fr:'À partir de 500$',es:'Desde $500',tr:'500$\'dan başlar',de:'Ab 500$',zh:'起价$500'},
+    featured:true,
+  },
+  {
+    ico:'⚙️',
+    ttl:{ar:'أتمتة وأنظمة',en:'Automation & Systems',fr:'Automatisation & Systèmes',es:'Automatización & Sistemas',tr:'Otomasyon & Sistemler',de:'Automatisierung & Systeme',zh:'自动化与系统'},
+    desc:{ar:'أنظمة تعمل بدلاً عنك — بوتات تلجرام، تكامل بيانات، تدفقات عمل ذكية، وتوصيل تلقائي.',en:'Systems that work for you — Telegram bots, data integration, smart workflows, auto-delivery.'},
+    features:{
+      ar:['بوت تلجرام ذكي كامل','تكامل مع أي نظام خارجي','تسليم ملفات تلقائي','إشعارات وتقارير فورية','صيانة مستمرة'],
+      en:['Full intelligent Telegram bot','Integration with any external system','Automatic file delivery','Instant notifications and reports','Continuous maintenance'],
+    },
+    price:{ar:'من 400$',en:'From $400',fr:'À partir de 400$',es:'Desde $400',tr:'400$\'dan başlar',de:'Ab 400$',zh:'起价$400'},
+  },
+  {
+    ico:'🎯',
+    ttl:{ar:'استشارات وتخطيط',en:'Consulting & Planning',fr:'Conseil & Planification',es:'Consultoría & Planificación',tr:'Danışmanlık & Planlama',de:'Beratung & Planung',zh:'咨询与规划'},
+    desc:{ar:'جلسة تخطيط كاملة لمشروعك — نحلل الفكرة، نرسم الطريق، نحدد التكلفة والجدول الزمني.',en:'Complete planning session for your project — analyze the idea, map the road, define cost and timeline.'},
+    features:{
+      ar:['جلسة تحليل 1-2 ساعة','تقرير تقني شامل','تحديد الميزانية الدقيقة','خارطة طريق واضحة','متابعة بعد الجلسة'],
+      en:['1-2 hour analysis session','Comprehensive technical report','Exact budget definition','Clear roadmap','Post-session follow-up'],
+    },
+    price:{ar:'من 100$',en:'From $100',fr:'À partir de 100$',es:'Desde $100',tr:'100$\'dan başlar',de:'Ab 100$',zh:'起价$100'},
+  },
+];
+
+/* HOW IT WORKS DATA */
+const HOW_DATA=[
+  {n:'01',ttl:{ar:'تتواصل معنا',en:'You Reach Out'},desc:{ar:'عبر واتساب أو تلجرام — تشرح ما تحتاجه ببساطة بدون مصطلحات تقنية.',en:'Via WhatsApp or Telegram — explain what you need simply, no technical jargon.'}},
+  {n:'02',ttl:{ar:'نتفق على التفاصيل',en:'We Align'},desc:{ar:'السعر، المدة، والمواصفات تُحدَّد بوضوح من البداية. لا مفاجآت.',en:'Price, timeline, and specs are clearly defined from the start. No surprises.'}},
+  {n:'03',ttl:{ar:'نبني بسرعة',en:'We Build Fast'},desc:{ar:'الذكاء الاصطناعي يسرّع البناء بدون التضحية بالجودة. تتابع معنا كل خطوة.',en:'AI accelerates the build without sacrificing quality. You follow every step with us.'}},
+  {n:'04',ttl:{ar:'تستلم وتنطلق',en:'You Launch'},desc:{ar:'تسليم كامل مع شرح وصلاحيات كاملة. أنت تملك كل شيء.',en:'Full delivery with explanation and complete ownership. Everything is yours.'}},
+];
+
+/* PRICING DATA */
+const PRICING_DATA=[
+  {
+    tier:{ar:'مشروع صغير',en:'Small Project'},
+    price:'$300',from:true,
+    desc:{ar:'أداة أو صفحة واحدة بسيطة',en:'Single tool or simple page'},
+    features:{
+      ar:['تصميم احترافي','مدة: 3-7 أيام','مراجعة واحدة','تسليم كامل','دعم 2 أسبوع'],
+      en:['Professional design','Timeline: 3-7 days','One revision','Full delivery','2-week support'],
+    },
+    ok:[1,1,1,1,1],
+  },
+  {
+    tier:{ar:'مشروع متوسط',en:'Medium Project'},
+    price:'$500',from:true,featured:true,
+    desc:{ar:'موقع كامل أو نظام متكامل',en:'Full website or integrated system'},
+    features:{
+      ar:['تصميم حصري','مدة: 1-2 أسبوع','3 مراجعات','تسليم + تدريب','دعم شهر كامل'],
+      en:['Exclusive design','Timeline: 1-2 weeks','3 revisions','Delivery + training','Full month support'],
+    },
+    ok:[1,1,1,1,1],
+  },
+  {
+    tier:{ar:'مشروع كبير',en:'Large Project'},
+    price:'$1500',from:true,
+    desc:{ar:'نظام متكامل متعدد المكونات',en:'Multi-component integrated system'},
+    features:{
+      ar:['بنية تحتية كاملة','مدة: حسب الاتفاق','مراجعات غير محدودة','تسليم + توثيق كامل','دعم 3 أشهر'],
+      en:['Full infrastructure','Timeline: as agreed','Unlimited revisions','Delivery + full docs','3-month support'],
+    },
+    ok:[1,1,1,1,1],
+  },
+];
+
+/* FAQ DATA */
+const FAQ_DATA=[
+  {
+    q:{ar:'كيف يتم الدفع؟',en:'How is payment made?'},
+    a:{ar:'نقبل USDT (TRC-20/BEP-20)، BTC، ETH، وBNB. 50% مقدماً قبل البدء، و50% عند التسليم النهائي.',en:'We accept USDT (TRC-20/BEP-20), BTC, ETH, and BNB. 50% upfront before starting, 50% upon final delivery.'},
+  },
+  {
+    q:{ar:'كم يستغرق بناء المشروع؟',en:'How long does a project take?'},
+    a:{ar:'المشاريع الصغيرة 3-7 أيام، المتوسطة 1-2 أسبوع، والكبيرة حسب الاتفاق. نحترم المواعيد دائماً.',en:'Small projects 3-7 days, medium 1-2 weeks, large as agreed. We always respect deadlines.'},
+  },
+  {
+    q:{ar:'هل أملك الكود والمشروع بالكامل؟',en:'Do I own the code and project completely?'},
+    a:{ar:'نعم تماماً. بعد التسليم الكامل والدفع الكامل، تملك كل الكود والحقوق والملكية الفكرية للمشروع.',en:'Yes, completely. After full delivery and full payment, you own all code, rights, and intellectual property.'},
+  },
+  {
+    q:{ar:'ماذا لو لم أكن راضياً عن النتيجة؟',en:"What if I'm not satisfied with the result?"},
+    a:{ar:'نعمل معك حتى تكون راضياً ضمن المواصفات المتفق عليها. لديك مراجعات متضمنة في السعر للتعديل.',en:"We work with you until you're satisfied within the agreed specs. You have revisions included in the price."},
+  },
+  {
+    q:{ar:'هل يمكن إضافة مميزات بعد التسليم؟',en:'Can features be added after delivery?'},
+    a:{ar:'نعم — أي إضافة بعد التسليم تُسعَّر بشكل منفصل حسب حجم التعديل. دائماً بسعر عادل.',en:'Yes — any additions after delivery are priced separately based on the size of changes. Always at a fair price.'},
+  },
+];
+
+/* ════════ LANG SYSTEM ════════ */
+function applyLang(l){
+  if(!TR[l])l='ar';
+  lang=l;
+  const meta=LANGS.find(x=>x.code===l);
+  const rtl=meta?.rtl??(l==='ar');
+  document.documentElement.lang=l;
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.body.classList.toggle('ltr',!rtl);
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(TR[l]?.[k]||TR.ar[k]) el.textContent=T(k);
+  });
+  document.getElementById('lang-cur').textContent=meta?.native||'AR';
+  localStorage.setItem('pv_lang',l);
+  buildTicker();buildServices();buildHow();buildPricing();buildFAQ();
+}
+
+function buildLangMenu(){
+  const menu=document.getElementById('lang-menu');
+  const fl=document.getElementById('foot-langs');
+  menu.textContent='';fl.textContent='';
+  LANGS.forEach(m=>{
+    const btn=document.createElement('button');
+    btn.className='lang-opt'+(m.code===lang?' on':'');
+    btn.setAttribute('role','menuitem');
+    btn.textContent=`${m.native} — ${m.label}`;
+    btn.addEventListener('click',()=>{applyLang(m.code);menu.classList.remove('open');document.getElementById('lang-btn').setAttribute('aria-expanded','false');buildLangMenu()});
+    menu.appendChild(btn);
+    const li=document.createElement('li');
+    const a=document.createElement('a');a.href='#';a.textContent=m.native;
+    a.addEventListener('click',e=>{e.preventDefault();applyLang(m.code);buildLangMenu()});
+    li.appendChild(a);fl.appendChild(li);
+  });
+}
+
+/* ════════ TICKER ════════ */
+function buildTicker(){
+  const tt=document.getElementById('tt');if(!tt)return;
+  const keys=['tk.1','tk.2','tk.3','tk.4','tk.5'];
+  const items=keys.map(k=>T(k));
+  const all=[...items,...items,...items];
+  tt.textContent='';
+  all.forEach((txt,i)=>{
+    const sp=document.createElement('span');sp.className='t-item';sp.textContent=txt;
+    if(i<all.length-1){const sep=document.createElement('span');sep.className='t-sep';sep.textContent='✦';sp.appendChild(sep)}
+    tt.appendChild(sp);
+  });
+}
+
+/* ════════ SERVICES ════════ */
+function buildServices(){
+  const grid=document.getElementById('svc-grid');if(!grid)return;
+  grid.textContent='';
+  SERVICES_DATA.forEach(svc=>{
+    const card=document.createElement('article');
+    card.className='svc-card rv';card.setAttribute('role','listitem');
+    const ico=document.createElement('span');ico.className='svc-ico';ico.setAttribute('aria-hidden','true');ico.textContent=svc.ico;
+    const ttl=document.createElement('h2');ttl.className='svc-ttl';ttl.textContent=svc.ttl[lang]||svc.ttl.ar;
+    const desc=document.createElement('p');desc.className='svc-desc';desc.textContent=svc.desc[lang]||svc.desc.en;
+    const feats=document.createElement('ul');feats.className='svc-features';
+    const fl=svc.features[lang]||svc.features.en;
+    fl.forEach(f=>{const li=document.createElement('li');li.textContent=f;feats.appendChild(li)});
+    const priceRow=document.createElement('div');priceRow.className='svc-price-row';
+    const price=document.createElement('span');price.className='svc-price';price.textContent=svc.price[lang]||svc.price.en;
+    const cta=document.createElement('a');cta.className='svc-cta';cta.href='#';cta.textContent=T('inquire');
+    cta.addEventListener('click',e=>{e.preventDefault();openWA((svc.ttl[lang]||svc.ttl.ar))});
+    priceRow.append(price,cta);
+    card.append(ico,ttl,desc,feats,priceRow);
+    grid.appendChild(card);
+  });
+  obs&&document.querySelectorAll('.svc-card.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ HOW IT WORKS ════════ */
+function buildHow(){
+  const grid=document.getElementById('how-grid');if(!grid)return;
+  grid.textContent='';
+  HOW_DATA.forEach(step=>{
+    const div=document.createElement('div');div.className='how-step rv';
+    const num=document.createElement('div');num.className='how-num';num.textContent=step.n;
+    const ttl=document.createElement('div');ttl.className='how-ttl';ttl.textContent=step.ttl[lang]||step.ttl.en;
+    const desc=document.createElement('div');desc.className='how-desc';desc.textContent=step.desc[lang]||step.desc.en;
+    div.append(num,ttl,desc);grid.appendChild(div);
+  });
+  obs&&document.querySelectorAll('.how-step.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ PRICING ════════ */
+function buildPricing(){
+  const grid=document.getElementById('pricing-grid');if(!grid)return;
+  grid.textContent='';
+  PRICING_DATA.forEach(plan=>{
+    const card=document.createElement('div');
+    card.className='price-card rv'+(plan.featured?' featured':'');
+    const tier=document.createElement('div');tier.className='price-tier';tier.textContent=plan.tier[lang]||plan.tier.en;
+    const fromDiv=document.createElement('div');fromDiv.className='price-from';fromDiv.textContent=lang==='ar'?'يبدأ من':'Starting from';
+    const amt=document.createElement('div');amt.className='price-amount';const amtSup=document.createElement('sup');amtSup.textContent='$';const amtNum=document.createTextNode(plan.price.replace('$',''));amt.appendChild(amtSup);amt.appendChild(amtNum);
+    const desc=document.createElement('div');desc.className='price-desc';desc.textContent=plan.desc[lang]||plan.desc.en;
+    const feats=document.createElement('ul');feats.className='price-features';
+    const fl=plan.features[lang]||plan.features.en;
+    fl.forEach((f,i)=>{const li=document.createElement('li');if(!plan.ok[i])li.className='na';li.textContent=f;feats.appendChild(li)});
+    const btn=document.createElement('a');btn.className='price-btn';btn.href='#';btn.textContent=T('start');
+    btn.addEventListener('click',e=>{e.preventDefault();openWA((plan.tier[lang]||plan.tier.en))});
+    card.append(tier,fromDiv,amt,desc,feats,btn);
+    grid.appendChild(card);
+  });
+  obs&&document.querySelectorAll('.price-card.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ FAQ ════════ */
+function buildFAQ(){
+  const list=document.getElementById('faq-list');if(!list)return;
+  list.textContent='';
+  FAQ_DATA.forEach(item=>{
+    const div=document.createElement('div');div.className='faq-item rv';div.setAttribute('role','listitem');
+    const q=document.createElement('button');q.className='faq-q';
+    q.textContent=item.q[lang]||item.q.en;
+    const arrow=document.createElement('span');arrow.className='faq-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='▾';
+    q.appendChild(arrow);
+    const a=document.createElement('div');a.className='faq-a';
+    const inner=document.createElement('div');inner.className='faq-a-inner';inner.textContent=item.a[lang]||item.a.en;
+    a.appendChild(inner);
+    q.addEventListener('click',()=>{
+      const open=a.classList.toggle('open');
+      q.classList.toggle('open',open);
+    });
+    div.append(q,a);list.appendChild(div);
+  });
+  obs&&document.querySelectorAll('.faq-item.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ OBSERVER ════════ */
+let obs;
+function initObserver(){
+  obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ NAV ════════ */
+function initNav(){
+  const nav=document.getElementById('nav');
+  const bar=document.getElementById('scroll-progress');
+  let tick=false;
+  window.addEventListener('scroll',()=>{
+    if(tick)return;
+    requestAnimationFrame(()=>{
+      nav.classList.toggle('sc',window.scrollY>60);
+      const max=document.documentElement.scrollHeight-window.innerHeight;
+      bar.style.transform=`scaleX(${max>0?window.scrollY/max:0})`;
+      tick=false;
+    });tick=true;
+  },{passive:true});
+}
+
+function initBurger(){
+  const btn=document.getElementById('burg');const menu=document.getElementById('mmenu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('on');btn.classList.toggle('on',o);btn.setAttribute('aria-expanded',String(o));document.body.style.overflow=o?'hidden':''});
+  menu.querySelectorAll('.mm-link').forEach(l=>l.addEventListener('click',()=>{menu.classList.remove('on');btn.classList.remove('on');btn.setAttribute('aria-expanded','false');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('on')){menu.classList.remove('on');btn.classList.remove('on');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';btn.focus()}});
+}
+function initLangMenu(){
+  const btn=document.getElementById('lang-btn');const menu=document.getElementById('lang-menu');
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(o))});
+  document.addEventListener('click',e=>{if(!e.target.closest('.lang-sw')){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+}
+
+/* ════════ CURSOR ════════ */
+function initCursor(){
+  const ring=document.getElementById('cr');const dot=document.getElementById('cd');
+  if(!ring||!dot)return;
+  if(window.matchMedia('(pointer:coarse)').matches){ring.style.display=dot.style.display='none';document.body.style.cursor='auto';document.querySelectorAll('a,button').forEach(el=>el.style.cursor='pointer');return}
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'},{passive:true});
+  (function tick(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick)})();
+  document.addEventListener('mouseover',e=>{document.body.classList.toggle('ch',!!e.target.closest('a,button,.svc-card,.faq-q,.price-card'))});
+}
+
+/* ════════ PARTICLES ════════ */
+function initParticles(){
+  const cv=document.getElementById('pc');if(!cv)return;
+  const gl=cv.getContext('webgl',{alpha:true});if(!gl)return;
+  const r=()=>{cv.width=innerWidth;cv.height=innerHeight;gl.viewport(0,0,cv.width,cv.height)};
+  r();window.addEventListener('resize',r,{passive:true});
+  const N=window.matchMedia('(pointer:coarse)').matches?40:80;
+  const pos=new Float32Array(N*2),vel=new Float32Array(N*2),life=new Float32Array(N),maxL=new Float32Array(N);
+  for(let i=0;i<N;i++){pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;vel[i*2]=(Math.random()-.5)*.0006;vel[i*2+1]=(Math.random()-.5)*.0006;life[i]=Math.random();maxL[i]=.5+Math.random()*1.4}
+  const vs=`attribute vec2 a;attribute float l;varying float v;void main(){gl_Position=vec4(a,0,1);gl_PointSize=mix(1.,3.,l);v=l;}`;
+  const fs=`precision mediump float;varying float v;void main(){float d=distance(gl_PointCoord,vec2(.5));if(d>.5)discard;gl_FragColor=vec4(.784,.643,.353,v*(1.-d*2.)*.6);}`;
+  const mk=(t,s)=>{const sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);return sh};
+  const p=gl.createProgram();gl.attachShader(p,mk(gl.VERTEX_SHADER,vs));gl.attachShader(p,mk(gl.FRAGMENT_SHADER,fs));gl.linkProgram(p);gl.useProgram(p);
+  const aL=gl.getAttribLocation(p,'a'),lL=gl.getAttribLocation(p,'l');
+  const pb=gl.createBuffer(),lb=gl.createBuffer();
+  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);
+  (function f(){
+    for(let i=0;i<N;i++){pos[i*2]+=vel[i*2];pos[i*2+1]+=vel[i*2+1];life[i]+=.003;if(life[i]>maxL[i]||Math.abs(pos[i*2])>1.2||Math.abs(pos[i*2+1])>1.2){pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;vel[i*2]=(Math.random()-.5)*.0006;vel[i*2+1]=(Math.random()-.5)*.0006;life[i]=0;maxL[i]=.5+Math.random()*1.4}}
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.bindBuffer(gl.ARRAY_BUFFER,pb);gl.bufferData(gl.ARRAY_BUFFER,pos,gl.DYNAMIC_DRAW);gl.enableVertexAttribArray(aL);gl.vertexAttribPointer(aL,2,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,lb);gl.bufferData(gl.ARRAY_BUFFER,life,gl.DYNAMIC_DRAW);gl.enableVertexAttribArray(lL);gl.vertexAttribPointer(lL,1,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.POINTS,0,N);requestAnimationFrame(f);
+  })();
+}
+
+/* ════════ CONNECTION ════════ */
+function initConn(){
+  const bn=document.getElementById('cbn');if(!bn)return;
+  let timer=null;
+  const show=o=>{clearTimeout(timer);bn.textContent=o?(lang==='ar'?'✅ الاتصال عاد':'✅ Connected'):(lang==='ar'?'📴 لا إنترنت':'📴 Offline');bn.className=`on ${o?'ol':'off'}`;if(o)timer=setTimeout(()=>bn.classList.remove('on'),3000)};
+  window.addEventListener('online',()=>show(true));window.addEventListener('offline',()=>show(false));
+}
+
+/* ════════ CONTACT LINKS ════════ */
+function openWA(context=''){
+  const msg=encodeURIComponent(san(lang==='ar'?`مرحباً، أريد الاستفسار عن: ${context}`:`Hello, I want to inquire about: ${context}`,200));
+  window.open(`${CONTACT.whatsapp}?text=${msg}`,'_blank','noopener,noreferrer');
+}
+function initContactLinks(){
+  ['float-wa','foot-wa','cta-wa'].forEach(id=>{
+    const el=document.getElementById(id);if(!el)return;
+    el.href=CONTACT.whatsapp;el.target='_blank';el.rel='noopener noreferrer';
+    el.addEventListener('click',e=>{if(id==='cta-wa'){e.preventDefault();openWA(T('ph.ttl'))}});
+  });
+  ['float-tg','foot-tg','cta-tg'].forEach(id=>{
+    const el=document.getElementById(id);if(!el)return;
+    el.href=CONTACT.telegram;el.target='_blank';el.rel='noopener noreferrer';
+  });
+  const tgCh=document.getElementById('foot-tg-ch');if(tgCh){tgCh.href=CONTACT.tgChannel;tgCh.target='_blank';tgCh.rel='noopener noreferrer'}
+  const waCh=document.getElementById('foot-wa-ch');if(waCh){waCh.href=CONTACT.waChannel;waCh.target='_blank';waCh.rel='noopener noreferrer'}
+}
+
+/* ════════ TICKER PAUSE ════════ */
+function initTickerPause(){
+  const bar=document.getElementById('ticker');const trk=document.getElementById('tt');
+  if(!bar||!trk)return;
+  bar.addEventListener('mouseenter',()=>{trk.style.animationPlayState='paused'});
+  bar.addEventListener('mouseleave',()=>{trk.style.animationPlayState='running'});
+}
+
+/* ════════ INIT ════════ */
+document.addEventListener('DOMContentLoaded',()=>{
+  applyLang(lang);
+  buildLangMenu();
+  initObserver();
+  initNav();
+  initBurger();
+  initLangMenu();
+  initCursor();
+  initParticles();
+  initConn();
+  initContactLinks();
+  initTickerPause();
+});
+</script>
+</body>
+</html>

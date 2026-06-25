@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<!-- PEAK AI Agency © 2025 | peakvault.com | All rights reserved -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="PEAK AI Agency — وكالة ذكاء اصطناعي تبني ما تحلم به. منتجات رقمية حصرية وخدمات بناء مخصصة، دفع بالعملات المشفرة.">
+<meta name="author" content="PEAK AI Agency">
+<meta name="copyright" content="© 2025 PEAK AI Agency — peakvault.com">
+<meta property="og:title" content="PEAK AI Agency — نبني ما تحلم به">
+<meta property="og:description" content="وكالة رقمية من عام 2100 — ذكاء اصطناعي، رفوف رقمية، بناء بالطلب">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050508">
+<title>PEAK AI Agency — نبني ما تحلم به</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PEAK AI Agency",
+  "alternateName": "PEAKvault",
+  "url": "https://peakvault.com",
+  "founder": "Darm",
+  "copyrightYear": "2025",
+  "sameAs": [
+    "https://t.me/T963996767062",
+    "https://wa.me/963996767062"
+  ]
+}
+</script>
+<style>
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+/* ══════════════════════════════════════════════
+   DESIGN SYSTEM
+   ══════════════════════════════════════════════ */
+:root{
+  --void:#050508;--abyss:#07070e;--deep:#0a0a14;
+  --surface:#10101c;--card:#161626;--lift:#1e1e32;
+  --gold:#c8a45a;--gold-l:#e8c87a;--gold-d:#8a6835;
+  --gold-xs:rgba(200,164,90,.06);--gold-sm:rgba(200,164,90,.12);
+  --gold-md:rgba(200,164,90,.25);--gold-lg:rgba(200,164,90,.45);
+  --platinum:#e8e4dc;--silver:#a8a49c;--dust:#6a6660;
+  --neon-g:#00ff88;--neon-b:#0088ff;--neon-p:#8844ff;
+  --danger:#ff2244;--success:#00e676;--warning:#ffaa00;
+  --font-d:'Cinzel',serif;
+  --font-b:'Cormorant Garamond',serif;
+  --font-m:'Space Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-el:cubic-bezier(.175,.885,.32,1.275);
+  --fast:160ms;--mid:320ms;--slow:600ms;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  background:var(--void);color:var(--platinum);
+  font-family:var(--font-b);font-size:clamp(15px,1.1vw,17px);
+  line-height:1.7;overflow-x:hidden;cursor:none;
+}
+body.ltr{direction:ltr;text-align:left}
+body.no-scroll{overflow:hidden;height:100vh}
+::selection{background:var(--gold-md);color:var(--void)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:none;border:none;background:none;font:inherit;color:inherit}
+
+/* ── Custom Cursor ── */
+#cr,#cd{
+  position:fixed;pointer-events:none;z-index:99999;
+  transform:translate(-50%,-50%);transition:opacity var(--fast);
+}
+#cr{
+  width:34px;height:34px;border:1.5px solid var(--gold);
+  border-radius:50%;
+  transition:width var(--mid) var(--ease),height var(--mid) var(--ease),
+             border-color var(--mid),background var(--mid);
+  mix-blend-mode:screen;
+}
+#cd{width:5px;height:5px;background:var(--gold);border-radius:50%}
+body.ch #cr{width:56px;height:56px;background:var(--gold-xs);border-color:var(--gold-l)}
+
+/* ── Grid Overlay ── */
+#grid{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(var(--gold-xs) 1px,transparent 1px),
+    linear-gradient(90deg,var(--gold-xs) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);
+}
+
+/* ── Particle Canvas ── */
+#pc{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.55}
+
+/* ── Ambient Logo (permanent background) ── */
+#ambient-logo{
+  position:fixed;inset:0;pointer-events:none;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+#ambient-logo svg{
+  width:min(140vw,1400px);height:auto;
+  opacity:.025;
+  animation:ambientDrift 60s ease-in-out infinite;
+}
+@keyframes ambientDrift{
+  0%,100%{transform:translate(0,0) rotate(0deg) scale(1)}
+  50%{transform:translate(2%,-1.5%) rotate(0.6deg) scale(1.02)}
+}
+#ambient-logo text{
+  font-family:var(--font-d);font-weight:900;
+  fill:var(--gold);
+}
+
+/* ── Scanlines + Noise ── */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:2;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px
+  );
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;
+}
+
+#app{position:relative;z-index:10}
+
+/* ══════════════════════════════════════════════
+   LOGO INTRO — "حلم الأحرف"
+   ══════════════════════════════════════════════ */
+#intro{
+  position:fixed;inset:0;z-index:9000;
+  background:var(--void);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 700ms var(--ease),visibility 700ms;
+}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+#intro-stage{
+  position:relative;width:min(90vw,900px);height:min(60vh,500px);
+}
+.letter{
+  position:absolute;
+  font-family:var(--font-d);font-weight:900;
+  font-size:clamp(2.5rem,9vw,7rem);
+  color:var(--gold);
+  opacity:0;
+  will-change:transform,opacity;
+  filter:drop-shadow(0 0 18px rgba(200,164,90,.35));
+}
+#intro-sub{
+  position:absolute;bottom:8%;left:50%;
+  transform:translateX(-50%);
+  font-family:var(--font-m);font-size:clamp(.7rem,1.6vw,.95rem);
+  letter-spacing:.15em;color:var(--silver);
+  white-space:nowrap;opacity:0;text-align:center;
+  max-width:90vw;overflow:hidden;
+}
+#intro-cursor{
+  display:inline-block;width:2px;height:1em;
+  background:var(--gold);margin-right:4px;vertical-align:middle;
+  animation:blink 0.9s steps(1) infinite;
+}
+@keyframes blink{50%{opacity:0}}
+#intro-skip{
+  position:absolute;bottom:24px;
+  font-family:var(--font-m);font-size:.65rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--dust);
+  opacity:0;transition:opacity var(--mid),color var(--fast);
+  padding:8px 16px;border:1px solid var(--gold-xs);
+}
+body:not(.ltr) #intro-skip{left:50%;transform:translateX(-50%)}
+body.ltr #intro-skip{left:50%;transform:translateX(-50%)}
+#intro-skip.show{opacity:1}
+#intro-skip:hover{color:var(--gold);border-color:var(--gold-sm)}
+
+@media(prefers-reduced-motion:reduce){
+  #intro{display:none}
+}
+
+/* ══════════════════════════════════════════════
+   TICKER
+   ══════════════════════════════════════════════ */
+#ticker{
+  position:fixed;top:0;left:0;right:0;z-index:199;
+  height:30px;background:var(--gold);overflow:hidden;
+  display:flex;align-items:center;
+}
+.t-track{
+  display:flex;gap:48px;white-space:nowrap;
+  animation:tickR 38s linear infinite;
+}
+body.ltr .t-track{animation-name:tickL}
+@keyframes tickR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes tickL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.t-item{
+  font-family:var(--font-m);font-size:.62rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--void);
+  display:flex;align-items:center;gap:16px;
+}
+.t-sep{opacity:.35;font-size:.45rem}
+
+/* ══════════════════════════════════════════════
+   NAVBAR
+   ══════════════════════════════════════════════ */
+#nav{
+  position:fixed;top:30px;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px clamp(20px,5vw,96px);
+  transition:background var(--mid),backdrop-filter var(--mid),padding var(--mid);
+  border-bottom:1px solid transparent;
+}
+#nav.sc{
+  background:rgba(5,5,8,.88);backdrop-filter:blur(24px);
+  border-bottom-color:var(--gold-xs);
+  padding-top:10px;padding-bottom:10px;
+}
+.logo{
+  font-family:var(--font-d);font-size:clamp(1rem,1.8vw,1.3rem);
+  font-weight:700;letter-spacing:.25em;color:var(--gold);
+  text-transform:uppercase;display:flex;align-items:center;gap:10px;
+}
+.logo-mark{
+  position:relative;width:30px;height:30px;
+  display:grid;place-items:center;flex-shrink:0;
+}
+.logo-mark svg{width:100%;height:100%}
+.logo-name{
+  background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,
+    var(--gold-l) 50%,var(--gold) 70%,var(--gold-d) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:shimmer 5s linear infinite;
+}
+@keyframes shimmer{from{background-position:200% center}to{background-position:-200% center}}
+@media(prefers-reduced-motion:reduce){.logo-name{animation:none;color:var(--gold)}}
+
+.nav-links{
+  display:flex;align-items:center;gap:clamp(20px,3vw,56px);list-style:none;
+}
+@media(max-width:768px){.nav-links{display:none}}
+.nav-links a{
+  font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--silver);
+  transition:color var(--fast);position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:right;
+  transition:transform var(--mid) var(--ease);
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-sw{position:relative}
+.lang-btn{
+  font-family:var(--font-m);font-size:.62rem;letter-spacing:.15em;
+  padding:6px 10px;border:1px solid var(--gold-sm);
+  color:var(--silver);transition:all var(--fast);
+  text-transform:uppercase;display:flex;align-items:center;gap:6px;
+}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lang-menu{
+  position:absolute;top:calc(100% + 8px);
+  background:var(--surface);border:1px solid var(--gold-sm);
+  min-width:140px;box-shadow:0 16px 48px rgba(0,0,0,.5);
+  opacity:0;transform:translateY(-8px);pointer-events:none;
+  transition:all var(--fast) var(--ease);z-index:250;
+}
+body:not(.ltr) .lang-menu{left:0}
+body.ltr .lang-menu{right:0}
+.lang-menu.open{opacity:1;transform:translateY(0);pointer-events:all}
+.lang-opt{
+  display:flex;align-items:center;gap:10px;width:100%;
+  padding:10px 14px;font-size:.78rem;color:var(--silver);
+  transition:all var(--fast);text-align:start;
+}
+.lang-opt:hover{background:var(--gold-xs);color:var(--gold)}
+.lang-opt.on{color:var(--gold)}
+
+.burger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px}
+@media(max-width:768px){.burger{display:flex}}
+.burger span{display:block;height:1px;background:var(--gold);transition:all var(--mid) var(--ease)}
+.burger.on span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+#mmenu{
+  position:fixed;inset:0;z-index:190;
+  background:rgba(5,5,8,.97);backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:32px;
+  transform:translateY(-100%);transition:transform var(--slow) var(--ease);
+}
+#mmenu.on{transform:translateY(0)}
+.mm-link{
+  font-family:var(--font-d);font-size:clamp(1.6rem,6vw,2.8rem);
+  letter-spacing:.2em;color:var(--silver);text-transform:uppercase;
+  transition:color var(--fast);
+}
+.mm-link:hover{color:var(--gold)}
+
+/* ══════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════ */
+#hero{
+  position:relative;min-height:100svh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:calc(128px + 30px) clamp(20px,8vw,128px) 100px;
+  text-align:center;overflow:hidden;
+}
+.orb{
+  position:absolute;border-radius:50%;filter:blur(80px);
+  pointer-events:none;animation:orbF 12s ease-in-out infinite;
+}
+.orb-1{
+  width:clamp(280px,50vw,680px);height:clamp(280px,50vw,680px);
+  background:radial-gradient(circle,rgba(200,164,90,.11),transparent 70%);
+  top:-10%;right:-8%;animation-delay:0s;
+}
+.orb-2{
+  width:clamp(180px,32vw,480px);height:clamp(180px,32vw,480px);
+  background:radial-gradient(circle,rgba(0,136,255,.07),transparent 70%);
+  bottom:-5%;left:-5%;animation-delay:-4s;
+}
+.orb-3{
+  width:clamp(140px,22vw,360px);height:clamp(140px,22vw,360px);
+  background:radial-gradient(circle,rgba(136,68,255,.06),transparent 70%);
+  top:30%;left:8%;animation-delay:-8s;
+}
+@keyframes orbF{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(18px,-28px) scale(1.05)}
+  66%{transform:translate(-14px,18px) scale(.97)}
+}
+.h-eye{
+  font-family:var(--font-m);font-size:clamp(.58rem,1.1vw,.72rem);
+  letter-spacing:.4em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:24px;display:flex;align-items:center;gap:16px;
+  opacity:0;animation:fsu var(--slow) var(--ease) .3s forwards;
+}
+.h-eye::before,.h-eye::after{content:'';display:block;width:36px;height:1px;background:var(--gold-md)}
+.h-title{
+  font-family:var(--font-d);
+  font-size:clamp(2.4rem,8.5vw,7.5rem);
+  font-weight:900;line-height:.95;
+  letter-spacing:-.01em;
+  margin-bottom:24px;
+  opacity:0;animation:fsu var(--slow) var(--ease) .5s forwards;
+}
+.h-title .l1{color:var(--platinum);display:block}
+.h-title .l2{
+  display:block;
+  background:linear-gradient(135deg,var(--gold),var(--gold-l),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:200% 100%;
+  filter:drop-shadow(0 0 24px rgba(200,164,90,.3));
+  animation:gsh 4s linear infinite,fsu var(--slow) var(--ease) .5s forwards;
+}
+@keyframes gsh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.h-title .l2{animation:none;background-position:0 0}}
+.h-sub{
+  font-family:var(--font-b);font-size:clamp(.95rem,1.8vw,1.25rem);
+  font-weight:300;font-style:italic;color:var(--silver);
+  max-width:600px;margin:0 auto 48px;line-height:1.65;
+  opacity:0;animation:fsu var(--slow) var(--ease) .7s forwards;
+}
+.h-ctas{
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  opacity:0;animation:fsu var(--slow) var(--ease) .9s forwards;
+}
+.btn-p{
+  position:relative;font-family:var(--font-m);font-size:.68rem;
+  letter-spacing:.25em;text-transform:uppercase;
+  color:var(--void);background:var(--gold);
+  padding:14px clamp(24px,3vw,40px);overflow:hidden;
+  transition:transform var(--mid) var(--ease),box-shadow var(--mid);
+}
+.btn-p::before{
+  content:'';position:absolute;inset:0;background:var(--gold-l);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform var(--mid) var(--ease);
+}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px var(--gold-md)}
+.btn-p:hover::before{transform:scaleX(1)}
+.btn-p span{position:relative;z-index:1}
+.btn-s{
+  font-family:var(--font-m);font-size:.68rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--gold);
+  padding:13px clamp(22px,3vw,38px);
+  border:1px solid var(--gold-sm);position:relative;overflow:hidden;
+  transition:all var(--mid) var(--ease);
+}
+.btn-s::before{
+  content:'';position:absolute;inset:0;background:var(--gold-xs);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform var(--mid) var(--ease);
+}
+.btn-s:hover{border-color:var(--gold);transform:translateY(-2px)}
+.btn-s:hover::before{transform:scaleX(1)}
+.btn-s span{position:relative;z-index:1}
+
+.h-stats{
+  display:flex;gap:clamp(24px,5vw,80px);margin-top:80px;
+  justify-content:center;flex-wrap:wrap;
+  opacity:0;animation:fsu var(--slow) var(--ease) 1.1s forwards;
+}
+.h-stat{text-align:center;position:relative}
+.h-stat::after{
+  content:'';position:absolute;
+  right:-20px;top:50%;transform:translateY(-50%);
+  width:1px;height:28px;background:var(--gold-sm);
+}
+body.ltr .h-stat::after{right:auto;left:-20px}
+@media(min-width:600px){
+  .h-stat::after{right:-40px}
+  body.ltr .h-stat::after{right:auto;left:-40px}
+}
+.h-stat:last-child::after{display:none}
+.sn{
+  font-family:var(--font-d);font-size:clamp(1.5rem,3.5vw,2.4rem);
+  font-weight:700;color:var(--gold);line-height:1;display:block;
+}
+.sl{
+  font-family:var(--font-m);font-size:.58rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--dust);margin-top:6px;display:block;
+}
+.h-scroll{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fi var(--slow) 1.5s forwards;
+}
+.sc-line{width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:scp 2s ease-in-out infinite}
+@keyframes scp{0%,100%{opacity:.3;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.2)}}
+.sc-txt{font-family:var(--font-m);font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dust);writing-mode:vertical-rl}
+
+/* ══════════════════════════════════════════════
+   TRUST BAR
+   ══════════════════════════════════════════════ */
+#tbar{
+  position:relative;z-index:10;background:var(--surface);
+  border-top:1px solid var(--gold-xs);border-bottom:1px solid var(--gold-xs);
+  padding:20px clamp(20px,5vw,96px);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.ti{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--font-m);font-size:.62rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--silver);
+}
+.ti-ic{
+  width:30px;height:30px;border:1px solid var(--gold-sm);
+  display:grid;place-items:center;color:var(--gold);font-size:.85rem;flex-shrink:0;
+}
+@media(max-width:480px){.ti:nth-child(n+4){display:none}}
+
+/* ══════════════════════════════════════════════
+   SERVICES PREVIEW
+   ══════════════════════════════════════════════ */
+#services-preview{
+  position:relative;z-index:10;
+  padding:clamp(80px,10vw,160px) clamp(20px,5vw,96px);
+}
+.sec-hd{text-align:center;margin-bottom:clamp(48px,8vw,96px)}
+.sec-eye{
+  font-family:var(--font-m);font-size:.62rem;letter-spacing:.4em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block;
+}
+.sec-ttl{
+  font-family:var(--font-d);font-size:clamp(1.7rem,4.5vw,3.2rem);
+  font-weight:700;letter-spacing:.05em;
+  color:var(--platinum);line-height:1.1;
+}
+.sg{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+  gap:12px;
+}
+.svc-card{
+  position:relative;background:var(--card);border:1px solid var(--gold-xs);
+  padding:36px 28px;overflow:hidden;
+  opacity:0;transform:translateY(16px);
+  transition:transform var(--mid) var(--ease),border-color var(--mid),
+             background var(--mid),box-shadow var(--mid);
+}
+.svc-card.rv.on{opacity:1;transform:translateY(0)}
+.svc-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:right;
+  transition:transform var(--mid) var(--ease);
+}
+.svc-card:hover{
+  transform:translateY(-4px);border-color:var(--gold-md);
+  background:var(--lift);
+  box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px var(--gold-sm);
+}
+.svc-card:hover::after{transform:scaleX(1);transform-origin:left}
+.svc-ico{font-size:2rem;margin-bottom:16px;display:block}
+.svc-ttl{
+  font-family:var(--font-d);font-size:1.05rem;font-weight:700;
+  letter-spacing:.05em;color:var(--platinum);margin-bottom:10px;
+}
+.svc-desc{font-size:.92rem;color:var(--dust);line-height:1.6;margin-bottom:20px}
+.svc-price{
+  font-family:var(--font-m);font-size:.78rem;letter-spacing:.1em;
+  color:var(--gold);display:block;margin-bottom:18px;
+}
+.svc-link{
+  font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);
+  display:inline-flex;align-items:center;gap:8px;
+  transition:gap var(--fast);
+}
+.svc-card:hover .svc-link{gap:14px}
+
+/* ══════════════════════════════════════════════
+   STORE PREVIEW
+   ══════════════════════════════════════════════ */
+#store-preview{
+  position:relative;z-index:10;background:var(--deep);
+  border-top:1px solid var(--gold-xs);border-bottom:1px solid var(--gold-xs);
+  padding:clamp(80px,10vw,160px) clamp(20px,5vw,96px);
+}
+.shelf-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+  gap:12px;
+}
+.shelf-card{
+  position:relative;background:var(--card);
+  border:1px dashed var(--gold-sm);
+  padding:32px 22px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  opacity:0;transform:translateY(16px);
+  transition:transform var(--mid) var(--ease),border-color var(--mid),background var(--mid);
+}
+.shelf-card.rv.on{opacity:1;transform:translateY(0)}
+.shelf-card:hover{border-color:var(--gold-md);background:var(--lift);transform:translateY(-4px)}
+.shelf-card.special{
+  border-style:solid;border-color:var(--gold-sm);
+  background:linear-gradient(135deg,var(--card),var(--surface));
+}
+.shelf-ico{
+  font-size:1.8rem;width:56px;height:56px;
+  border:1px solid var(--gold-xs);display:grid;place-items:center;
+  color:var(--gold);opacity:.7;
+}
+.shelf-ttl{
+  font-family:var(--font-d);font-size:.92rem;font-weight:600;
+  letter-spacing:.08em;color:var(--platinum);
+}
+.shelf-desc{font-size:.82rem;color:var(--dust);line-height:1.5}
+.shelf-btn{
+  font-family:var(--font-m);font-size:.6rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);
+  border:1px solid var(--gold-sm);padding:8px 16px;
+  transition:all var(--fast);margin-top:4px;
+}
+.shelf-btn:hover{background:var(--gold-xs);border-color:var(--gold)}
+
+/* ══════════════════════════════════════════════
+   PROCESS
+   ══════════════════════════════════════════════ */
+#process{
+  position:relative;z-index:10;
+  padding:clamp(80px,10vw,160px) clamp(20px,5vw,96px);
+}
+.proc-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+  gap:0;position:relative;
+}
+.proc-step{
+  position:relative;padding:0 24px 24px;text-align:center;
+  opacity:0;transform:translateY(16px);
+}
+.proc-step.rv.on{opacity:1;transform:translateY(0)}
+.proc-num{
+  font-family:var(--font-d);font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:900;color:var(--gold-xs);
+  -webkit-text-stroke:1px var(--gold-sm);
+  line-height:1;margin-bottom:16px;
+}
+.proc-ttl{
+  font-family:var(--font-d);font-size:1rem;font-weight:700;
+  letter-spacing:.08em;color:var(--platinum);margin-bottom:8px;
+}
+.proc-desc{font-size:.85rem;color:var(--dust);line-height:1.6}
+.proc-step::after{
+  content:'';position:absolute;top:24px;
+  width:100%;height:1px;
+  background:linear-gradient(90deg,var(--gold-sm),transparent);
+}
+body:not(.ltr) .proc-step::after{right:-50%}
+body.ltr .proc-step::after{left:-50%}
+.proc-step:last-child::after{display:none}
+@media(max-width:768px){.proc-step::after{display:none}}
+
+/* ══════════════════════════════════════════════
+   SOCIAL PROOF
+   ══════════════════════════════════════════════ */
+#proof{
+  position:relative;z-index:10;background:var(--surface);
+  border-top:1px solid var(--gold-xs);border-bottom:1px solid var(--gold-xs);
+  padding:clamp(64px,8vw,120px) clamp(20px,5vw,96px);
+}
+.proof-g{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:48px;max-width:1100px;margin:0 auto;
+}
+.ps{text-align:center}
+.pn{
+  font-family:var(--font-d);font-size:clamp(2.2rem,5.5vw,4rem);
+  font-weight:900;color:var(--gold);line-height:1;display:block;
+  letter-spacing:-.02em;
+}
+.pl{
+  font-family:var(--font-m);font-size:.62rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--silver);margin-top:8px;display:block;
+}
+.live{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font-m);font-size:.52rem;letter-spacing:.2em;
+  color:var(--neon-g);margin-top:6px;
+}
+.live::before{
+  content:'';width:6px;height:6px;background:var(--neon-g);
+  border-radius:50%;animation:lp 2s ease-in-out infinite;
+}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* ══════════════════════════════════════════════
+   CTA
+   ══════════════════════════════════════════════ */
+#cta{
+  position:relative;z-index:10;
+  padding:clamp(96px,12vw,180px) clamp(20px,8vw,128px);
+  text-align:center;overflow:hidden;
+}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(200,164,90,.05),transparent 70%)}
+.cta-ln{position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-sm),transparent)}
+.cta-ttl{
+  font-family:var(--font-d);font-size:clamp(1.7rem,4.5vw,3.5rem);
+  font-weight:700;letter-spacing:.05em;
+  color:var(--platinum);margin-bottom:16px;line-height:1.1;position:relative;
+}
+.cta-sub{
+  font-family:var(--font-b);font-style:italic;
+  font-size:clamp(.95rem,1.8vw,1.15rem);
+  color:var(--silver);margin-bottom:40px;position:relative;
+}
+.cta-act{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+
+/* ══════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════ */
+#foot{
+  position:relative;z-index:10;background:var(--abyss);
+  border-top:1px solid var(--gold-xs);
+  padding:clamp(64px,8vw,120px) clamp(20px,5vw,96px) 32px;
+}
+.foot-g{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:48px;margin-bottom:48px;
+}
+.foot-tag{font-family:var(--font-b);font-style:italic;font-size:.88rem;color:var(--dust);line-height:1.65;margin-top:16px}
+.fc-ttl{
+  font-family:var(--font-m);font-size:.58rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;
+}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px}
+.flinks a{font-size:.83rem;color:var(--dust);transition:color var(--fast);display:flex;align-items:center;gap:8px}
+.flinks a:hover{color:var(--gold)}
+.foot-coins{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.coin{font-family:var(--font-m);font-size:.52rem;letter-spacing:.12em;padding:4px 8px;border:1px solid var(--gold-xs);color:var(--dust)}
+.foot-bot{
+  border-top:1px solid var(--gold-xs);padding-top:24px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.foot-cp{font-family:var(--font-m);font-size:.58rem;letter-spacing:.15em;color:var(--dust)}
+
+/* ══════════════════════════════════════════════
+   FLOATING ACTIONS (WhatsApp, Telegram, AI)
+   ══════════════════════════════════════════════ */
+#float-stack{
+  position:fixed;bottom:32px;z-index:300;
+  display:flex;flex-direction:column;gap:12px;
+}
+body:not(.ltr) #float-stack{left:32px}
+body.ltr #float-stack{right:32px}
+.float-btn{
+  width:52px;height:52px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;font-size:1.3rem;
+  transition:transform var(--mid) var(--ease-el),box-shadow var(--mid);
+  box-shadow:0 8px 28px rgba(0,0,0,.4);
+}
+.float-btn:hover{transform:scale(1.1)}
+.float-wa{background:#25D366;color:#fff}
+.float-tg{background:#229ED9;color:#fff}
+.float-ai{
+  width:58px;height:58px;background:var(--gold);color:var(--void);
+  box-shadow:0 8px 32px var(--gold-md);
+}
+.float-ai::before{
+  content:'';position:absolute;inset:-4px;border:1px solid var(--gold-sm);
+  animation:abp 3s ease-out infinite;
+}
+@keyframes abp{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+.float-ai:hover{box-shadow:0 12px 48px var(--gold-lg)}
+.ai-ico{font-family:var(--font-d);font-size:.85rem;font-weight:700;letter-spacing:.1em}
+
+/* AI Drawer */
+#ai-drw{
+  position:fixed;bottom:120px;
+  width:min(370px,calc(100vw - 48px));
+  background:var(--surface);border:1px solid var(--gold-sm);
+  box-shadow:0 24px 80px rgba(0,0,0,.65);
+  transform:translateY(16px) scale(.96);opacity:0;
+  pointer-events:none;transition:all var(--mid) var(--ease);
+  z-index:300;
+}
+body:not(.ltr) #ai-drw{left:32px;transform-origin:bottom left}
+body.ltr #ai-drw{right:32px;transform-origin:bottom right}
+#ai-drw.on{transform:translateY(0) scale(1);opacity:1;pointer-events:all}
+.ai-hd{background:var(--card);border-bottom:1px solid var(--gold-xs);padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.ai-ttl{font-family:var(--font-d);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px}
+.ai-dot{width:7px;height:7px;background:var(--neon-g);border-radius:50%;animation:lp 2s ease-in-out infinite}
+.ai-x{color:var(--dust);font-size:1.1rem;line-height:1;transition:color var(--fast)}
+.ai-x:hover{color:var(--gold)}
+.ai-msgs{height:250px;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;scrollbar-width:thin;scrollbar-color:var(--gold-xs) transparent}
+.msg{max-width:88%;padding:8px 12px;font-size:.82rem;line-height:1.5;border:1px solid transparent;animation:ms var(--fast) var(--ease) forwards}
+@keyframes ms{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.msg.bot{background:var(--card);border-color:var(--gold-xs);color:var(--platinum);align-self:flex-start;border-radius:0 8px 8px 8px}
+.msg.usr{background:var(--gold-xs);border-color:var(--gold-sm);color:var(--platinum);align-self:flex-end;border-radius:8px 0 8px 8px}
+.msg.thk{background:var(--card);border-color:var(--gold-xs);align-self:flex-start}
+.thk-dots{display:flex;gap:4px;padding:2px 0}
+.thk-dots span{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:td 1.2s ease-in-out infinite}
+.thk-dots span:nth-child(2){animation-delay:.2s}
+.thk-dots span:nth-child(3){animation-delay:.4s}
+@keyframes td{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-6px);opacity:1}}
+.ai-inp-row{border-top:1px solid var(--gold-xs);padding:10px 14px;display:flex;gap:10px;align-items:center}
+#ai-in{flex:1;background:transparent;border:none;outline:none;font-family:var(--font-b);font-size:.83rem;color:var(--platinum);caret-color:var(--gold)}
+#ai-in::placeholder{color:var(--dust);font-style:italic}
+.ai-snd{width:30px;height:30px;background:var(--gold);display:grid;place-items:center;color:var(--void);font-size:.8rem;flex-shrink:0;transition:all var(--fast)}
+.ai-snd:hover{background:var(--gold-l);transform:scale(1.06)}
+
+/* ══════════════════════════════════════════════
+   CONNECTION BANNER
+   ══════════════════════════════════════════════ */
+#cbn{
+  position:fixed;top:0;left:0;right:0;z-index:99999;
+  padding:6px 16px;text-align:center;
+  font-family:var(--font-m);font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;
+  transform:translateY(-100%);transition:transform var(--mid) var(--ease);
+}
+#cbn.on{transform:translateY(0)}
+#cbn.ol{background:var(--neon-g);color:var(--void)}
+#cbn.off{background:var(--warning);color:var(--void)}
+
+/* ══════════════════════════════════════════════
+   LAST PURCHASE TOAST + SCROLL PROGRESS
+   ══════════════════════════════════════════════ */
+#scroll-progress{
+  position:fixed;top:0;left:0;right:0;height:2px;z-index:201;
+  background:var(--gold);transform-origin:left;transform:scaleX(0);
+  transition:transform 100ms linear;
+  box-shadow:0 0 8px var(--gold-md);
+}
+body.ltr #scroll-progress{transform-origin:right}
+
+#toast{
+  position:fixed;bottom:32px;left:50%;
+  transform:translate(-50%,120%);
+  background:var(--card);border:1px solid var(--gold-sm);
+  padding:12px 20px;display:flex;align-items:center;gap:12px;
+  font-size:.8rem;color:var(--platinum);
+  box-shadow:0 16px 48px rgba(0,0,0,.5);
+  z-index:299;transition:transform var(--mid) var(--ease);
+  max-width:min(90vw,360px);
+}
+#toast.show{transform:translate(-50%,0)}
+.toast-ico{
+  width:32px;height:32px;background:var(--gold-xs);
+  border:1px solid var(--gold-sm);display:grid;place-items:center;
+  color:var(--gold);font-size:.9rem;flex-shrink:0;
+}
+
+/* ══════════════════════════════════════════════
+   REVEAL / UTILS
+   ══════════════════════════════════════════════ */
+@keyframes fsu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease)}
+.rv.on{opacity:1;transform:translateY(0)}
+@media(max-width:480px){.h-stat::after{display:none}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body class="no-scroll">
+
+<!-- ════════ LOGO INTRO ════════ -->
+<div id="intro" role="dialog" aria-label="شعار PEAK AI Agency">
+  <div id="intro-stage" aria-hidden="true"></div>
+  <div id="intro-sub"></div>
+  <button id="intro-skip">تخطّي →</button>
+</div>
+
+<!-- Connection Banner -->
+<div id="cbn" role="status" aria-live="polite"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- Custom Cursor -->
+<div id="cr" aria-hidden="true"></div>
+<div id="cd" aria-hidden="true"></div>
+
+<!-- Background -->
+<div id="grid" aria-hidden="true"></div>
+<canvas id="pc" aria-hidden="true"></canvas>
+<div id="ambient-logo" aria-hidden="true">
+  <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+    <text x="400" y="140" font-size="140" text-anchor="middle">PEAK</text>
+    <text x="400" y="230" font-size="60" text-anchor="middle" letter-spacing="20">AI</text>
+  </svg>
+</div>
+
+<!-- Ticker -->
+<div id="ticker" aria-label="إعلانات" role="marquee">
+  <div class="t-track" id="tt"></div>
+</div>
+
+<!-- Mobile Menu -->
+<nav id="mmenu" aria-label="قائمة الجوال">
+  <a href="store.html"    class="mm-link" data-i="nav.store">الرفوف</a>
+  <a href="vault.html"    class="mm-link" data-i="nav.vault">أعمالنا</a>
+  <a href="services.html" class="mm-link" data-i="nav.services">الخدمات</a>
+  <a href="about.html"    class="mm-link" data-i="nav.about">من نحن</a>
+  <a href="#" class="mm-link" id="mm-contact" data-i="nav.contact">تواصل</a>
+</nav>
+
+<!-- Navbar -->
+<header id="nav" role="banner">
+  <a href="/" class="logo" aria-label="PEAK AI Agency">
+    <span class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/>
+        <path d="M20 4 L20 34" stroke="currentColor" stroke-width="1" opacity="0.4" style="color:var(--gold)"/>
+      </svg>
+    </span>
+    <span class="logo-name">PEAK AI</span>
+  </a>
+  <nav aria-label="رئيسي">
+    <ul class="nav-links" role="list">
+      <li><a href="store.html"    data-i="nav.store">الرفوف</a></li>
+      <li><a href="vault.html"    data-i="nav.vault">أعمالنا</a></li>
+      <li><a href="services.html" data-i="nav.services">الخدمات</a></li>
+      <li><a href="about.html"    data-i="nav.about">من نحن</a></li>
+    </ul>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+        <span id="lang-cur">AR</span> ▾
+      </button>
+      <div class="lang-menu" id="lang-menu" role="menu"></div>
+    </div>
+    <button class="burger" id="burg" aria-label="القائمة" aria-expanded="false" aria-controls="mmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- APP -->
+<main id="app">
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="htitle">
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <span class="h-eye" data-i="hero.badge">وكالة ذكاء اصطناعي سيادية</span>
+
+  <h1 class="h-title" id="htitle">
+    <span class="l1" data-i="hero.l1">نبني ما تحلم به</span>
+    <span class="l2" data-i="hero.l2">بالذكاء الاصطناعي</span>
+  </h1>
+
+  <p class="h-sub" data-i="hero.sub">
+    منتجات رقمية حصرية وخدمات بناء مخصصة — من فكرة إلى منتج جاهز
+    في أيام لا أسابيع، بدفع كريبتو مباشر وآمن
+  </p>
+
+  <div class="h-ctas">
+    <a href="#" class="btn-p" id="hero-cta-order"><span data-i="btn.order">اطلب مشروعك</span></a>
+    <a href="store.html" class="btn-s"><span data-i="btn.store">تصفح الرفوف</span></a>
+  </div>
+
+  <div class="h-stats" aria-label="إحصاءات">
+    <div class="h-stat">
+      <span class="sn" id="s1" data-t="7">0</span>
+      <span class="sl" data-i="st.langs">لغة مدعومة</span>
+    </div>
+    <div class="h-stat">
+      <span class="sn" id="s2" data-t="22">0</span>
+      <span class="sl" data-i="st.sectors">قطاع متخصص</span>
+    </div>
+    <div class="h-stat">
+      <span class="sn" id="s3" data-t="5">0</span>
+      <span class="sl" data-i="st.crypto">عملات مشفرة</span>
+    </div>
+    <div class="h-stat">
+      <span class="sn" id="s4" data-t="24">0</span>
+      <span class="sl" data-i="st.support">دعم متواصل</span>
+    </div>
+  </div>
+
+  <div class="h-scroll" aria-hidden="true">
+    <div class="sc-line"></div>
+    <span class="sc-txt">scroll</span>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section id="tbar" aria-label="مزايا">
+  <div class="ti"><div class="ti-ic" aria-hidden="true">⚡</div><span data-i="tr.fast">بناء سريع بالذكاء الاصطناعي</span></div>
+  <div class="ti"><div class="ti-ic" aria-hidden="true">🔐</div><span data-i="tr.secure">دفع مشفر مباشر</span></div>
+  <div class="ti"><div class="ti-ic" aria-hidden="true">✦</div><span data-i="tr.custom">بناء مخصص بالطلب</span></div>
+  <div class="ti"><div class="ti-ic" aria-hidden="true">◈</div><span data-i="tr.sup">دعم 24/7</span></div>
+  <div class="ti"><div class="ti-ic" aria-hidden="true">◐</div><span>USDT · BTC · ETH · BNB</span></div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section id="services-preview" aria-labelledby="svctitle">
+  <div class="sec-hd rv">
+    <span class="sec-eye" data-i="svc.eye">ماذا نبني</span>
+    <h2 class="sec-ttl" id="svctitle" data-i="svc.ttl">خدماتنا</h2>
+  </div>
+  <div class="sg" id="svc-grid"></div>
+</section>
+
+<!-- STORE PREVIEW -->
+<section id="store-preview" aria-labelledby="shelftitle">
+  <div class="sec-hd rv">
+    <span class="sec-eye" data-i="shelf.eye">الرفوف السيادية</span>
+    <h2 class="sec-ttl" id="shelftitle" data-i="shelf.ttl">قادم قريباً</h2>
+  </div>
+  <div class="shelf-grid" id="shelf-grid"></div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" aria-labelledby="proctitle">
+  <div class="sec-hd rv">
+    <span class="sec-eye" data-i="proc.eye">كيف نعمل</span>
+    <h2 class="sec-ttl" id="proctitle" data-i="proc.ttl">المسار من الفكرة للتسليم</h2>
+  </div>
+  <div class="proc-grid" id="proc-grid"></div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section id="proof" aria-labelledby="prooftitle">
+  <div class="sec-hd rv" style="margin-bottom:48px">
+    <span class="sec-eye" data-i="pr.eye">أرقام حية</span>
+    <h2 class="sec-ttl" id="prooftitle" data-i="pr.ttl">الوكالة بالأرقام</h2>
+  </div>
+  <div class="proof-g">
+    <div class="ps rv"><span class="pn" id="p1" data-t="0">0</span><span class="pl" data-i="pr.online">يتصفحون الآن</span><span class="live" data-i="pr.live">مباشر</span></div>
+    <div class="ps rv"><span class="pn" id="p2" data-t="7">0</span><span class="pl" data-i="pr.langs">لغات مدعومة</span><span class="live" data-i="pr.live">مباشر</span></div>
+    <div class="ps rv"><span class="pn" id="p3" data-t="22">0</span><span class="pl" data-i="pr.sectors">قطاعات</span><span class="live" data-i="pr.live">مباشر</span></div>
+    <div class="ps rv"><span class="pn" id="p4">24/7</span><span class="pl" data-i="pr.availability">جاهزون دائماً</span><span class="live" data-i="pr.live">مباشر</span></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" aria-labelledby="cttl">
+  <div class="cta-bg" aria-hidden="true"></div>
+  <div class="cta-ln" aria-hidden="true"></div>
+  <h2 class="cta-ttl rv" id="cttl" data-i="cta.ttl">مشروعك القادم يبدأ هنا</h2>
+  <p  class="cta-sub rv" data-i="cta.sub">تحدث معنا الآن — لا انتظار، لا تعقيد</p>
+  <div class="cta-act rv">
+    <a href="#" class="btn-p" id="cta-wa"><span data-i="cta.b1">واتساب</span></a>
+    <a href="#" class="btn-s" id="cta-tg"><span data-i="cta.b2">تلجرام</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="foot" role="contentinfo">
+  <div class="foot-g">
+    <div>
+      <div class="logo"><span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/></svg>
+      </span><span class="logo-name">PEAK AI</span></div>
+      <p class="foot-tag" data-i="ft.tag">وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.</p>
+      <div class="foot-coins">
+        <span class="coin">USDT TRC-20</span>
+        <span class="coin">USDT BEP-20</span>
+        <span class="coin">BTC</span>
+        <span class="coin">ETH</span>
+        <span class="coin">BNB</span>
+      </div>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.platform">المنصة</span>
+      <ul class="flinks">
+        <li><a href="store.html"    data-i="nav.store">الرفوف</a></li>
+        <li><a href="services.html" data-i="nav.services">الخدمات</a></li>
+        <li><a href="about.html"    data-i="nav.about">من نحن</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.lang">اللغة</span>
+      <ul class="flinks" id="foot-langs"></ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.contact">تواصل</span>
+      <ul class="flinks">
+        <li><a href="#" id="foot-wa">💬 WhatsApp</a></li>
+        <li><a href="#" id="foot-tg">✈ Telegram</a></li>
+        <li><a href="#" id="foot-tg-channel" data-i="ft.channel">قناة الإعلانات</a></li>
+        <li><a href="#" id="foot-wa-channel" data-i="ft.wa_channel">قناة واتساب</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span class="foot-cp" data-i="ft.copy">© 2025 PEAK AI Agency — جميع الحقوق محفوظة</span>
+    <span class="foot-cp" style="color:var(--gold);letter-spacing:.3em;font-size:.52rem">PEAKVAULT.COM</span>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" role="status" aria-live="polite">
+  <div class="toast-ico" aria-hidden="true">◈</div>
+  <span id="toast-text"></span>
+</div>
+
+<!-- FLOATING ACTIONS -->
+<div id="float-stack">
+  <div id="ai-drw" role="dialog" aria-modal="true" aria-labelledby="aittl" aria-hidden="true">
+    <div class="ai-hd">
+      <span class="ai-ttl" id="aittl"><span class="ai-dot" aria-hidden="true"></span>VAULT AI</span>
+      <button class="ai-x" id="ai-x" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="ai-msgs" id="ai-msgs" role="log" aria-live="polite"></div>
+    <div class="ai-inp-row">
+      <input type="text" id="ai-in" maxlength="500" placeholder="اسألني عن أي شيء..." autocomplete="off" aria-label="رسالتك">
+      <button class="ai-snd" id="ai-snd" aria-label="إرسال">→</button>
+    </div>
+  </div>
+  <a href="#" class="float-btn float-wa" id="float-wa" aria-label="واتساب">💬</a>
+  <a href="#" class="float-btn float-tg" id="float-tg" aria-label="تلجرام">✈</a>
+  <button class="float-btn float-ai" id="ai-btn" aria-label="فتح VAULT AI" aria-expanded="false" aria-controls="ai-drw">
+    <span class="ai-ico" aria-hidden="true">AI</span>
+  </button>
+</div>
+
+<script>
+'use strict';
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+/* ══════════════════════════════════════════════
+   CONFIG (contact links — NOT secrets, public channels)
+   ══════════════════════════════════════════════ */
+const CONTACT = Object.freeze({
+  whatsapp:   'https://wa.me/963996767062',
+  telegram:   'https://t.me/T963996767062',
+  tgChannel:  'https://t.me/+hx9uSnNasH40MzBh',
+  waChannel:  'https://whatsapp.com/channel/0029VbCmXviDJ6GsuDynlU3o',
+});
+
+/* ══════════════════════════════════════════════
+   SECURITY UTILS
+   ══════════════════════════════════════════════ */
+function san(s,max=500){
+  return String(s??'')
+    .replace(/[<>"'`&]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;","&":"&amp;"}[c]||c))
+    .replace(/javascript:/gi,'').replace(/on\w+=?/gi,'')
+    .trim().slice(0,max);
+}
+const csrf=(()=>{
+  return ()=>{
+    let t=sessionStorage.getItem('pv_csrf');
+    if(typeof t!=='string'||t.length<32){
+      t=[...crypto.getRandomValues(new Uint8Array(24))].map(b=>b.toString(16).padStart(2,'0')).join('');
+      sessionStorage.setItem('pv_csrf',t);
+    }
+    return t;
+  };
+})();
+csrf();
+
+/* ══════════════════════════════════════════════
+   TRANSLATIONS
+   ══════════════════════════════════════════════ */
+const LANGS=[
+  {code:'ar',label:'العربية',native:'AR',rtl:true},
+  {code:'en',label:'English',native:'EN',rtl:false},
+  {code:'fr',label:'Français',native:'FR',rtl:false},
+  {code:'es',label:'Español',native:'ES',rtl:false},
+  {code:'tr',label:'Türkçe',native:'TR',rtl:false},
+  {code:'de',label:'Deutsch',native:'DE',rtl:false},
+  {code:'zh',label:'中文',native:'ZH',rtl:false},
+];
+
+const TR={
+  ar:{
+    'nav.store':'الرفوف','nav.vault':'أعمالنا','nav.services':'الخدمات','nav.about':'من نحن','nav.contact':'تواصل',
+    'hero.badge':'وكالة ذكاء اصطناعي سيادية',
+    'hero.l1':'نبني ما تحلم به','hero.l2':'بالذكاء الاصطناعي',
+    'hero.sub':'منتجات رقمية حصرية وخدمات بناء مخصصة — من فكرة إلى منتج جاهز في أيام لا أسابيع، بدفع كريبتو مباشر وآمن',
+    'btn.order':'اطلب مشروعك','btn.store':'تصفح الرفوف',
+    'st.langs':'لغة مدعومة','st.sectors':'قطاع متخصص','st.crypto':'عملات مشفرة','st.support':'دعم متواصل',
+    'tr.fast':'بناء سريع بالذكاء الاصطناعي','tr.secure':'دفع مشفر مباشر',
+    'tr.custom':'بناء مخصص بالطلب','tr.sup':'دعم 24/7',
+    'svc.eye':'ماذا نبني','svc.ttl':'خدماتنا',
+    'shelf.eye':'الرفوف السيادية','shelf.ttl':'قادم قريباً',
+    'proc.eye':'كيف نعمل','proc.ttl':'المسار من الفكرة للتسليم',
+    'pr.eye':'أرقام حية','pr.ttl':'الوكالة بالأرقام',
+    'pr.online':'يتصفحون الآن','pr.langs':'لغات مدعومة','pr.sectors':'قطاعات',
+    'pr.availability':'جاهزون دائماً','pr.live':'مباشر',
+    'cta.ttl':'مشروعك القادم يبدأ هنا','cta.sub':'تحدث معنا الآن — لا انتظار، لا تعقيد',
+    'cta.b1':'واتساب','cta.b2':'تلجرام',
+    'ft.tag':'وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.',
+    'ft.platform':'المنصة','ft.lang':'اللغة','ft.contact':'تواصل',
+    'ft.channel':'قناة الإعلانات','ft.wa_channel':'قناة واتساب',
+    'ft.copy':'© 2025 PEAK AI Agency — جميع الحقوق محفوظة',
+    'ai.hello':'مرحباً! أنا VAULT AI — كيف أخدمك اليوم؟',
+    'intro.sub':'ماذا لو كان الذكاء الاصطناعي يعمل لك؟',
+    'toast.msg':'عميل من الإمارات طلب بناء أداة AI منذ لحظات',
+    'tk.1':'⚡ نبني بالذكاء الاصطناعي في أيام',
+    'tk.2':'🔐 دفع مشفر مباشر — لا وسطاء',
+    'tk.3':'✦ بناء مخصص حسب طلبك بالضبط',
+    'tk.4':'◈ 7 لغات · 22 قطاعاً متخصصاً',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'أدوات AI مخصصة','svc.1.desc':'أدوات ذكاء اصطناعي مصممة لمهمتك بالضبط — من المحادثة إلى الأتمتة الكاملة.','svc.1.price':'من 300$','svc.1.cta':'استفسر الآن',
+    'svc.2.ttl':'مواقع وتطبيقات','svc.2.desc':'مواقع وتطبيقات ويب كاملة، سريعة، آمنة، وجاهزة للنشر فوراً.','svc.2.price':'من 500$','svc.2.cta':'استفسر الآن',
+    'svc.3.ttl':'أتمتة وأنظمة','svc.3.desc':'أنظمة تعمل بدلاً عنك — بوتات، تكامل بيانات، تدفقات عمل ذكية.','svc.3.price':'من 400$','svc.3.cta':'استفسر الآن',
+    'shelf.empty.ttl':'منتج قادم','shelf.empty.desc':'هذا الرف يجهَّز الآن — كن أول من يعلم عند توفره.','shelf.empty.btn':'أخبرني عند التوفر',
+    'shelf.special.ttl':'لا تجد ما تريد؟','shelf.special.desc':'صف فكرتك ونبنيها لك خصيصاً — مهما كانت.','shelf.special.btn':'اطلب مشروعاً مخصصاً',
+    'proc.1.ttl':'تتواصل معنا','proc.1.desc':'عبر واتساب أو تلجرام — تشرح ما تحتاجه ببساطة.',
+    'proc.2.ttl':'نتفق على التفاصيل','proc.2.desc':'السعر، المدة، والمواصفات تُحدَّد بوضوح من البداية.',
+    'proc.3.ttl':'نبني بسرعة','proc.3.desc':'الذكاء الاصطناعي يسرّع البناء دون التضحية بالجودة.',
+    'proc.4.ttl':'تستلم وتنطلق','proc.4.desc':'تسليم كامل + شرح، وأنت تملك كل شيء.',
+  },
+  en:{
+    'nav.store':'Shelves','nav.vault':'Our Work','nav.services':'Services','nav.about':'About','nav.contact':'Contact',
+    'hero.badge':'Sovereign AI Agency',
+    'hero.l1':'We Build What You Dream','hero.l2':'With Artificial Intelligence',
+    'hero.sub':'Exclusive digital products and custom build services — from idea to ready product in days, not weeks, with direct secure crypto payment',
+    'btn.order':'Start Your Project','btn.store':'Browse Shelves',
+    'st.langs':'Languages','st.sectors':'Sectors','st.crypto':'Cryptocurrencies','st.support':'Always Available',
+    'tr.fast':'AI-Powered Fast Build','tr.secure':'Direct Crypto Payment',
+    'tr.custom':'Custom Build on Request','tr.sup':'24/7 Support',
+    'svc.eye':'What We Build','svc.ttl':'Our Services',
+    'shelf.eye':'Sovereign Shelves','shelf.ttl':'Coming Soon',
+    'proc.eye':'How We Work','proc.ttl':'From Idea to Delivery',
+    'pr.eye':'Live Numbers','pr.ttl':'The Agency in Numbers',
+    'pr.online':'Browsing Now','pr.langs':'Languages','pr.sectors':'Sectors',
+    'pr.availability':'Always Ready','pr.live':'Live',
+    'cta.ttl':'Your Next Project Starts Here','cta.sub':'Talk to us now — no waiting, no complexity',
+    'cta.b1':'WhatsApp','cta.b2':'Telegram',
+    'ft.tag':'An AI agency that builds your digital products and systems — from idea to delivery.',
+    'ft.platform':'Platform','ft.lang':'Language','ft.contact':'Contact',
+    'ft.channel':'Announcements','ft.wa_channel':'WhatsApp Channel',
+    'ft.copy':'© 2025 PEAK AI Agency — All rights reserved',
+    'ai.hello':"Hello! I'm VAULT AI — how can I help you today?",
+    'intro.sub':'What if AI worked for you?',
+    'toast.msg':'A client from UAE just requested an AI tool build',
+    'tk.1':'⚡ We build with AI in days',
+    'tk.2':'🔐 Direct crypto payment — no middlemen',
+    'tk.3':'✦ Custom-built exactly to your request',
+    'tk.4':'◈ 7 languages · 22 specialized sectors',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'Custom AI Tools','svc.1.desc':'AI tools designed exactly for your task — from chat to full automation.','svc.1.price':'From $300','svc.1.cta':'Inquire Now',
+    'svc.2.ttl':'Websites & Apps','svc.2.desc':'Full web apps and sites — fast, secure, and ready to deploy.','svc.2.price':'From $500','svc.2.cta':'Inquire Now',
+    'svc.3.ttl':'Automation & Systems','svc.3.desc':'Systems that work for you — bots, data integration, smart workflows.','svc.3.price':'From $400','svc.3.cta':'Inquire Now',
+    'shelf.empty.ttl':'Coming Product','shelf.empty.desc':"This shelf is being prepared — be the first to know when it's ready.",'shelf.empty.btn':'Notify Me',
+    'shelf.special.ttl':"Can't find what you need?",'shelf.special.desc':'Describe your idea and we\u2019ll build it for you — whatever it is.','shelf.special.btn':'Request Custom Build',
+    'proc.1.ttl':'You Reach Out','proc.1.desc':'Via WhatsApp or Telegram — simply explain what you need.',
+    'proc.2.ttl':'We Align on Details','proc.2.desc':'Price, timeline, and specs are clear from the start.',
+    'proc.3.ttl':'We Build Fast','proc.3.desc':'AI accelerates the build without sacrificing quality.',
+    'proc.4.ttl':'You Launch','proc.4.desc':'Full delivery with explanation — you own everything.',
+  },
+  fr:{
+    'nav.store':'Étagères','nav.vault':'Nos Travaux','nav.services':'Services','nav.about':'À propos','nav.contact':'Contact',
+    'hero.badge':'Agence IA Souveraine',
+    'hero.l1':'Nous bâtissons vos rêves','hero.l2':"Grâce à l'IA",
+    'hero.sub':"Produits numériques exclusifs et services sur mesure — de l'idée au produit fini en quelques jours, paiement crypto direct et sécurisé",
+    'btn.order':'Démarrer un projet','btn.store':'Voir les étagères',
+    'st.langs':'Langues','st.sectors':'Secteurs','st.crypto':'Cryptomonnaies','st.support':'Toujours disponible',
+    'tr.fast':'Construction rapide par IA','tr.secure':'Paiement crypto direct',
+    'tr.custom':'Sur mesure à la demande','tr.sup':'Support 24/7',
+    'svc.eye':'Ce que nous créons','svc.ttl':'Nos services',
+    'shelf.eye':'Étagères souveraines','shelf.ttl':'Bientôt disponible',
+    'proc.eye':'Comment nous travaillons','proc.ttl':"De l'idée à la livraison",
+    'pr.eye':'Chiffres en direct','pr.ttl':"L'agence en chiffres",
+    'pr.online':'En ligne maintenant','pr.langs':'Langues','pr.sectors':'Secteurs',
+    'pr.availability':'Toujours prêts','pr.live':'Direct',
+    'cta.ttl':'Votre prochain projet commence ici','cta.sub':'Contactez-nous — sans attente, sans complexité',
+    'cta.b1':'WhatsApp','cta.b2':'Telegram',
+    'ft.tag':'Une agence IA qui construit vos produits et systèmes numériques.',
+    'ft.platform':'Plateforme','ft.lang':'Langue','ft.contact':'Contact',
+    'ft.channel':'Annonces','ft.wa_channel':'Canal WhatsApp',
+    'ft.copy':'© 2025 PEAK AI Agency — Tous droits réservés',
+    'ai.hello':"Bonjour! Je suis VAULT AI — comment puis-je vous aider?",
+    'intro.sub':"Et si l'IA travaillait pour vous?",
+    'toast.msg':"Un client des EAU vient de demander un outil IA",
+    'tk.1':"⚡ Construction par IA en quelques jours",
+    'tk.2':'🔐 Paiement crypto direct — sans intermédiaires',
+    'tk.3':'✦ Sur mesure, exactement selon vos besoins',
+    'tk.4':'◈ 7 langues · 22 secteurs spécialisés',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'Outils IA sur mesure','svc.1.desc':'Outils IA conçus pour votre tâche exacte.','svc.1.price':'À partir de 300$','svc.1.cta':'Renseignez-vous',
+    'svc.2.ttl':'Sites & Applications','svc.2.desc':'Applications web complètes, rapides et sécurisées.','svc.2.price':'À partir de 500$','svc.2.cta':'Renseignez-vous',
+    'svc.3.ttl':'Automatisation','svc.3.desc':'Des systèmes qui travaillent pour vous.','svc.3.price':'À partir de 400$','svc.3.cta':'Renseignez-vous',
+    'shelf.empty.ttl':'Produit à venir','shelf.empty.desc':'Cette étagère se prépare — soyez informé en premier.','shelf.empty.btn':'Me notifier',
+    'shelf.special.ttl':'Vous ne trouvez pas?','shelf.special.desc':'Décrivez votre idée, nous la construisons.','shelf.special.btn':'Demande sur mesure',
+    'proc.1.ttl':'Vous nous contactez','proc.1.desc':'Via WhatsApp ou Telegram.',
+    'proc.2.ttl':'Nous définissons les détails','proc.2.desc':'Prix, délai et specs clairs dès le départ.',
+    'proc.3.ttl':'Construction rapide','proc.3.desc':"L'IA accélère sans sacrifier la qualité.",
+    'proc.4.ttl':'Vous lancez','proc.4.desc':'Livraison complète, vous possédez tout.',
+  },
+  es:{
+    'nav.store':'Estantes','nav.vault':'Nuestro Trabajo','nav.services':'Servicios','nav.about':'Nosotros','nav.contact':'Contacto',
+    'hero.badge':'Agencia de IA Soberana',
+    'hero.l1':'Construimos tus sueños','hero.l2':'Con Inteligencia Artificial',
+    'hero.sub':'Productos digitales exclusivos y servicios a medida — de idea a producto en días, pago cripto directo y seguro',
+    'btn.order':'Iniciar proyecto','btn.store':'Ver estantes',
+    'st.langs':'Idiomas','st.sectors':'Sectores','st.crypto':'Criptomonedas','st.support':'Siempre disponibles',
+    'tr.fast':'Construcción rápida con IA','tr.secure':'Pago cripto directo',
+    'tr.custom':'A medida bajo pedido','tr.sup':'Soporte 24/7',
+    'svc.eye':'Qué construimos','svc.ttl':'Nuestros servicios',
+    'shelf.eye':'Estantes soberanos','shelf.ttl':'Próximamente',
+    'proc.eye':'Cómo trabajamos','proc.ttl':'De la idea a la entrega',
+    'pr.eye':'Números en vivo','pr.ttl':'La agencia en números',
+    'pr.online':'En línea ahora','pr.langs':'Idiomas','pr.sectors':'Sectores',
+    'pr.availability':'Siempre listos','pr.live':'En vivo',
+    'cta.ttl':'Tu próximo proyecto empieza aquí','cta.sub':'Habla con nosotros — sin espera, sin complicaciones',
+    'cta.b1':'WhatsApp','cta.b2':'Telegram',
+    'ft.tag':'Una agencia de IA que construye tus productos y sistemas digitales.',
+    'ft.platform':'Plataforma','ft.lang':'Idioma','ft.contact':'Contacto',
+    'ft.channel':'Anuncios','ft.wa_channel':'Canal de WhatsApp',
+    'ft.copy':'© 2025 PEAK AI Agency — Todos los derechos reservados',
+    'ai.hello':'¡Hola! Soy VAULT AI — ¿cómo puedo ayudarte?',
+    'intro.sub':'¿Y si la IA trabajara para ti?',
+    'toast.msg':'Un cliente de EAU acaba de pedir una herramienta de IA',
+    'tk.1':'⚡ Construcción con IA en días',
+    'tk.2':'🔐 Pago cripto directo — sin intermediarios',
+    'tk.3':'✦ Hecho a medida exactamente para ti',
+    'tk.4':'◈ 7 idiomas · 22 sectores especializados',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'Herramientas IA a medida','svc.1.desc':'Herramientas de IA diseñadas para tu tarea exacta.','svc.1.price':'Desde $300','svc.1.cta':'Consultar',
+    'svc.2.ttl':'Sitios y Apps','svc.2.desc':'Aplicaciones web completas, rápidas y seguras.','svc.2.price':'Desde $500','svc.2.cta':'Consultar',
+    'svc.3.ttl':'Automatización','svc.3.desc':'Sistemas que trabajan por ti.','svc.3.price':'Desde $400','svc.3.cta':'Consultar',
+    'shelf.empty.ttl':'Producto próximo','shelf.empty.desc':'Este estante se está preparando — sé el primero en saberlo.','shelf.empty.btn':'Notificarme',
+    'shelf.special.ttl':'¿No encuentras lo que buscas?','shelf.special.desc':'Describe tu idea y la construimos.','shelf.special.btn':'Pedir a medida',
+    'proc.1.ttl':'Nos contactas','proc.1.desc':'Por WhatsApp o Telegram.',
+    'proc.2.ttl':'Acordamos detalles','proc.2.desc':'Precio, tiempo y specs claros desde el inicio.',
+    'proc.3.ttl':'Construcción rápida','proc.3.desc':'La IA acelera sin sacrificar calidad.',
+    'proc.4.ttl':'Lanzas','proc.4.desc':'Entrega completa, tú posees todo.',
+  },
+  tr:{
+    'nav.store':'Raflar','nav.vault':'Çalışmalarımız','nav.services':'Hizmetler','nav.about':'Hakkımızda','nav.contact':'İletişim',
+    'hero.badge':'Egemen Yapay Zeka Ajansı',
+    'hero.l1':'Hayalini İnşa Ediyoruz','hero.l2':'Yapay Zeka ile',
+    'hero.sub':'Özel dijital ürünler ve özel inşa hizmetleri — fikirden ürüne günler içinde, doğrudan güvenli kripto ödeme',
+    'btn.order':'Projeni Başlat','btn.store':'Rafları Gör',
+    'st.langs':'Dil','st.sectors':'Sektör','st.crypto':'Kripto Para','st.support':'Her Zaman Hazır',
+    'tr.fast':'Yapay Zeka ile Hızlı İnşa','tr.secure':'Doğrudan Kripto Ödeme',
+    'tr.custom':'Talebe Özel İnşa','tr.sup':'7/24 Destek',
+    'svc.eye':'Ne İnşa Ediyoruz','svc.ttl':'Hizmetlerimiz',
+    'shelf.eye':'Egemen Raflar','shelf.ttl':'Yakında',
+    'proc.eye':'Nasıl Çalışırız','proc.ttl':'Fikirden Teslimata',
+    'pr.eye':'Canlı Rakamlar','pr.ttl':'Ajans Rakamlarla',
+    'pr.online':'Şimdi Geziniyor','pr.langs':'Dil','pr.sectors':'Sektör',
+    'pr.availability':'Her Zaman Hazır','pr.live':'Canlı',
+    'cta.ttl':'Bir Sonraki Projen Burada Başlıyor','cta.sub':'Bizimle konuş — bekleme yok, karmaşa yok',
+    'cta.b1':'WhatsApp','cta.b2':'Telegram',
+    'ft.tag':'Dijital ürün ve sistemlerinizi inşa eden bir yapay zeka ajansı.',
+    'ft.platform':'Platform','ft.lang':'Dil','ft.contact':'İletişim',
+    'ft.channel':'Duyurular','ft.wa_channel':'WhatsApp Kanalı',
+    'ft.copy':'© 2025 PEAK AI Agency — Tüm hakları saklıdır',
+    'ai.hello':'Merhaba! Ben VAULT AI — size nasıl yardımcı olabilirim?',
+    'intro.sub':'Yapay zeka senin için çalışsa ne olurdu?',
+    'toast.msg':'BAE\'den bir müşteri az önce bir AI aracı talep etti',
+    'tk.1':'⚡ Yapay zeka ile günler içinde inşa',
+    'tk.2':'🔐 Doğrudan kripto ödeme — aracısız',
+    'tk.3':'✦ Tam isteğinize özel inşa',
+    'tk.4':'◈ 7 dil · 22 uzman sektör',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'Özel AI Araçları','svc.1.desc':'Tam görevinize özel tasarlanmış AI araçları.','svc.1.price':'300$\'dan başlar','svc.1.cta':'Bilgi Al',
+    'svc.2.ttl':'Web Sitesi & Uygulama','svc.2.desc':'Hızlı, güvenli, yayına hazır web uygulamaları.','svc.2.price':'500$\'dan başlar','svc.2.cta':'Bilgi Al',
+    'svc.3.ttl':'Otomasyon','svc.3.desc':'Sizin için çalışan sistemler.','svc.3.price':'400$\'dan başlar','svc.3.cta':'Bilgi Al',
+    'shelf.empty.ttl':'Yakında Ürün','shelf.empty.desc':'Bu raf hazırlanıyor — hazır olduğunda ilk siz öğrenin.','shelf.empty.btn':'Bana Bildir',
+    'shelf.special.ttl':'İstediğini bulamadın mı?','shelf.special.desc':'Fikrini anlat, senin için inşa edelim.','shelf.special.btn':'Özel Talep Gönder',
+    'proc.1.ttl':'Bize Ulaşın','proc.1.desc':'WhatsApp veya Telegram üzerinden.',
+    'proc.2.ttl':'Detaylarda Anlaşırız','proc.2.desc':'Fiyat, süre ve özellikler başından net.',
+    'proc.3.ttl':'Hızlı İnşa','proc.3.desc':'Yapay zeka kaliteden ödün vermeden hızlandırır.',
+    'proc.4.ttl':'Yayına Alın','proc.4.desc':'Tam teslimat, her şey sizin.',
+  },
+  de:{
+    'nav.store':'Regale','nav.services':'Leistungen','nav.about':'Über uns','nav.contact':'Kontakt',
+    'hero.badge':'Souveräne KI-Agentur',
+    'hero.l1':'Wir bauen deinen Traum','hero.l2':'Mit Künstlicher Intelligenz',
+    'hero.sub':'Exklusive digitale Produkte und individuelle Entwicklung — von der Idee zum fertigen Produkt in Tagen, direkte sichere Kryptozahlung',
+    'btn.order':'Projekt starten','btn.store':'Regale ansehen',
+    'st.langs':'Sprachen','st.sectors':'Branchen','st.crypto':'Kryptowährungen','st.support':'Immer verfügbar',
+    'tr.fast':'Schneller KI-Aufbau','tr.secure':'Direkte Kryptozahlung',
+    'tr.custom':'Individuell nach Wunsch','tr.sup':'24/7 Support',
+    'svc.eye':'Was wir bauen','svc.ttl':'Unsere Leistungen',
+    'shelf.eye':'Souveräne Regale','shelf.ttl':'Demnächst',
+    'proc.eye':'So arbeiten wir','proc.ttl':'Von der Idee zur Lieferung',
+    'pr.eye':'Live-Zahlen','pr.ttl':'Die Agentur in Zahlen',
+    'pr.online':'Jetzt online','pr.langs':'Sprachen','pr.sectors':'Branchen',
+    'pr.availability':'Immer bereit','pr.live':'Live',
+    'cta.ttl':'Dein nächstes Projekt beginnt hier','cta.sub':'Sprich jetzt mit uns — ohne Warten, ohne Komplexität',
+    'cta.b1':'WhatsApp','cta.b2':'Telegram',
+    'ft.tag':'Eine KI-Agentur, die deine digitalen Produkte und Systeme baut.',
+    'ft.platform':'Plattform','ft.lang':'Sprache','ft.contact':'Kontakt',
+    'ft.channel':'Ankündigungen','ft.wa_channel':'WhatsApp-Kanal',
+    'ft.copy':'© 2025 PEAK AI Agency — Alle Rechte vorbehalten',
+    'ai.hello':'Hallo! Ich bin VAULT AI — wie kann ich dir helfen?',
+    'intro.sub':'Was, wenn KI für dich arbeiten würde?',
+    'toast.msg':'Ein Kunde aus den VAE hat gerade ein KI-Tool angefragt',
+    'tk.1':'⚡ KI-Aufbau in wenigen Tagen',
+    'tk.2':'🔐 Direkte Kryptozahlung — ohne Vermittler',
+    'tk.3':'✦ Maßgeschneidert genau nach Wunsch',
+    'tk.4':'◈ 7 Sprachen · 22 Fachbereiche',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'Individuelle KI-Tools','svc.1.desc':'KI-Tools, genau für deine Aufgabe entwickelt.','svc.1.price':'Ab 300$','svc.1.cta':'Jetzt anfragen',
+    'svc.2.ttl':'Websites & Apps','svc.2.desc':'Vollständige, schnelle, sichere Webanwendungen.','svc.2.price':'Ab 500$','svc.2.cta':'Jetzt anfragen',
+    'svc.3.ttl':'Automatisierung','svc.3.desc':'Systeme, die für dich arbeiten.','svc.3.price':'Ab 400$','svc.3.cta':'Jetzt anfragen',
+    'shelf.empty.ttl':'Demnächst verfügbar','shelf.empty.desc':'Dieses Regal wird vorbereitet — erfahre es als Erster.','shelf.empty.btn':'Benachrichtigen',
+    'shelf.special.ttl':'Nicht gefunden, was du brauchst?','shelf.special.desc':'Beschreibe deine Idee, wir bauen sie.','shelf.special.btn':'Individuelle Anfrage',
+    'proc.1.ttl':'Du meldest dich','proc.1.desc':'Über WhatsApp oder Telegram.',
+    'proc.2.ttl':'Details abstimmen','proc.2.desc':'Preis, Dauer und Specs von Anfang an klar.',
+    'proc.3.ttl':'Schneller Aufbau','proc.3.desc':'KI beschleunigt ohne Qualitätsverlust.',
+    'proc.4.ttl':'Du startest','proc.4.desc':'Volle Lieferung, alles gehört dir.',
+  },
+  zh:{
+    'nav.store':'货架','nav.services':'服务','nav.about':'关于我们','nav.contact':'联系',
+    'hero.badge':'主权人工智能机构',
+    'hero.l1':'我们构建你的梦想','hero.l2':'借助人工智能',
+    'hero.sub':'独家数字产品与定制开发服务 — 从创意到成品只需数天，直接安全的加密货币支付',
+    'btn.order':'开始你的项目','btn.store':'浏览货架',
+    'st.langs':'支持语言','st.sectors':'专业领域','st.crypto':'加密货币','st.support':'全天候服务',
+    'tr.fast':'AI驱动快速构建','tr.secure':'直接加密支付',
+    'tr.custom':'按需定制','tr.sup':'24/7支持',
+    'svc.eye':'我们构建什么','svc.ttl':'我们的服务',
+    'shelf.eye':'主权货架','shelf.ttl':'即将上线',
+    'proc.eye':'我们如何工作','proc.ttl':'从创意到交付',
+    'pr.eye':'实时数据','pr.ttl':'机构数据',
+    'pr.online':'当前在线','pr.langs':'语言','pr.sectors':'领域',
+    'pr.availability':'随时待命','pr.live':'实时',
+    'cta.ttl':'你的下一个项目从这里开始','cta.sub':'立即与我们联系 — 无需等待，无需繁琐',
+    'cta.b1':'WhatsApp','cta.b2':'Telegram',
+    'ft.tag':'一家为你构建数字产品与系统的人工智能机构。',
+    'ft.platform':'平台','ft.lang':'语言','ft.contact':'联系',
+    'ft.channel':'公告频道','ft.wa_channel':'WhatsApp频道',
+    'ft.copy':'© 2025 PEAK AI Agency — 版权所有',
+    'ai.hello':'你好！我是VAULT AI — 有什么可以帮你？',
+    'intro.sub':'如果人工智能为你工作会怎样？',
+    'toast.msg':'一位阿联酋客户刚刚请求构建AI工具',
+    'tk.1':'⚡ AI驱动，数天交付',
+    'tk.2':'🔐 直接加密支付 — 无中间商',
+    'tk.3':'✦ 完全按你的需求定制',
+    'tk.4':'◈ 7种语言 · 22个专业领域',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'svc.1.ttl':'定制AI工具','svc.1.desc':'为你的任务量身定制的AI工具。','svc.1.price':'起价$300','svc.1.cta':'立即咨询',
+    'svc.2.ttl':'网站与应用','svc.2.desc':'快速、安全、即可部署的完整应用。','svc.2.price':'起价$500','svc.2.cta':'立即咨询',
+    'svc.3.ttl':'自动化系统','svc.3.desc':'为你工作的系统。','svc.3.price':'起价$400','svc.3.cta':'立即咨询',
+    'shelf.empty.ttl':'即将推出','shelf.empty.desc':'此货架正在准备中 — 第一时间通知你。','shelf.empty.btn':'通知我',
+    'shelf.special.ttl':'找不到你需要的？','shelf.special.desc':'描述你的想法，我们为你构建。','shelf.special.btn':'定制需求',
+    'proc.1.ttl':'联系我们','proc.1.desc':'通过WhatsApp或Telegram。',
+    'proc.2.ttl':'确认细节','proc.2.desc':'价格、周期和规格从一开始就明确。',
+    'proc.3.ttl':'快速构建','proc.3.desc':'AI加速而不影响质量。',
+    'proc.4.ttl':'你启动','proc.4.desc':'完整交付，一切归你所有。',
+  },
+};
+
+let lang=localStorage.getItem('pv_lang')||'ar';
+function T(k){return TR[lang]?.[k]||TR.ar[k]||k}
+
+/* ══════════════════════════════════════════════
+   LANGUAGE SYSTEM
+   ══════════════════════════════════════════════ */
+function applyLang(l){
+  if(!TR[l])l='ar';
+  lang=l;
+  const meta=LANGS.find(x=>x.code===l);
+  const rtl=meta?.rtl??(l==='ar');
+  document.documentElement.lang=l;
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.body.classList.toggle('ltr',!rtl);
+
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(TR[l]?.[k]||TR.ar[k]) el.textContent=T(k);
+  });
+  const aiIn=document.getElementById('ai-in');
+  if(aiIn) aiIn.placeholder=T('ai.ph')||aiIn.placeholder;
+
+  document.getElementById('lang-cur').textContent=meta?.native||'AR';
+
+  localStorage.setItem('pv_lang',l);
+  buildTicker();
+  buildServices();
+  buildShelf();
+  buildProcess();
+}
+
+function buildLangMenu(){
+  const menu=document.getElementById('lang-menu');
+  const footList=document.getElementById('foot-langs');
+  menu.textContent='';footList.textContent='';
+  LANGS.forEach(m=>{
+    const btn=document.createElement('button');
+    btn.className='lang-opt'+(m.code===lang?' on':'');
+    btn.setAttribute('role','menuitem');
+    btn.textContent=`${m.native} — ${m.label}`;
+    btn.addEventListener('click',()=>{
+      applyLang(m.code);
+      menu.classList.remove('open');
+      document.getElementById('lang-btn').setAttribute('aria-expanded','false');
+      buildLangMenu();
+    });
+    menu.appendChild(btn);
+
+    const li=document.createElement('li');
+    const a=document.createElement('a');
+    a.href='#';a.textContent=m.native;
+    a.addEventListener('click',e=>{e.preventDefault();applyLang(m.code);buildLangMenu()});
+    li.appendChild(a);footList.appendChild(li);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   TICKER
+   ══════════════════════════════════════════════ */
+function buildTicker(){
+  const tt=document.getElementById('tt');
+  if(!tt)return;
+  const keys=['tk.1','tk.2','tk.3','tk.4','tk.5'];
+  const items=keys.map(k=>T(k));
+  const all=[...items,...items,...items];
+  tt.textContent='';
+  all.forEach((txt,i)=>{
+    const sp=document.createElement('span');
+    sp.className='t-item';sp.textContent=txt;
+    if(i<all.length-1){
+      const sep=document.createElement('span');
+      sep.className='t-sep';sep.textContent='✦';
+      sp.appendChild(sep);
+    }
+    tt.appendChild(sp);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   SERVICES
+   ══════════════════════════════════════════════ */
+function buildServices(){
+  const grid=document.getElementById('svc-grid');
+  if(!grid)return;
+  grid.textContent='';
+  const items=[
+    {ico:'🤖',i:1},{ico:'💻',i:2},{ico:'⚙️',i:3},
+  ];
+  items.forEach((item,idx)=>{
+    const card=document.createElement('article');
+    card.className='svc-card rv';
+    const ico=document.createElement('span');ico.className='svc-ico';ico.setAttribute('aria-hidden','true');ico.textContent=item.ico;
+    const ttl=document.createElement('h3');ttl.className='svc-ttl';ttl.textContent=T(`svc.${item.i}.ttl`);
+    const desc=document.createElement('p');desc.className='svc-desc';desc.textContent=T(`svc.${item.i}.desc`);
+    const price=document.createElement('span');price.className='svc-price glow-text';price.textContent=T(`svc.${item.i}.price`);
+    const link=document.createElement('a');link.className='svc-link';link.href='#';
+    link.textContent=T(`svc.${item.i}.cta`)+' '+(document.body.classList.contains('ltr')?'→':'←');
+    link.addEventListener('click',e=>{
+      e.preventDefault();
+      openWA(`${T('svc.'+item.i+'.ttl')} — `);
+    });
+    card.append(ico,ttl,desc,price,link);
+    grid.appendChild(card);
+  });
+  obs && document.querySelectorAll('.svc-card.rv').forEach(el=>obs.observe(el));
+}
+
+/* ══════════════════════════════════════════════
+   SHELF (empty but smart)
+   ══════════════════════════════════════════════ */
+function buildShelf(){
+  const grid=document.getElementById('shelf-grid');
+  if(!grid)return;
+  grid.textContent='';
+
+  for(let i=0;i<3;i++){
+    const card=document.createElement('div');
+    card.className='shelf-card rv';
+    const ico=document.createElement('div');ico.className='shelf-ico';ico.setAttribute('aria-hidden','true');ico.textContent='◇';
+    const ttl=document.createElement('div');ttl.className='shelf-ttl';ttl.textContent=T('shelf.empty.ttl');
+    const desc=document.createElement('div');desc.className='shelf-desc';desc.textContent=T('shelf.empty.desc');
+    const btn=document.createElement('button');btn.className='shelf-btn';btn.textContent=T('shelf.empty.btn');
+    btn.addEventListener('click',()=>{
+      openWA(lang==='ar'?'أرجو إشعاري عند توفر منتجات جديدة':'Please notify me about new products');
+    });
+    card.append(ico,ttl,desc,btn);
+    grid.appendChild(card);
+  }
+
+  // Special card
+  const special=document.createElement('div');
+  special.className='shelf-card special rv';
+  const ico=document.createElement('div');ico.className='shelf-ico';ico.setAttribute('aria-hidden','true');ico.textContent='★';
+  const ttl=document.createElement('div');ttl.className='shelf-ttl glow-text';ttl.textContent=T('shelf.special.ttl');
+  const desc=document.createElement('div');desc.className='shelf-desc';desc.textContent=T('shelf.special.desc');
+  const btn=document.createElement('button');btn.className='shelf-btn';btn.textContent=T('shelf.special.btn');
+  btn.addEventListener('click',()=>{
+    openWA(lang==='ar'?'أريد طلب بناء منتج مخصص: ':'I want to request a custom product build: ');
+  });
+  special.append(ico,ttl,desc,btn);
+  grid.appendChild(special);
+
+  obs && document.querySelectorAll('.shelf-card.rv').forEach(el=>obs.observe(el));
+}
+
+/* ══════════════════════════════════════════════
+   PROCESS STEPS
+   ══════════════════════════════════════════════ */
+function buildProcess(){
+  const grid=document.getElementById('proc-grid');
+  if(!grid)return;
+  grid.textContent='';
+  for(let i=1;i<=4;i++){
+    const step=document.createElement('div');
+    step.className='proc-step rv';
+    const num=document.createElement('div');num.className='proc-num';num.textContent='0'+i;
+    const ttl=document.createElement('div');ttl.className='proc-ttl';ttl.textContent=T(`proc.${i}.ttl`);
+    const desc=document.createElement('div');desc.className='proc-desc';desc.textContent=T(`proc.${i}.desc`);
+    step.append(num,ttl,desc);
+    grid.appendChild(step);
+  }
+  obs && document.querySelectorAll('.proc-step.rv').forEach(el=>obs.observe(el));
+}
+
+/* ══════════════════════════════════════════════
+   INTERSECTION OBSERVER
+   ══════════════════════════════════════════════ */
+let obs;
+function counter(el,target,dur=1800){
+  if(!target){el.textContent='0';return}
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    const v=Math.floor(target*ease);
+    el.textContent=v.toLocaleString(lang==='ar'?'ar':'en');
+    if(p<1)requestAnimationFrame(step);
+    else el.textContent=target.toLocaleString(lang==='ar'?'ar':'en');
+  }
+  requestAnimationFrame(step);
+}
+function initObserver(){
+  obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      const el=e.target;
+      if(el.classList.contains('rv')){el.classList.add('on');obs.unobserve(el)}
+      if(el.dataset.t){counter(el,parseFloat(el.dataset.t));obs.unobserve(el)}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv,[data-t]').forEach(el=>obs.observe(el));
+}
+
+/* ══════════════════════════════════════════════
+   LOGO INTRO — "Letters' Dream"
+   ══════════════════════════════════════════════ */
+function runIntro(){
+  const intro=document.getElementById('intro');
+  const stage=document.getElementById('intro-stage');
+  const sub=document.getElementById('intro-sub');
+  const skip=document.getElementById('intro-skip');
+
+  const seen=localStorage.getItem('pv_intro_seen');
+  const reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const weak=(navigator.hardwareConcurrency||4)<4;
+
+  function finish(){
+    intro.classList.add('hide');
+    document.body.classList.remove('no-scroll');
+    localStorage.setItem('pv_intro_seen','1');
+    setTimeout(()=>{intro.remove()},800);
+  }
+
+  if(seen||reduced){
+    finish();
+    return;
+  }
+
+  const letters='PEAKAI'.split('');
+  const stageRect=()=>stage.getBoundingClientRect();
+
+  letters.forEach((ch,i)=>{
+    const span=document.createElement('span');
+    span.className='letter';span.textContent=ch;
+    span.setAttribute('aria-hidden','true');
+    stage.appendChild(span);
+
+    // random scattered start position
+    const sx=(Math.random()-0.5)*240;
+    const sy=(Math.random()-0.5)*180;
+    const rot=(Math.random()-0.5)*120;
+
+    span.style.left='50%';span.style.top='50%';
+    span.style.transform=`translate(-50%,-50%) translate(${sx}px,${sy}px) rotate(${rot}deg)`;
+
+    // target position: spread horizontally to form "PEAK AI"
+    const spacing= weak ? 0 : 56;
+    const targetX=(i-2.5)*spacing;
+
+    requestAnimationFrame(()=>{
+      span.style.transition=`opacity 900ms var(--ease) ${i*80}ms, transform ${weak?900:2200}ms var(--ease) ${i*80+(weak?0:400)}ms`;
+      span.style.opacity='1';
+    });
+
+    setTimeout(()=>{
+      span.style.transform=`translate(-50%,-50%) translate(${targetX}px,0) rotate(0deg)`;
+    }, weak?100:1500);
+  });
+
+  // typewriter subtitle
+  const text=T('intro.sub');
+  setTimeout(()=>{
+    sub.style.opacity='1';
+    let i=0;
+    const cursor=document.createElement('span');
+    cursor.id='intro-cursor';
+    function type(){
+      if(i<=text.length){
+        sub.textContent=text.slice(0,i);
+        sub.appendChild(cursor);
+        i++;
+        setTimeout(type,45);
+      }
+    }
+    type();
+  }, weak?900:3000);
+
+  // skip button
+  setTimeout(()=>skip.classList.add('show'),2000);
+  skip.addEventListener('click',finish);
+
+  // auto-finish
+  setTimeout(finish, weak?2400:5200);
+}
+
+/* ══════════════════════════════════════════════
+   NAVBAR SCROLL + SCROLL PROGRESS
+   ══════════════════════════════════════════════ */
+function initNav(){
+  const nav=document.getElementById('nav');
+  const bar=document.getElementById('scroll-progress');
+  let tick=false;
+  window.addEventListener('scroll',()=>{
+    if(tick)return;
+    requestAnimationFrame(()=>{
+      nav.classList.toggle('sc',window.scrollY>60);
+      const max=document.documentElement.scrollHeight-window.innerHeight;
+      const ratio=max>0?window.scrollY/max:0;
+      bar.style.transform=`scaleX(${ratio})`;
+      tick=false;
+    });
+    tick=true;
+  },{passive:true});
+}
+
+/* ══════════════════════════════════════════════
+   HAMBURGER + LANG MENU
+   ══════════════════════════════════════════════ */
+function initBurger(){
+  const btn=document.getElementById('burg');
+  const menu=document.getElementById('mmenu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',()=>{
+    const open=menu.classList.toggle('on');
+    btn.classList.toggle('on',open);
+    btn.setAttribute('aria-expanded',String(open));
+    document.body.style.overflow=open?'hidden':'';
+  });
+  menu.querySelectorAll('.mm-link').forEach(l=>{
+    l.addEventListener('click',(e)=>{
+      menu.classList.remove('on');btn.classList.remove('on');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&menu.classList.contains('on')){
+      menu.classList.remove('on');btn.classList.remove('on');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';btn.focus();
+    }
+  });
+}
+
+function initLangMenu(){
+  const btn=document.getElementById('lang-btn');
+  const menu=document.getElementById('lang-menu');
+  btn.addEventListener('click',()=>{
+    const open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',String(open));
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.lang-sw')){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+}
+
+/* ══════════════════════════════════════════════
+   CUSTOM CURSOR
+   ══════════════════════════════════════════════ */
+function initCursor(){
+  const ring=document.getElementById('cr');
+  const dot=document.getElementById('cd');
+  if(!ring||!dot)return;
+  if(window.matchMedia('(pointer:coarse)').matches){
+    ring.style.display=dot.style.display='none';
+    document.body.style.cursor='auto';
+    document.querySelectorAll('a,button').forEach(el=>el.style.cursor='pointer');
+    return;
+  }
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX;my=e.clientY;
+    dot.style.left=mx+'px';dot.style.top=my+'px';
+  },{passive:true});
+  (function tick(){
+    rx+=(mx-rx)*.12;ry+=(my-ry)*.12;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(tick);
+  })();
+  document.addEventListener('mouseover',e=>{
+    document.body.classList.toggle('ch',!!e.target.closest('a,button,.svc-card,.shelf-card,.btn-p,.btn-s'));
+  });
+}
+
+/* ══════════════════════════════════════════════
+   WEBGL PARTICLES
+   ══════════════════════════════════════════════ */
+function initParticles(){
+  const cv=document.getElementById('pc');
+  if(!cv)return;
+  const gl=cv.getContext('webgl',{alpha:true})||cv.getContext('experimental-webgl',{alpha:true});
+  if(!gl)return;
+  const resize=()=>{cv.width=innerWidth;cv.height=innerHeight;gl.viewport(0,0,cv.width,cv.height)};
+  resize();window.addEventListener('resize',resize,{passive:true});
+  const N=window.matchMedia('(pointer:coarse)').matches?50:100;
+  const pos=new Float32Array(N*2),vel=new Float32Array(N*2),
+        life=new Float32Array(N),maxL=new Float32Array(N);
+  for(let i=0;i<N;i++){
+    pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;
+    vel[i*2]=(Math.random()-.5)*.0007;vel[i*2+1]=(Math.random()-.5)*.0007;
+    life[i]=Math.random();maxL[i]=.5+Math.random()*1.4;
+  }
+  const vs=`attribute vec2 a;attribute float l;varying float v;
+    void main(){gl_Position=vec4(a,0,1);gl_PointSize=mix(1.,3.5,l);v=l;}`;
+  const fs=`precision mediump float;varying float v;
+    void main(){float d=distance(gl_PointCoord,vec2(.5));if(d>.5)discard;
+    gl_FragColor=vec4(.784,.643,.353,v*(1.-d*2.)*.65);}`;
+  const mk=(t,src)=>{const s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);return s};
+  const prog=gl.createProgram();
+  gl.attachShader(prog,mk(gl.VERTEX_SHADER,vs));
+  gl.attachShader(prog,mk(gl.FRAGMENT_SHADER,fs));
+  gl.linkProgram(prog);gl.useProgram(prog);
+  const aL=gl.getAttribLocation(prog,'a'),lL=gl.getAttribLocation(prog,'l');
+  const pb=gl.createBuffer(),lb=gl.createBuffer();
+  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);
+  (function f(){
+    for(let i=0;i<N;i++){
+      pos[i*2]+=vel[i*2];pos[i*2+1]+=vel[i*2+1];life[i]+=.003;
+      if(life[i]>maxL[i]||Math.abs(pos[i*2])>1.2||Math.abs(pos[i*2+1])>1.2){
+        pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;
+        vel[i*2]=(Math.random()-.5)*.0007;vel[i*2+1]=(Math.random()-.5)*.0007;
+        life[i]=0;maxL[i]=.5+Math.random()*1.4;
+      }
+    }
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.bindBuffer(gl.ARRAY_BUFFER,pb);gl.bufferData(gl.ARRAY_BUFFER,pos,gl.DYNAMIC_DRAW);
+    gl.enableVertexAttribArray(aL);gl.vertexAttribPointer(aL,2,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,lb);gl.bufferData(gl.ARRAY_BUFFER,life,gl.DYNAMIC_DRAW);
+    gl.enableVertexAttribArray(lL);gl.vertexAttribPointer(lL,1,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.POINTS,0,N);requestAnimationFrame(f);
+  })();
+}
+
+/* ══════════════════════════════════════════════
+   MAGNETIC BUTTONS + PARALLAX
+   ══════════════════════════════════════════════ */
+function initMagnetic(){
+  if(window.matchMedia('(pointer:coarse)').matches)return;
+  document.querySelectorAll('.btn-p,.btn-s').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      const dx=(e.clientX-r.left-r.width/2)*.22;
+      const dy=(e.clientY-r.top-r.height/2)*.22;
+      btn.style.transform=`translate(${dx}px,${dy}px) translateY(-2px)`;
+    });
+    btn.addEventListener('mouseleave',()=>{btn.style.transform=''});
+  });
+}
+function initParallax(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const orbs=document.querySelectorAll('.orb');
+  window.addEventListener('mousemove',e=>{
+    const cx=innerWidth/2,cy=innerHeight/2;
+    const dx=(e.clientX-cx)/cx,dy=(e.clientY-cy)/cy;
+    orbs.forEach((o,i)=>{
+      const s=(i+1)*10;
+      o.style.transform=`translate(${dx*s}px,${dy*s}px)`;
+    });
+  },{passive:true});
+}
+
+/* ══════════════════════════════════════════════
+   VAULT AI
+   ══════════════════════════════════════════════ */
+let aiOpen=false,aiInit=false,aiThink=false,aiHist=[];
+const AI_POOL={
+  ar:['يمكنني مساعدتك في فهم خدماتنا. ما المشروع الذي تفكر فيه؟',
+      'نبني أدوات AI ومواقع وأنظمة أتمتة. أي مجال يهمك؟',
+      'تواصل معنا مباشرة عبر واتساب أو تلجرام لعرض سعر فوري.',
+      'كل مشروع يبدأ بمحادثة بسيطة — أخبرني عن فكرتك.'],
+  en:['I can help explain our services. What project are you considering?',
+      'We build AI tools, websites, and automation systems. What interests you?',
+      'Contact us directly via WhatsApp or Telegram for an instant quote.',
+      'Every project starts with a simple chat — tell me your idea.'],
+};
+function addMsg(text,role){
+  const box=document.getElementById('ai-msgs');if(!box)return;
+  const d=document.createElement('div');d.className=`msg ${role}`;
+  d.textContent=san(text,400);box.appendChild(d);
+  box.scrollTop=box.scrollHeight;
+}
+function showThink(){
+  const box=document.getElementById('ai-msgs');if(!box)return;
+  const d=document.createElement('div');d.className='msg thk';d.id='thk';
+  const dd=document.createElement('div');dd.className='thk-dots';
+  [1,2,3].forEach(()=>{const s=document.createElement('span');dd.appendChild(s)});
+  d.appendChild(dd);box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+function hideThink(){const el=document.getElementById('thk');if(el)el.remove()}
+async function aiSend(msg){
+  if(aiThink||!msg.trim())return;
+
+  /* ══ Rate Limiting: يمنع استنزاف Gemini API quota ══
+     30 رسالة/ساعة لكل متصفح — كافية للاستخدام الحقيقي
+     غير كافية لأي هجوم استنزاف. */
+  const AI_LIMIT=30;
+  const AI_WINDOW=3600000; // ساعة بالمللي ثانية
+  const now=Date.now();
+  let aiUsage=JSON.parse(localStorage.getItem('vault_ai_usage')||'{"count":0,"reset_at":0}');
+  if(now>aiUsage.reset_at){aiUsage={count:0,reset_at:now+AI_WINDOW}}
+  if(aiUsage.count>=AI_LIMIT){
+    addMsg(lang==='ar'
+      ?'⏳ وصلت لحد الرسائل المسموح (30 رسالة/ساعة). حاول بعد قليل.'
+      :'⏳ Rate limit reached (30 messages/hour). Try again later.','bot');
+    return;
+  }
+  aiUsage.count++;
+  localStorage.setItem('vault_ai_usage',JSON.stringify(aiUsage));
+  const clean=san(msg);if(!clean)return;
+  addMsg(clean,'usr');
+  aiHist.push({role:'user',content:clean});
+  if(aiHist.length>20)aiHist=aiHist.slice(-20);
+  aiThink=true;
+  const snd=document.getElementById('ai-snd');if(snd)snd.disabled=true;
+  showThink();
+  await new Promise(r=>setTimeout(r,700+Math.random()*500));
+  const pool=AI_POOL[lang]||AI_POOL.ar;
+  const reply=pool[Math.floor(Math.random()*pool.length)];
+  hideThink();addMsg(reply,'bot');
+  aiHist.push({role:'assistant',content:reply});
+  aiThink=false;if(snd)snd.disabled=false;
+}
+function initAI(){
+  const btn=document.getElementById('ai-btn');
+  const drw=document.getElementById('ai-drw');
+  const x=document.getElementById('ai-x');
+  const inp=document.getElementById('ai-in');
+  const snd=document.getElementById('ai-snd');
+  if(!btn||!drw)return;
+  btn.addEventListener('click',()=>{
+    aiOpen=!aiOpen;
+    drw.classList.toggle('on',aiOpen);
+    drw.setAttribute('aria-hidden',String(!aiOpen));
+    btn.setAttribute('aria-expanded',String(aiOpen));
+    if(aiOpen&&!aiInit){addMsg(T('ai.hello'),'bot');aiInit=true}
+    if(aiOpen)inp?.focus();
+  });
+  x?.addEventListener('click',()=>{
+    aiOpen=false;drw.classList.remove('on');
+    drw.setAttribute('aria-hidden','true');
+    btn.setAttribute('aria-expanded','false');btn.focus();
+  });
+  drw.addEventListener('keydown',e=>{if(e.key==='Escape')x?.click()});
+  snd?.addEventListener('click',()=>{
+    if(!inp)return;const v=inp.value.trim();
+    if(v){aiSend(v);inp.value=''}
+  });
+  inp?.addEventListener('keydown',e=>{
+    if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();snd?.click()}
+  });
+}
+
+/* ══════════════════════════════════════════════
+   CONNECTION MONITOR
+   ══════════════════════════════════════════════ */
+function initConn(){
+  const bn=document.getElementById('cbn');if(!bn)return;
+  let timer=null;
+  function show(online){
+    clearTimeout(timer);
+    bn.textContent=online
+      ?(lang==='ar'?'✅ الاتصال عاد — جاري المزامنة...':'✅ Connection restored — syncing...')
+      :(lang==='ar'?'📴 لا إنترنت — يعمل محلياً':'📴 Offline — running locally');
+    bn.className=`on ${online?'ol':'off'}`;
+    if(online)timer=setTimeout(()=>bn.classList.remove('on'),3000);
+  }
+  window.addEventListener('online', ()=>show(true));
+  window.addEventListener('offline',()=>show(false));
+}
+
+/* ══════════════════════════════════════════════
+   CONTACT LINKS (WhatsApp/Telegram)
+   ══════════════════════════════════════════════ */
+function openWA(prefix=''){
+  const msg=encodeURIComponent(san(prefix,200));
+  window.open(`${CONTACT.whatsapp}?text=${msg}`,'_blank','noopener,noreferrer');
+}
+function initContactLinks(){
+  const waLinks=['float-wa','cta-wa','foot-wa','hero-cta-order','mm-contact'];
+  waLinks.forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.href=CONTACT.whatsapp;
+    el.target='_blank';el.rel='noopener noreferrer';
+    el.addEventListener('click',e=>{
+      if(id==='hero-cta-order'){
+        e.preventDefault();
+        openWA(lang==='ar'?'مرحباً، أريد بدء مشروع جديد: ':'Hello, I want to start a new project: ');
+      }
+    });
+  });
+  ['float-tg','cta-tg','foot-tg'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.href=CONTACT.telegram;el.target='_blank';el.rel='noopener noreferrer';
+  });
+  const tgChan=document.getElementById('foot-tg-channel');
+  if(tgChan){tgChan.href=CONTACT.tgChannel;tgChan.target='_blank';tgChan.rel='noopener noreferrer'}
+  const waChan=document.getElementById('foot-wa-channel');
+  if(waChan){waChan.href=CONTACT.waChannel;waChan.target='_blank';waChan.rel='noopener noreferrer'}
+}
+
+/* ══════════════════════════════════════════════
+   TOAST — Last activity (anonymized, demo data)
+   ══════════════════════════════════════════════ */
+function initToast(){
+  const toast=document.getElementById('toast');
+  const txt=document.getElementById('toast-text');
+  if(!toast||!txt)return;
+
+  function show(){
+    txt.textContent=T('toast.msg');
+    toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'),5000);
+  }
+  // first appearance after 12s, then every ~90s
+  setTimeout(show,12000);
+  setInterval(show,90000);
+}
+
+/* ══════════════════════════════════════════════
+   LIVE VISITOR COUNTER (local-only estimate)
+   ══════════════════════════════════════════════ */
+function initVisitorCounter(){
+  const el=document.getElementById('p1');
+  if(!el)return;
+  // Demo baseline — replace with Firestore realtime count in production
+  const base=12+Math.floor(Math.random()*9);
+  el.dataset.t=String(base);
+}
+
+/* ══════════════════════════════════════════════
+   TICKER PAUSE ON HOVER
+   ══════════════════════════════════════════════ */
+function initTickerPause(){
+  const bar=document.getElementById('ticker');
+  const trk=document.getElementById('tt');
+  if(!bar||!trk)return;
+  bar.addEventListener('mouseenter',()=>{trk.style.animationPlayState='paused'});
+  bar.addEventListener('mouseleave',()=>{trk.style.animationPlayState='running'});
+}
+
+/* ══════════════════════════════════════════════
+   INIT
+   ══════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded',()=>{
+  initVisitorCounter();
+  applyLang(lang);
+  buildLangMenu();
+  initObserver();
+  initNav();
+  initBurger();
+  initLangMenu();
+  initCursor();
+  initParticles();
+  initMagnetic();
+  initParallax();
+  initAI();
+  initConn();
+  initContactLinks();
+  initToast();
+  initTickerPause();
+  runIntro();
+});
+</script>
+</body>
+</html>

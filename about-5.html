@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!-- PEAK AI Agency © 2025 | peakvault.com | All rights reserved -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="من نحن — PEAK AI Agency. وكالة ذكاء اصطناعي سيادية تبني المستقبل الرقمي بالطلب.">
+<meta name="author" content="PEAK AI Agency">
+<meta name="copyright" content="© 2025 PEAK AI Agency — peakvault.com">
+<meta property="og:title" content="من نحن — PEAK AI Agency">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050508">
+<title>من نحن — PEAK AI Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+:root{
+  --void:#050508;--abyss:#07070e;--deep:#0a0a14;
+  --surface:#10101c;--card:#161626;--lift:#1e1e32;
+  --gold:#c8a45a;--gold-l:#e8c87a;--gold-d:#8a6835;
+  --gold-xs:rgba(200,164,90,.06);--gold-sm:rgba(200,164,90,.12);
+  --gold-md:rgba(200,164,90,.25);--gold-lg:rgba(200,164,90,.45);
+  --platinum:#e8e4dc;--silver:#a8a49c;--dust:#6a6660;
+  --neon-g:#00ff88;
+  --font-d:'Cinzel',serif;--font-b:'Cormorant Garamond',serif;--font-m:'Space Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);--ease-el:cubic-bezier(.175,.885,.32,1.275);
+  --fast:160ms;--mid:320ms;--slow:600ms;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--void);color:var(--platinum);font-family:var(--font-b);font-size:clamp(15px,1.1vw,17px);line-height:1.7;overflow-x:hidden;cursor:none}
+body.ltr{direction:ltr;text-align:left}
+::selection{background:var(--gold-md);color:var(--void)}
+a{color:inherit;text-decoration:none}
+button{cursor:none;border:none;background:none;font:inherit;color:inherit}
+
+#cr,#cd{position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:opacity var(--fast)}
+#cr{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;transition:width var(--mid) var(--ease),height var(--mid) var(--ease),border-color var(--mid),background var(--mid);mix-blend-mode:screen}
+#cd{width:5px;height:5px;background:var(--gold);border-radius:50%}
+body.ch #cr{width:56px;height:56px;background:var(--gold-xs);border-color:var(--gold-l)}
+
+#grid{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--gold-xs) 1px,transparent 1px),linear-gradient(90deg,var(--gold-xs) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+#pc{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:2;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px)}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+#app{position:relative;z-index:10}
+
+/* TICKER + NAVBAR */
+#ticker{position:fixed;top:0;left:0;right:0;z-index:199;height:30px;background:var(--gold);overflow:hidden;display:flex;align-items:center}
+.t-track{display:flex;gap:48px;white-space:nowrap;animation:tickR 38s linear infinite}
+body.ltr .t-track{animation-name:tickL}
+@keyframes tickR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes tickL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.t-item{font-family:var(--font-m);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--void);display:flex;align-items:center;gap:16px}
+.t-sep{opacity:.35;font-size:.45rem}
+
+#nav{position:fixed;top:30px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,5vw,96px);transition:background var(--mid),backdrop-filter var(--mid),padding var(--mid);border-bottom:1px solid transparent}
+#nav.sc{background:rgba(5,5,8,.88);backdrop-filter:blur(24px);border-bottom-color:var(--gold-xs);padding-top:10px;padding-bottom:10px}
+.logo{font-family:var(--font-d);font-size:clamp(1rem,1.8vw,1.3rem);font-weight:700;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo-mark{width:30px;height:30px;display:grid;place-items:center;flex-shrink:0}
+.logo-mark svg{width:100%;height:100%}
+.logo-name{background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,var(--gold-l) 50%,var(--gold) 70%,var(--gold-d) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite}
+@keyframes shimmer{from{background-position:200% center}to{background-position:-200% center}}
+@media(prefers-reduced-motion:reduce){.logo-name{animation:none;color:var(--gold)}}
+.nav-links{display:flex;align-items:center;gap:clamp(20px,3vw,56px);list-style:none}
+@media(max-width:768px){.nav-links{display:none}}
+.nav-links a{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);transition:color var(--fast);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--mid) var(--ease)}
+.nav-links a.on{color:var(--gold)}
+.nav-links a.on::after{transform:scaleX(1);transform-origin:left}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-sw{position:relative}
+.lang-btn{font-family:var(--font-m);font-size:.62rem;letter-spacing:.15em;padding:6px 10px;border:1px solid var(--gold-sm);color:var(--silver);transition:all var(--fast);text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lang-menu{position:absolute;top:calc(100% + 8px);background:var(--surface);border:1px solid var(--gold-sm);min-width:140px;box-shadow:0 16px 48px rgba(0,0,0,.5);opacity:0;transform:translateY(-8px);pointer-events:none;transition:all var(--fast) var(--ease);z-index:250;max-height:260px;overflow-y:auto}
+body:not(.ltr) .lang-menu{left:0}
+body.ltr .lang-menu{right:0}
+.lang-menu.open{opacity:1;transform:translateY(0);pointer-events:all}
+.lang-opt{display:flex;align-items:center;gap:10px;width:100%;padding:10px 14px;font-size:.78rem;color:var(--silver);transition:all var(--fast);text-align:start}
+.lang-opt:hover{background:var(--gold-xs);color:var(--gold)}
+.lang-opt.on{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;width:28px;padding:4px}
+@media(max-width:768px){.burger{display:flex}}
+.burger span{display:block;height:1px;background:var(--gold);transition:all var(--mid) var(--ease)}
+.burger.on span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+#mmenu{position:fixed;inset:0;z-index:190;background:rgba(5,5,8,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateY(-100%);transition:transform var(--slow) var(--ease)}
+#mmenu.on{transform:translateY(0)}
+.mm-link{font-family:var(--font-d);font-size:clamp(1.6rem,6vw,2.8rem);letter-spacing:.2em;color:var(--silver);text-transform:uppercase;transition:color var(--fast)}
+.mm-link:hover,.mm-link.on{color:var(--gold)}
+
+/* PAGE HEADER */
+#page-header{position:relative;z-index:10;padding:calc(128px + 30px) clamp(20px,8vw,128px) 64px;text-align:center;overflow:hidden}
+.ph-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;width:clamp(300px,50vw,700px);height:clamp(300px,50vw,700px);background:radial-gradient(circle,rgba(200,164,90,.10),transparent 70%);top:-15%;left:-10%}
+.ph-eye{font-family:var(--font-m);font-size:clamp(.58rem,1.1vw,.72rem);letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:16px;opacity:0;animation:fsu var(--slow) var(--ease) .2s forwards}
+.ph-eye::before,.ph-eye::after{content:'';display:block;width:36px;height:1px;background:var(--gold-md)}
+.ph-ttl{font-family:var(--font-d);font-size:clamp(2.2rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-.01em;margin-bottom:20px;opacity:0;animation:fsu var(--slow) var(--ease) .35s forwards}
+.ph-ttl .glow{background:linear-gradient(135deg,var(--gold),var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 100%;filter:drop-shadow(0 0 24px rgba(200,164,90,.3));animation:gsh 4s linear infinite}
+@keyframes gsh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.ph-ttl .glow{animation:none}}
+.ph-sub{font-family:var(--font-b);font-size:clamp(.95rem,1.8vw,1.2rem);font-weight:300;font-style:italic;color:var(--silver);max-width:600px;margin:0 auto;line-height:1.65;opacity:0;animation:fsu var(--slow) var(--ease) .5s forwards}
+
+/* STORY SECTION */
+#story{position:relative;z-index:10;padding:clamp(80px,10vw,140px) clamp(20px,5vw,96px)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center}
+@media(max-width:768px){.story-grid{grid-template-columns:1fr}}
+.story-text{display:flex;flex-direction:column;gap:20px}
+.sec-eye{font-family:var(--font-m);font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;display:block}
+.sec-ttl{font-family:var(--font-d);font-size:clamp(1.7rem,4vw,2.8rem);font-weight:700;color:var(--platinum);line-height:1.1}
+.story-body{font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--silver);line-height:1.85}
+.story-body p{margin-bottom:16px}
+.story-body p:last-child{margin-bottom:0}
+.story-visual{display:flex;flex-direction:column;gap:12px}
+.story-card{background:var(--card);border:1px solid var(--gold-xs);padding:24px;position:relative;overflow:hidden;opacity:0;transform:translateX(20px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease),border-color var(--mid)}
+body.ltr .story-card{transform:translateX(-20px)}
+.story-card.on{opacity:1;transform:translateX(0)}
+.story-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold-xs),transparent 60%);opacity:0;transition:opacity var(--mid)}
+.story-card:hover::before{opacity:1}
+.story-card:hover{border-color:var(--gold-sm)}
+.sc-num{font-family:var(--font-d);font-size:2.5rem;font-weight:900;color:var(--gold-xs);-webkit-text-stroke:1px var(--gold-sm);line-height:1;margin-bottom:8px}
+.sc-ttl{font-family:var(--font-d);font-size:.9rem;font-weight:700;letter-spacing:.05em;color:var(--platinum);margin-bottom:6px}
+.sc-desc{font-size:.82rem;color:var(--dust);line-height:1.55}
+
+/* VALUES */
+#values{position:relative;z-index:10;background:var(--deep);border-top:1px solid var(--gold-xs);border-bottom:1px solid var(--gold-xs);padding:clamp(80px,10vw,140px) clamp(20px,5vw,96px)}
+.val-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;margin-top:48px}
+.val-card{background:var(--card);border:1px solid var(--gold-xs);padding:28px;opacity:0;transform:translateY(16px)}
+.val-card.rv.on{opacity:1;transform:translateY(0)}
+.val-ico{font-size:1.6rem;margin-bottom:14px;display:block}
+.val-ttl{font-family:var(--font-d);font-size:.9rem;font-weight:700;letter-spacing:.08em;color:var(--platinum);margin-bottom:8px}
+.val-desc{font-size:.85rem;color:var(--dust);line-height:1.6}
+
+/* MANIFESTO */
+#manifesto{position:relative;z-index:10;padding:clamp(80px,10vw,140px) clamp(20px,8vw,128px);text-align:center;overflow:hidden}
+.man-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;width:clamp(300px,60vw,800px);height:clamp(300px,60vw,800px);background:radial-gradient(circle,rgba(200,164,90,.07),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.man-quote{font-family:var(--font-b);font-style:italic;font-size:clamp(1.2rem,3vw,2rem);color:var(--platinum);line-height:1.5;max-width:820px;margin:0 auto 32px;position:relative}
+.man-quote::before{content:'"';position:absolute;top:-.2em;font-size:3em;color:var(--gold-sm);font-style:normal;line-height:1}
+body:not(.ltr) .man-quote::before{right:-.2em;left:auto}
+body.ltr .man-quote::before{left:-.2em}
+.man-attr{font-family:var(--font-m);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);position:relative}
+
+/* CONTACT SECTION */
+#contact-section{position:relative;z-index:10;background:var(--surface);border-top:1px solid var(--gold-xs);padding:clamp(80px,10vw,140px) clamp(20px,5vw,96px)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;margin-top:48px}
+.contact-card{background:var(--card);border:1px solid var(--gold-xs);padding:28px 24px;display:flex;flex-direction:column;gap:14px;opacity:0;transform:translateY(16px);transition:all var(--mid) var(--ease)}
+.contact-card.rv.on{opacity:1;transform:translateY(0)}
+.contact-card:hover{border-color:var(--gold-sm);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.cc-ico{font-size:1.8rem}
+.cc-label{font-family:var(--font-m);font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--dust)}
+.cc-link{font-family:var(--font-d);font-size:.9rem;font-weight:600;color:var(--gold);letter-spacing:.04em}
+.cc-desc{font-size:.82rem;color:var(--dust);line-height:1.5}
+.cc-btn{font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-sm);padding:10px 18px;transition:all var(--fast);display:inline-block;margin-top:4px}
+.cc-btn:hover{background:var(--gold-xs);border-color:var(--gold)}
+
+/* CTA */
+#cta-band{position:relative;z-index:10;background:linear-gradient(135deg,var(--card),var(--surface));border-top:1px solid var(--gold-sm);border-bottom:1px solid var(--gold-sm);padding:clamp(64px,8vw,120px) clamp(20px,8vw,128px);text-align:center;overflow:hidden}
+.cta-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;width:clamp(200px,40vw,600px);height:clamp(200px,40vw,600px);background:radial-gradient(circle,rgba(200,164,90,.09),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-ttl{font-family:var(--font-d);font-size:clamp(1.6rem,4vw,3rem);font-weight:700;color:var(--platinum);margin-bottom:14px;position:relative}
+.cta-sub{font-family:var(--font-b);font-style:italic;color:var(--silver);font-size:clamp(.95rem,1.6vw,1.1rem);margin-bottom:36px;position:relative}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-p{position:relative;font-family:var(--font-m);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--void);background:var(--gold);padding:14px clamp(24px,3vw,40px);overflow:hidden;transition:transform var(--mid) var(--ease),box-shadow var(--mid);display:inline-block}
+.btn-p::before{content:'';position:absolute;inset:0;background:var(--gold-l);transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px var(--gold-md)}
+.btn-p:hover::before{transform:scaleX(1)}
+.btn-p span{position:relative;z-index:1}
+.btn-s{font-family:var(--font-m);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);padding:13px clamp(22px,3vw,38px);border:1px solid var(--gold-sm);position:relative;overflow:hidden;transition:all var(--mid) var(--ease);display:inline-block}
+.btn-s::before{content:'';position:absolute;inset:0;background:var(--gold-xs);transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.btn-s:hover{border-color:var(--gold);transform:translateY(-2px)}
+.btn-s:hover::before{transform:scaleX(1)}
+.btn-s span{position:relative;z-index:1}
+
+/* FOOTER */
+#foot{position:relative;z-index:10;background:var(--abyss);border-top:1px solid var(--gold-xs);padding:clamp(64px,8vw,120px) clamp(20px,5vw,96px) 32px}
+.foot-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:48px;margin-bottom:48px}
+.foot-tag{font-family:var(--font-b);font-style:italic;font-size:.88rem;color:var(--dust);line-height:1.65;margin-top:16px}
+.fc-ttl{font-family:var(--font-m);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px}
+.flinks a{font-size:.83rem;color:var(--dust);transition:color var(--fast)}
+.flinks a:hover{color:var(--gold)}
+.foot-coins{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.coin{font-family:var(--font-m);font-size:.52rem;letter-spacing:.12em;padding:4px 8px;border:1px solid var(--gold-xs);color:var(--dust)}
+.foot-bot{border-top:1px solid var(--gold-xs);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot-cp{font-family:var(--font-m);font-size:.58rem;letter-spacing:.15em;color:var(--dust)}
+
+/* FLOAT */
+#float-stack{position:fixed;bottom:32px;z-index:300;display:flex;flex-direction:column;gap:12px}
+body:not(.ltr) #float-stack{left:32px}
+body.ltr #float-stack{right:32px}
+.float-btn{width:52px;height:52px;display:flex;align-items:center;justify-content:center;position:relative;font-size:1.3rem;transition:transform var(--mid) var(--ease-el),box-shadow var(--mid);box-shadow:0 8px 28px rgba(0,0,0,.4)}
+.float-btn:hover{transform:scale(1.1)}
+.float-wa{background:#25D366;color:#fff}
+.float-tg{background:#229ED9;color:#fff}
+.float-ai{width:58px;height:58px;background:var(--gold);color:var(--void);box-shadow:0 8px 32px var(--gold-md)}
+.float-ai::before{content:'';position:absolute;inset:-4px;border:1px solid var(--gold-sm);animation:abp 3s ease-out infinite}
+@keyframes abp{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+.ai-ico{font-family:var(--font-d);font-size:.85rem;font-weight:700;letter-spacing:.1em}
+
+/* UTILS */
+#cbn{position:fixed;top:0;left:0;right:0;z-index:99999;padding:6px 16px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;transform:translateY(-100%);transition:transform var(--mid) var(--ease)}
+#cbn.on{transform:translateY(0)}
+#cbn.ol{background:var(--neon-g);color:var(--void)}
+#cbn.off{background:#ffaa00;color:var(--void)}
+#scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:201;background:var(--gold);transform-origin:left;transform:scaleX(0);transition:transform 100ms linear;box-shadow:0 0 8px var(--gold-md)}
+body.ltr #scroll-progress{transform-origin:right}
+@keyframes fsu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease)}
+.rv.on{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="cbn" role="status" aria-live="polite"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+<div id="cr" aria-hidden="true"></div>
+<div id="cd" aria-hidden="true"></div>
+<div id="grid" aria-hidden="true"></div>
+<canvas id="pc" aria-hidden="true"></canvas>
+
+<div id="ticker" aria-label="إعلانات" role="marquee"><div class="t-track" id="tt"></div></div>
+
+<nav id="mmenu" aria-label="قائمة الجوال">
+  <a href="index.html"    class="mm-link" data-i="nav.home">الرئيسية</a>
+  <a href="store.html"    class="mm-link" data-i="nav.store">الرفوف</a>
+  <a href="vault.html"    class="mm-link" data-i="nav.vault">أعمالنا</a>
+  <a href="services.html" class="mm-link" data-i="nav.services">الخدمات</a>
+  <a href="about.html"    class="mm-link on" data-i="nav.about">من نحن</a>
+</nav>
+
+<header id="nav" role="banner">
+  <a href="index.html" class="logo" aria-label="PEAK AI Agency">
+    <span class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/>
+        <path d="M20 4 L20 34" stroke="currentColor" stroke-width="1" opacity="0.4" style="color:var(--gold)"/>
+      </svg>
+    </span>
+    <span class="logo-name">PEAK AI</span>
+  </a>
+  <nav aria-label="رئيسي">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    data-i="nav.home">الرئيسية</a></li>
+      <li><a href="store.html"    data-i="nav.store">الرفوف</a></li>
+      <li><a href="vault.html"    data-i="nav.vault">أعمالنا</a></li>
+      <li><a href="services.html" data-i="nav.services">الخدمات</a></li>
+      <li><a href="about.html" class="on" data-i="nav.about" aria-current="page">من نحن</a></li>
+    </ul>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+        <span id="lang-cur">AR</span> ▾
+      </button>
+      <div class="lang-menu" id="lang-menu" role="menu"></div>
+    </div>
+    <button class="burger" id="burg" aria-label="القائمة" aria-expanded="false" aria-controls="mmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="app">
+
+<!-- PAGE HEADER -->
+<section id="page-header">
+  <div class="ph-orb" aria-hidden="true"></div>
+  <span class="ph-eye" data-i="ph.eye">قصتنا</span>
+  <h1 class="ph-ttl" id="phttl">
+    <span class="glow" data-i="ph.ttl">من نحن</span>
+  </h1>
+  <p class="ph-sub" data-i="ph.sub">وكالة ذكاء اصطناعي سيادية — نبني المستقبل الرقمي بالطلب</p>
+</section>
+
+<!-- STORY -->
+<section id="story" aria-labelledby="story-ttl">
+  <div class="story-grid">
+    <div class="story-text rv">
+      <div>
+        <span class="sec-eye" data-i="story.eye">نشأة الفكرة</span>
+        <h2 class="sec-ttl" id="story-ttl" data-i="story.ttl">لماذا وُجدنا</h2>
+      </div>
+      <div class="story-body" id="story-body"></div>
+    </div>
+    <div class="story-visual" id="story-cards"></div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values" aria-labelledby="val-ttl">
+  <div class="rv">
+    <span class="sec-eye" data-i="val.eye">ما نؤمن به</span>
+    <h2 style="font-family:var(--font-d);font-size:clamp(1.7rem,4vw,2.8rem);font-weight:700;color:var(--platinum);margin-top:12px" id="val-ttl" data-i="val.ttl">قيمنا الحديدية</h2>
+  </div>
+  <div class="val-grid" id="val-grid"></div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto" aria-label="فلسفتنا">
+  <div class="man-orb" aria-hidden="true"></div>
+  <blockquote class="man-quote rv" id="man-quote" lang="ar"></blockquote>
+  <p class="man-attr rv" id="man-attr">PEAK AI Agency</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact-section" aria-labelledby="contact-ttl">
+  <div class="rv">
+    <span class="sec-eye" data-i="contact.eye">تواصل معنا</span>
+    <h2 style="font-family:var(--font-d);font-size:clamp(1.7rem,4vw,2.8rem);font-weight:700;color:var(--platinum);margin-top:12px" id="contact-ttl" data-i="contact.ttl">كل قنواتنا</h2>
+  </div>
+  <div class="contact-grid" id="contact-grid"></div>
+</section>
+
+<!-- CTA -->
+<section id="cta-band" aria-labelledby="cta-ttl">
+  <div class="cta-orb" aria-hidden="true"></div>
+  <h2 class="cta-ttl rv" id="cta-ttl" data-i="cta.ttl">ابدأ معنا اليوم</h2>
+  <p class="cta-sub rv" data-i="cta.sub">مشروعك الأول خطوة واحدة بعيداً</p>
+  <div class="cta-btns rv">
+    <a href="#" class="btn-p" id="cta-wa"><span data-i="cta.wa">واتساب</span></a>
+    <a href="services.html" class="btn-s"><span data-i="cta.services">الخدمات</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="foot" role="contentinfo">
+  <div class="foot-g">
+    <div>
+      <div class="logo"><span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/></svg>
+      </span><span class="logo-name">PEAK AI</span></div>
+      <p class="foot-tag" data-i="ft.tag">وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.</p>
+      <div class="foot-coins"><span class="coin">USDT TRC-20</span><span class="coin">USDT BEP-20</span><span class="coin">BTC</span><span class="coin">ETH</span><span class="coin">BNB</span></div>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.platform">المنصة</span>
+      <ul class="flinks">
+        <li><a href="index.html" data-i="nav.home">الرئيسية</a></li>
+        <li><a href="store.html" data-i="nav.store">الرفوف</a></li>
+        <li><a href="vault.html"    data-i="nav.vault">أعمالنا</a></li>
+      <li><a href="services.html" data-i="nav.services">الخدمات</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.lang">اللغة</span>
+      <ul class="flinks" id="foot-langs"></ul>
+    </div>
+    <div>
+      <span class="fc-ttl" data-i="ft.contact">تواصل</span>
+      <ul class="flinks">
+        <li><a href="#" id="foot-wa">💬 WhatsApp</a></li>
+        <li><a href="#" id="foot-tg">✈ Telegram</a></li>
+        <li><a href="#" id="foot-tg-ch" data-i="ft.channel">قناة الإعلانات</a></li>
+        <li><a href="#" id="foot-wa-ch" data-i="ft.wa_channel">قناة واتساب</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span class="foot-cp" data-i="ft.copy">© 2025 PEAK AI Agency — جميع الحقوق محفوظة</span>
+    <span class="foot-cp" style="color:var(--gold);letter-spacing:.3em;font-size:.52rem">PEAKVAULT.COM</span>
+  </div>
+</footer>
+
+<div id="float-stack">
+  <a href="#" class="float-btn float-wa" id="float-wa" aria-label="واتساب">💬</a>
+  <a href="#" class="float-btn float-tg" id="float-tg" aria-label="تلجرام">✈</a>
+  <a href="index.html#ai" class="float-btn float-ai" aria-label="VAULT AI">
+    <span class="ai-ico" aria-hidden="true">AI</span>
+  </a>
+</div>
+
+<script>
+'use strict';
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+const CONTACT=Object.freeze({
+  whatsapp:  'https://wa.me/963996767062',
+  telegram:  'https://t.me/T963996767062',
+  tgChannel: 'https://t.me/+hx9uSnNasH40MzBh',
+  waChannel: 'https://whatsapp.com/channel/0029VbCmXviDJ6GsuDynlU3o',
+});
+
+function san(s,max=500){
+  return String(s??'').replace(/[<>"'`&]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;","&":"&amp;"}[c]||c)).replace(/javascript:/gi,'').replace(/on\w+=?/gi,'').trim().slice(0,max);
+}
+
+const LANGS=[
+  {code:'ar',label:'العربية',native:'AR',rtl:true},
+  {code:'en',label:'English',native:'EN',rtl:false},
+  {code:'fr',label:'Français',native:'FR',rtl:false},
+  {code:'es',label:'Español',native:'ES',rtl:false},
+  {code:'tr',label:'Türkçe',native:'TR',rtl:false},
+  {code:'de',label:'Deutsch',native:'DE',rtl:false},
+  {code:'zh',label:'中文',native:'ZH',rtl:false},
+];
+
+const TR={
+  ar:{
+    'nav.home':'الرئيسية','nav.store':'الرفوف','nav.services':'الخدمات','nav.about':'من نحن',
+    'ph.eye':'قصتنا','ph.ttl':'من نحن','ph.sub':'وكالة ذكاء اصطناعي سيادية — نبني المستقبل الرقمي بالطلب',
+    'story.eye':'نشأة الفكرة','story.ttl':'لماذا وُجدنا',
+    'val.eye':'ما نؤمن به','val.ttl':'قيمنا الحديدية',
+    'contact.eye':'تواصل معنا','contact.ttl':'كل قنواتنا',
+    'cta.ttl':'ابدأ معنا اليوم','cta.sub':'مشروعك الأول خطوة واحدة بعيداً',
+    'cta.wa':'واتساب','cta.services':'الخدمات',
+    'ft.tag':'وكالة ذكاء اصطناعي تبني منتجاتك وأنظمتك الرقمية — من فكرة إلى تسليم.',
+    'ft.platform':'المنصة','ft.lang':'اللغة','ft.contact':'تواصل',
+    'ft.channel':'قناة الإعلانات','ft.wa_channel':'قناة واتساب','ft.copy':'© 2025 PEAK AI Agency — جميع الحقوق محفوظة',
+    'tk.1':'⚡ نبني بالذكاء الاصطناعي في أيام',
+    'tk.2':'🔐 دفع مشفر مباشر — لا وسطاء',
+    'tk.3':'✦ بناء مخصص حسب طلبك بالضبط',
+    'tk.4':'◈ 7 لغات · 22 قطاعاً متخصصاً',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'open':'فتح القناة',
+  },
+  en:{
+    'nav.home':'Home','nav.store':'Shelves','nav.services':'Services','nav.about':'About',
+    'ph.eye':'Our Story','ph.ttl':'Who We Are','ph.sub':'A sovereign AI agency — building the digital future on demand',
+    'story.eye':'Origins','story.ttl':'Why We Exist',
+    'val.eye':'What We Believe','val.ttl':'Our Iron Values',
+    'contact.eye':'Connect','contact.ttl':'All Our Channels',
+    'cta.ttl':'Start With Us Today','cta.sub':'Your first project is one step away',
+    'cta.wa':'WhatsApp','cta.services':'Services',
+    'ft.tag':'An AI agency that builds your digital products and systems — from idea to delivery.',
+    'ft.platform':'Platform','ft.lang':'Language','ft.contact':'Contact',
+    'ft.channel':'Announcements','ft.wa_channel':'WhatsApp Channel','ft.copy':'© 2025 PEAK AI Agency — All rights reserved',
+    'tk.1':'⚡ We build with AI in days',
+    'tk.2':'🔐 Direct crypto payment — no middlemen',
+    'tk.3':'✦ Custom-built exactly to your request',
+    'tk.4':'◈ 7 languages · 22 specialized sectors',
+    'tk.5':'🌍 PEAK AI Agency — peakvault.com',
+    'open':'Open Channel',
+  },
+};
+['fr','es','tr','de','zh'].forEach(l=>{TR[l]={...TR.en}});
+
+const CONTENT={
+  ar:{
+    story:[
+      'وُلدت PEAK AI Agency من سؤال بسيط: لماذا يستغرق بناء منتج رقمي أسابيع أو أشهر بينما الذكاء الاصطناعي يمكنه تسريع كل خطوة؟',
+      'أنشأناها لتكون الإجابة الحقيقية — وكالة تبني ما تحلم به بسرعة لم تكن ممكنة من قبل، بجودة لا تُساوَم عليها، وبدفع مباشر بالعملات المشفرة لأننا نؤمن بالسيادة الرقمية الكاملة.',
+      'كل مشروع نبنيه هو شهادة على ما يمكن تحقيقه عندما تلتقي الفكرة الصحيحة بالأدوات الصحيحة والفريق الصحيح.',
+    ],
+    en:[
+      'PEAK AI Agency was born from a simple question: why does building a digital product take weeks or months when AI can accelerate every step?',
+      'We were created to be the real answer — an agency that builds what you dream of at unprecedented speed, with uncompromising quality, and direct crypto payment because we believe in complete digital sovereignty.',
+      'Every project we build is a testament to what can be achieved when the right idea meets the right tools and the right team.',
+    ],
+  },
+  storyCards:{
+    ar:[
+      {n:'01',ttl:'السرعة السيادية',desc:'ما يأخذ أسابيع نبنيه في أيام بالذكاء الاصطناعي'},
+      {n:'02',ttl:'الجودة أولاً',desc:'لا نضحي بالجودة في سبيل السرعة — نحقق الاثنين'},
+      {n:'03',ttl:'شفافية كاملة',desc:'أسعار واضحة، مواصفات محددة، لا مفاجآت'},
+    ],
+    en:[
+      {n:'01',ttl:'Sovereign Speed',desc:'What takes weeks we build in days with AI'},
+      {n:'02',ttl:'Quality First',desc:'We never sacrifice quality for speed — we achieve both'},
+      {n:'03',ttl:'Full Transparency',desc:'Clear prices, defined specs, no surprises'},
+    ],
+  },
+  values:{
+    ar:[
+      {ico:'⚡',ttl:'السرعة الحقيقية',desc:'لا وعود فارغة — الذكاء الاصطناعي يسرّع البناء فعلياً وبشكل موثَّق.'},
+      {ico:'🎯',ttl:'الدقة في التسليم',desc:'كل ما نتفق عليه نُسلِّمه بالضبط. لا إضافات، لا نقصان.'},
+      {ico:'🔐',ttl:'السيادة الرقمية',desc:'دفع مشفر مباشر، ملكية كاملة لك، لا وسيط يتحكم في أموالك.'},
+      {ico:'✦',ttl:'الجمال وظيفي',desc:'كل ما نبنيه جميل لأن الجمال يبيع ويُلهم ويُميِّز.'},
+      {ico:'◈',ttl:'الصدق المطلق',desc:'لا نعد بما لا نستطيع، ولا نخفي ما يجب قوله.'},
+      {ico:'∞',ttl:'التطور المستمر',desc:'كل مشروع يعلّمنا شيئاً — كل درس يُحسِّن المشروع القادم.'},
+    ],
+    en:[
+      {ico:'⚡',ttl:'Real Speed',desc:"No empty promises — AI genuinely accelerates the build, and it's documented."},
+      {ico:'🎯',ttl:'Delivery Precision',desc:"Everything we agree on gets delivered exactly. No additions, no omissions."},
+      {ico:'🔐',ttl:'Digital Sovereignty',desc:"Direct crypto payment, full ownership for you, no intermediary controlling your money."},
+      {ico:'✦',ttl:'Beauty is Functional',desc:"Everything we build is beautiful because beauty sells, inspires, and differentiates."},
+      {ico:'◈',ttl:'Absolute Honesty',desc:"We don't promise what we can't do, and we don't hide what needs to be said."},
+      {ico:'∞',ttl:'Continuous Evolution',desc:"Every project teaches us something — every lesson improves the next project."},
+    ],
+  },
+  manifesto:{
+    ar:'نحن لا نبني مواقع — نبني أسلحة رقمية تصارع الأسواق وتكسب.',
+    en:'We don\'t build websites — we build digital weapons that fight markets and win.',
+  },
+  contacts:[
+    {ico:'💬',label:{ar:'واتساب المباشر',en:'Direct WhatsApp'},link:CONTACT.whatsapp,desc:{ar:'تواصل مباشر للمشاريع والاستفسارات',en:'Direct contact for projects and inquiries'},btn:{ar:'تواصل',en:'Contact'},type:'wa'},
+    {ico:'✈',label:{ar:'تلجرام',en:'Telegram'},link:CONTACT.telegram,desc:{ar:'مراسلة عبر تلجرام',en:'Message via Telegram'},btn:{ar:'راسلنا',en:'Message Us'},type:'tg'},
+    {ico:'📢',label:{ar:'قناة تلجرام',en:'Telegram Channel'},link:CONTACT.tgChannel,desc:{ar:'آخر الإعلانات والمنتجات الجديدة',en:'Latest announcements and new products'},btn:{ar:'انضم',en:'Join'},type:'ext'},
+    {ico:'📱',label:{ar:'قناة واتساب',en:'WhatsApp Channel'},link:CONTACT.waChannel,desc:{ar:'متابعة الأخبار على واتساب',en:'Follow news on WhatsApp'},btn:{ar:'تابع',en:'Follow'},type:'ext'},
+  ],
+};
+
+let lang=localStorage.getItem('pv_lang')||'ar';
+function T(k){return TR[lang]?.[k]||TR.ar[k]||k}
+function C(obj){return obj[lang]||obj.ar||obj.en||''}
+
+/* ════════ LANG ════════ */
+function applyLang(l){
+  if(!TR[l])l='ar';
+  lang=l;
+  const meta=LANGS.find(x=>x.code===l);
+  const rtl=meta?.rtl??(l==='ar');
+  document.documentElement.lang=l;
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.body.classList.toggle('ltr',!rtl);
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(TR[l]?.[k]||TR.ar[k]) el.textContent=T(k);
+  });
+  document.getElementById('lang-cur').textContent=meta?.native||'AR';
+  localStorage.setItem('pv_lang',l);
+  buildTicker();buildStory();buildValues();buildManifesto();buildContacts();
+}
+
+function buildLangMenu(){
+  const menu=document.getElementById('lang-menu');
+  const fl=document.getElementById('foot-langs');
+  menu.textContent='';fl.textContent='';
+  LANGS.forEach(m=>{
+    const btn=document.createElement('button');
+    btn.className='lang-opt'+(m.code===lang?' on':'');
+    btn.setAttribute('role','menuitem');
+    btn.textContent=`${m.native} — ${m.label}`;
+    btn.addEventListener('click',()=>{applyLang(m.code);menu.classList.remove('open');document.getElementById('lang-btn').setAttribute('aria-expanded','false');buildLangMenu()});
+    menu.appendChild(btn);
+    const li=document.createElement('li');
+    const a=document.createElement('a');a.href='#';a.textContent=m.native;
+    a.addEventListener('click',e=>{e.preventDefault();applyLang(m.code);buildLangMenu()});
+    li.appendChild(a);fl.appendChild(li);
+  });
+}
+
+/* ════════ TICKER ════════ */
+function buildTicker(){
+  const tt=document.getElementById('tt');if(!tt)return;
+  const keys=['tk.1','tk.2','tk.3','tk.4','tk.5'];
+  const all=[...keys,...keys,...keys].map(k=>T(k));
+  tt.textContent='';
+  all.forEach((txt,i)=>{
+    const sp=document.createElement('span');sp.className='t-item';sp.textContent=txt;
+    if(i<all.length-1){const sep=document.createElement('span');sep.className='t-sep';sep.textContent='✦';sp.appendChild(sep)}
+    tt.appendChild(sp);
+  });
+}
+
+/* ════════ STORY ════════ */
+function buildStory(){
+  const body=document.getElementById('story-body');
+  const cardsWrap=document.getElementById('story-cards');
+  if(!body||!cardsWrap)return;
+
+  body.textContent='';
+  const paras=CONTENT.story[lang]||CONTENT.story.ar;
+  paras.forEach(txt=>{
+    const p=document.createElement('p');p.textContent=txt;body.appendChild(p);
+  });
+
+  cardsWrap.textContent='';
+  const cards=CONTENT.storyCards[lang]||CONTENT.storyCards.ar;
+  cards.forEach((c,i)=>{
+    const div=document.createElement('div');
+    div.className='story-card';
+    const num=document.createElement('div');num.className='sc-num';num.textContent=c.n;
+    const ttl=document.createElement('div');ttl.className='sc-ttl';ttl.textContent=c.ttl;
+    const desc=document.createElement('div');desc.className='sc-desc';desc.textContent=c.desc;
+    div.append(num,ttl,desc);
+    div.style.transitionDelay=(i*100)+'ms';
+    cardsWrap.appendChild(div);
+  });
+  obs&&cardsWrap.querySelectorAll('.story-card').forEach(el=>obs.observe(el));
+}
+
+/* ════════ VALUES ════════ */
+function buildValues(){
+  const grid=document.getElementById('val-grid');if(!grid)return;
+  grid.textContent='';
+  const vals=CONTENT.values[lang]||CONTENT.values.ar;
+  vals.forEach((v,i)=>{
+    const card=document.createElement('div');card.className='val-card rv';
+    const ico=document.createElement('span');ico.className='val-ico';ico.setAttribute('aria-hidden','true');ico.textContent=v.ico;
+    const ttl=document.createElement('div');ttl.className='val-ttl';ttl.textContent=v.ttl;
+    const desc=document.createElement('div');desc.className='val-desc';desc.textContent=v.desc;
+    card.append(ico,ttl,desc);
+    card.style.transitionDelay=(i*60)+'ms';
+    grid.appendChild(card);
+  });
+  obs&&document.querySelectorAll('.val-card.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ MANIFESTO ════════ */
+function buildManifesto(){
+  const q=document.getElementById('man-quote');
+  if(q) q.textContent=CONTENT.manifesto[lang]||CONTENT.manifesto.ar;
+}
+
+/* ════════ CONTACTS ════════ */
+function buildContacts(){
+  const grid=document.getElementById('contact-grid');if(!grid)return;
+  grid.textContent='';
+  CONTENT.contacts.forEach((c,i)=>{
+    const card=document.createElement('div');card.className='contact-card rv';
+    card.style.transitionDelay=(i*80)+'ms';
+    const ico=document.createElement('div');ico.className='cc-ico';ico.setAttribute('aria-hidden','true');ico.textContent=c.ico;
+    const label=document.createElement('div');label.className='cc-label';label.textContent=C(c.label);
+    const link=document.createElement('div');link.className='cc-link';link.textContent=c.link.replace('https://','').replace('http://','').substring(0,30);
+    const desc=document.createElement('div');desc.className='cc-desc';desc.textContent=C(c.desc);
+    const btn=document.createElement('a');
+    btn.className='cc-btn';btn.href=c.link;btn.target='_blank';btn.rel='noopener noreferrer';
+    btn.textContent=C(c.btn);
+    card.append(ico,label,link,desc,btn);
+    grid.appendChild(card);
+  });
+  obs&&document.querySelectorAll('.contact-card.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ OBSERVER ════════ */
+let obs;
+function initObserver(){
+  obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      if(e.target.classList.contains('rv')){e.target.classList.add('on');obs.unobserve(e.target)}
+      else if(e.target.classList.contains('story-card')){e.target.classList.add('on');obs.unobserve(e.target)}
+    });
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+}
+
+/* ════════ NAV + UI ════════ */
+function initNav(){
+  const nav=document.getElementById('nav');
+  const bar=document.getElementById('scroll-progress');
+  let tick=false;
+  window.addEventListener('scroll',()=>{
+    if(tick)return;
+    requestAnimationFrame(()=>{
+      nav.classList.toggle('sc',window.scrollY>60);
+      const max=document.documentElement.scrollHeight-window.innerHeight;
+      bar.style.transform=`scaleX(${max>0?window.scrollY/max:0})`;
+      tick=false;
+    });tick=true;
+  },{passive:true});
+}
+function initBurger(){
+  const btn=document.getElementById('burg');const menu=document.getElementById('mmenu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('on');btn.classList.toggle('on',o);btn.setAttribute('aria-expanded',String(o));document.body.style.overflow=o?'hidden':''});
+  menu.querySelectorAll('.mm-link').forEach(l=>l.addEventListener('click',()=>{menu.classList.remove('on');btn.classList.remove('on');btn.setAttribute('aria-expanded','false');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('on')){menu.classList.remove('on');btn.classList.remove('on');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';btn.focus()}});
+}
+function initLangMenu(){
+  const btn=document.getElementById('lang-btn');const menu=document.getElementById('lang-menu');
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(o))});
+  document.addEventListener('click',e=>{if(!e.target.closest('.lang-sw')){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+}
+function initCursor(){
+  const ring=document.getElementById('cr');const dot=document.getElementById('cd');
+  if(!ring||!dot)return;
+  if(window.matchMedia('(pointer:coarse)').matches){ring.style.display=dot.style.display='none';document.body.style.cursor='auto';document.querySelectorAll('a,button').forEach(el=>el.style.cursor='pointer');return}
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'},{passive:true});
+  (function tick(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick)})();
+  document.addEventListener('mouseover',e=>{document.body.classList.toggle('ch',!!e.target.closest('a,button,.val-card,.contact-card,.story-card'))});
+}
+function initParticles(){
+  const cv=document.getElementById('pc');if(!cv)return;
+  const gl=cv.getContext('webgl',{alpha:true});if(!gl)return;
+  const r=()=>{cv.width=innerWidth;cv.height=innerHeight;gl.viewport(0,0,cv.width,cv.height)};
+  r();window.addEventListener('resize',r,{passive:true});
+  const N=window.matchMedia('(pointer:coarse)').matches?40:80;
+  const pos=new Float32Array(N*2),vel=new Float32Array(N*2),life=new Float32Array(N),maxL=new Float32Array(N);
+  for(let i=0;i<N;i++){pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;vel[i*2]=(Math.random()-.5)*.0006;vel[i*2+1]=(Math.random()-.5)*.0006;life[i]=Math.random();maxL[i]=.5+Math.random()*1.4}
+  const vs=`attribute vec2 a;attribute float l;varying float v;void main(){gl_Position=vec4(a,0,1);gl_PointSize=mix(1.,3.,l);v=l;}`;
+  const fs=`precision mediump float;varying float v;void main(){float d=distance(gl_PointCoord,vec2(.5));if(d>.5)discard;gl_FragColor=vec4(.784,.643,.353,v*(1.-d*2.)*.6);}`;
+  const mk=(t,s)=>{const sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);return sh};
+  const p=gl.createProgram();gl.attachShader(p,mk(gl.VERTEX_SHADER,vs));gl.attachShader(p,mk(gl.FRAGMENT_SHADER,fs));gl.linkProgram(p);gl.useProgram(p);
+  const aL=gl.getAttribLocation(p,'a'),lL=gl.getAttribLocation(p,'l');
+  const pb=gl.createBuffer(),lb=gl.createBuffer();
+  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);
+  (function f(){
+    for(let i=0;i<N;i++){pos[i*2]+=vel[i*2];pos[i*2+1]+=vel[i*2+1];life[i]+=.003;if(life[i]>maxL[i]||Math.abs(pos[i*2])>1.2||Math.abs(pos[i*2+1])>1.2){pos[i*2]=Math.random()*2-1;pos[i*2+1]=Math.random()*2-1;vel[i*2]=(Math.random()-.5)*.0006;vel[i*2+1]=(Math.random()-.5)*.0006;life[i]=0;maxL[i]=.5+Math.random()*1.4}}
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.bindBuffer(gl.ARRAY_BUFFER,pb);gl.bufferData(gl.ARRAY_BUFFER,pos,gl.DYNAMIC_DRAW);gl.enableVertexAttribArray(aL);gl.vertexAttribPointer(aL,2,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,lb);gl.bufferData(gl.ARRAY_BUFFER,life,gl.DYNAMIC_DRAW);gl.enableVertexAttribArray(lL);gl.vertexAttribPointer(lL,1,gl.FLOAT,false,0,0);
+    gl.drawArrays(gl.POINTS,0,N);requestAnimationFrame(f);
+  })();
+}
+function initConn(){
+  const bn=document.getElementById('cbn');if(!bn)return;
+  let timer=null;
+  const show=o=>{clearTimeout(timer);bn.textContent=o?(lang==='ar'?'✅ الاتصال عاد':'✅ Connected'):(lang==='ar'?'📴 لا إنترنت':'📴 Offline');bn.className=`on ${o?'ol':'off'}`;if(o)timer=setTimeout(()=>bn.classList.remove('on'),3000)};
+  window.addEventListener('online',()=>show(true));window.addEventListener('offline',()=>show(false));
+}
+function initContactLinks(){
+  const waEl=document.getElementById('cta-wa');
+  if(waEl){
+    const msg=encodeURIComponent(lang==='ar'?'مرحباً، أريد التواصل مع PEAK AI Agency':'Hello, I want to connect with PEAK AI Agency');
+    waEl.href=`${CONTACT.whatsapp}?text=${msg}`;waEl.target='_blank';waEl.rel='noopener noreferrer';
+  }
+  ['float-wa','foot-wa'].forEach(id=>{const el=document.getElementById(id);if(el){el.href=CONTACT.whatsapp;el.target='_blank';el.rel='noopener noreferrer'}});
+  ['float-tg','foot-tg'].forEach(id=>{const el=document.getElementById(id);if(el){el.href=CONTACT.telegram;el.target='_blank';el.rel='noopener noreferrer'}});
+  const tgCh=document.getElementById('foot-tg-ch');if(tgCh){tgCh.href=CONTACT.tgChannel;tgCh.target='_blank';tgCh.rel='noopener noreferrer'}
+  const waCh=document.getElementById('foot-wa-ch');if(waCh){waCh.href=CONTACT.waChannel;waCh.target='_blank';waCh.rel='noopener noreferrer'}
+}
+function initTickerPause(){
+  const bar=document.getElementById('ticker');const trk=document.getElementById('tt');
+  if(!bar||!trk)return;
+  bar.addEventListener('mouseenter',()=>{trk.style.animationPlayState='paused'});
+  bar.addEventListener('mouseleave',()=>{trk.style.animationPlayState='running'});
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  applyLang(lang);
+  buildLangMenu();
+  initObserver();
+  initNav();
+  initBurger();
+  initLangMenu();
+  initCursor();
+  initParticles();
+  initConn();
+  initContactLinks();
+  initTickerPause();
+});
+</script>
+</body>
+</html>

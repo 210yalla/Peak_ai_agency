@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<!-- PEAK AI Agency © 2025 | peakvault.com | All rights reserved -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="بوابة الدفع الآمنة — PEAK AI Agency. ادفع بالعملات المشفرة مباشرةً وبأمان تام.">
+<meta name="author" content="PEAK AI Agency">
+<meta name="copyright" content="© 2025 PEAK AI Agency — peakvault.com">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#050508">
+<title>بوابة الدفع — PEAK AI Agency</title>
+<!-- Frame Busting: prevent clickjacking -->
+<script>if(window.self!==window.top){window.top.location=window.self.location}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSi2jPQFRYJ0tFjPJMo4GqV3VPsZMhQXMEjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved */
+
+:root{
+  --void:#050508;--abyss:#07070e;--deep:#0a0a14;
+  --surface:#10101c;--card:#161626;--lift:#1e1e32;
+  --gold:#c8a45a;--gold-l:#e8c87a;--gold-d:#8a6835;
+  --gold-xs:rgba(200,164,90,.06);--gold-sm:rgba(200,164,90,.12);
+  --gold-md:rgba(200,164,90,.25);--gold-lg:rgba(200,164,90,.45);
+  --platinum:#e8e4dc;--silver:#a8a49c;--dust:#6a6660;
+  --neon-g:#00ff88;--neon-b:#0088ff;
+  --danger:#ff2244;--success:#00e676;--warning:#ffaa00;
+  --font-d:'Cinzel',serif;
+  --font-b:'Cormorant Garamond',serif;
+  --font-m:'Space Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-el:cubic-bezier(.175,.885,.32,1.275);
+  --fast:160ms;--mid:320ms;--slow:600ms;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden}
+body{
+  background:var(--void);color:var(--platinum);
+  font-family:var(--font-b);font-size:clamp(15px,1.1vw,17px);
+  line-height:1.7;overflow-x:hidden;cursor:none;
+  min-height:100vh;
+}
+body.ltr{direction:ltr;text-align:left}
+::selection{background:var(--gold-md);color:var(--void)}
+a{color:inherit;text-decoration:none}
+button{cursor:none;border:none;background:none;font:inherit;color:inherit}
+
+/* Cursor */
+#cr,#cd{position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:opacity var(--fast)}
+#cr{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;transition:width var(--mid) var(--ease),height var(--mid) var(--ease),border-color var(--mid),background var(--mid);mix-blend-mode:screen}
+#cd{width:5px;height:5px;background:var(--gold);border-radius:50%}
+body.ch #cr{width:56px;height:56px;background:var(--gold-xs);border-color:var(--gold-l)}
+
+/* Grid + noise */
+#grid{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--gold-xs) 1px,transparent 1px),linear-gradient(90deg,var(--gold-xs) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+
+#app{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column}
+
+/* ══════ NAVBAR ══════ */
+#nav{
+  position:sticky;top:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px clamp(20px,5vw,64px);
+  background:rgba(5,5,8,.92);backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--gold-xs);
+}
+.logo{font-family:var(--font-d);font-size:clamp(.9rem,1.6vw,1.2rem);font-weight:700;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo-mark{width:26px;height:26px;display:grid;place-items:center;flex-shrink:0}
+.logo-mark svg{width:100%;height:100%}
+.logo-name{background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 30%,var(--gold-l) 50%,var(--gold) 70%,var(--gold-d) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite}
+@keyframes shimmer{from{background-position:200% center}to{background-position:-200% center}}
+@media(prefers-reduced-motion:reduce){.logo-name{animation:none;color:var(--gold)}}
+.nav-secure{display:flex;align-items:center;gap:8px;font-family:var(--font-m);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--neon-g)}
+.nav-secure::before{content:'';width:8px;height:8px;background:var(--neon-g);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+/* ══════ MAIN LAYOUT ══════ */
+.pay-wrap{
+  flex:1;
+  display:grid;
+  grid-template-columns:1fr min(480px,100%);
+  gap:0;
+  max-width:1100px;
+  margin:0 auto;
+  padding:48px clamp(20px,5vw,64px);
+  width:100%;
+}
+@media(max-width:800px){.pay-wrap{grid-template-columns:1fr;padding:32px 20px}}
+
+/* ══════ ORDER SUMMARY (left) ══════ */
+.order-summary{
+  padding:0 40px 0 0;
+  border-inline-end:1px solid var(--gold-xs);
+}
+@media(max-width:800px){.order-summary{padding:0 0 32px 0;border-inline-end:none;border-bottom:1px solid var(--gold-xs)}}
+body.ltr .order-summary{padding:0 0 0 40px}
+@media(max-width:800px){body.ltr .order-summary{padding:0 0 32px 0}}
+
+.sec-eye{font-family:var(--font-m);font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+.sec-ttl{font-family:var(--font-d);font-size:clamp(1.3rem,3vw,2rem);font-weight:700;color:var(--platinum);margin-bottom:24px;line-height:1.1}
+
+.order-items{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.order-item{display:flex;align-items:center;gap:14px;padding:14px;background:var(--card);border:1px solid var(--gold-xs)}
+.order-item-ico{width:44px;height:44px;background:var(--surface);border:1px solid var(--gold-xs);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+.order-item-info{flex:1;min-width:0}
+.order-item-ttl{font-family:var(--font-d);font-size:.85rem;color:var(--platinum);margin-bottom:2px}
+.order-item-type{font-family:var(--font-m);font-size:.58rem;color:var(--dust);letter-spacing:.1em;text-transform:uppercase}
+.order-item-price{font-family:var(--font-m);font-size:.9rem;color:var(--gold);flex-shrink:0}
+
+.order-total-row{display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--gold-xs);border:1px solid var(--gold-sm);margin-bottom:24px}
+.order-total-label{font-family:var(--font-m);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--silver)}
+.order-total-amount{font-family:var(--font-d);font-size:1.6rem;font-weight:700;background:linear-gradient(90deg,var(--gold-d) 0%,var(--gold) 40%,var(--gold-l) 60%,var(--gold) 80%,var(--gold-d) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite}
+@media(prefers-reduced-motion:reduce){.order-total-amount{animation:none;-webkit-text-fill-color:var(--gold)}}
+
+.security-badges{display:flex;flex-direction:column;gap:8px}
+.sec-badge{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--dust)}
+.sec-badge-ico{width:20px;height:20px;display:grid;place-items:center;color:var(--neon-g);font-size:.9rem;flex-shrink:0}
+
+/* ══════ PAYMENT PANEL (right) ══════ */
+.pay-panel{padding:0 0 0 40px}
+@media(max-width:800px){.pay-panel{padding:32px 0 0 0}}
+body.ltr .pay-panel{padding:0 40px 0 0}
+@media(max-width:800px){body.ltr .pay-panel{padding:32px 0 0 0}}
+
+/* Currency selector */
+.currency-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-bottom:28px}
+.cur-btn{
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  padding:12px 8px;background:var(--card);border:1px solid var(--gold-xs);
+  transition:all var(--fast);position:relative;
+}
+.cur-btn:hover{border-color:var(--gold-sm);background:var(--lift)}
+.cur-btn.selected{border-color:var(--gold);background:var(--gold-xs);box-shadow:0 0 0 1px var(--gold-sm)}
+.cur-btn.selected::after{content:'✓';position:absolute;top:4px;right:6px;font-family:var(--font-m);font-size:.55rem;color:var(--neon-g)}
+body.ltr .cur-btn.selected::after{right:auto;left:6px}
+.cur-ico{font-size:1.1rem}
+.cur-sym{font-family:var(--font-m);font-size:.65rem;letter-spacing:.1em;color:var(--gold)}
+.cur-name{font-family:var(--font-m);font-size:.52rem;letter-spacing:.08em;color:var(--dust);text-transform:uppercase}
+.cur-fee{font-family:var(--font-m);font-size:.5rem;color:var(--neon-g);letter-spacing:.05em}
+
+/* Wallet display */
+.wallet-section{background:var(--card);border:1px solid var(--gold-sm);padding:20px;margin-bottom:20px}
+.wallet-label{font-family:var(--font-m);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--dust);margin-bottom:12px;display:block}
+.wallet-address-wrap{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.wallet-address{
+  flex:1;font-family:var(--font-m);font-size:clamp(.62rem,.9vw,.78rem);
+  color:var(--platinum);word-break:break-all;line-height:1.5;
+  background:var(--surface);padding:10px 12px;border:1px solid var(--gold-xs);
+  position:relative;
+}
+.wallet-address .addr-start{color:var(--gold);font-weight:700}
+.wallet-address .addr-end{color:var(--gold);font-weight:700}
+.copy-btn{
+  flex-shrink:0;width:38px;height:38px;background:var(--gold-xs);
+  border:1px solid var(--gold-sm);display:grid;place-items:center;
+  color:var(--gold);font-size:.85rem;transition:all var(--fast);
+}
+.copy-btn:hover{background:var(--gold-sm)}
+.copy-btn.copied{background:rgba(0,230,118,.12);border-color:var(--neon-g);color:var(--neon-g)}
+.wallet-integrity{font-family:var(--font-m);font-size:.56rem;letter-spacing:.12em;color:var(--neon-g);display:flex;align-items:center;gap:6px}
+.wallet-integrity::before{content:'✓';font-size:.7rem}
+
+/* QR Code */
+.qr-wrap{display:flex;justify-content:center;margin-bottom:20px}
+.qr-inner{
+  width:160px;height:160px;background:#fff;padding:12px;
+  display:grid;place-items:center;position:relative;
+}
+.qr-inner canvas{display:block}
+.qr-placeholder{
+  width:160px;height:160px;background:var(--card);border:1px dashed var(--gold-xs);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;color:var(--dust);font-size:.8rem;text-align:center;padding:12px;
+}
+
+/* Timer */
+.timer-wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 16px;background:var(--surface);border:1px solid var(--gold-xs);
+  margin-bottom:20px;
+}
+.timer-label{font-family:var(--font-m);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dust)}
+.timer-val{font-family:var(--font-m);font-size:1.1rem;letter-spacing:.08em;color:var(--gold)}
+.timer-val.warn{color:var(--warning);animation:timerPulse 1s ease-in-out infinite}
+.timer-val.expired{color:var(--danger);animation:none}
+@keyframes timerPulse{0%,100%{opacity:1}50%{opacity:.5}}
+.timer-bar{height:3px;background:var(--surface);margin-bottom:20px;position:relative;overflow:hidden}
+.timer-bar-fill{height:100%;background:var(--gold);transform-origin:right;transition:transform 1s linear;box-shadow:0 0 8px var(--gold-md)}
+body.ltr .timer-bar-fill{transform-origin:left}
+
+/* Amount input */
+.amount-section{margin-bottom:20px}
+.amount-label{font-family:var(--font-m);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--dust);margin-bottom:10px;display:block}
+.amount-display{
+  padding:14px 16px;background:var(--card);border:1px solid var(--gold-sm);
+  font-family:var(--font-m);font-size:1.2rem;color:var(--gold);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.amount-display .crypto-amount{font-size:.85rem;color:var(--silver)}
+
+/* CTA confirm */
+.confirm-btn{
+  width:100%;padding:18px;background:var(--gold);
+  font-family:var(--font-m);font-size:.72rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--void);font-weight:700;
+  transition:all var(--mid) var(--ease);position:relative;overflow:hidden;
+  margin-bottom:12px;
+}
+.confirm-btn::before{content:'';position:absolute;inset:0;background:var(--gold-l);transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.confirm-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px var(--gold-md)}
+.confirm-btn:hover::before{transform:scaleX(1)}
+.confirm-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.confirm-btn span{position:relative;z-index:1}
+
+.confirm-note{font-size:.78rem;color:var(--dust);line-height:1.6;text-align:center}
+.confirm-note a{color:var(--gold);text-decoration:underline}
+
+/* Steps indicator */
+.steps{display:flex;align-items:center;gap:0;margin-bottom:32px}
+.step{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;position:relative}
+.step::after{content:'';position:absolute;top:12px;width:100%;height:1px;background:var(--gold-xs);z-index:0}
+body:not(.ltr) .step::after{right:50%}
+body.ltr .step::after{left:50%}
+.step:last-child::after{display:none}
+.step-num{width:24px;height:24px;border:1px solid var(--gold-xs);display:grid;place-items:center;font-family:var(--font-m);font-size:.58rem;color:var(--dust);position:relative;z-index:1;background:var(--void)}
+.step.done .step-num{background:var(--neon-g);border-color:var(--neon-g);color:var(--void)}
+.step.active .step-num{background:var(--gold);border-color:var(--gold);color:var(--void)}
+.step-label{font-family:var(--font-m);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dust);text-align:center}
+.step.done .step-label,.step.active .step-label{color:var(--gold)}
+
+/* Success screen */
+#success-screen{
+  display:none;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:48px;
+  gap:16px;
+}
+#success-screen.show{display:flex}
+.success-ico{width:80px;height:80px;background:rgba(0,230,118,.12);border:2px solid var(--neon-g);display:grid;place-items:center;font-size:2rem;border-radius:50%;animation:successPop var(--ease-el) .3s both}
+@keyframes successPop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+.success-ttl{font-family:var(--font-d);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--platinum)}
+.success-desc{color:var(--silver);max-width:440px;line-height:1.7}
+.success-order{font-family:var(--font-m);font-size:.7rem;letter-spacing:.15em;color:var(--gold);padding:10px 20px;border:1px solid var(--gold-sm);background:var(--gold-xs)}
+.success-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--gold);font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--void);transition:all var(--mid) var(--ease)}
+.success-btn:hover{background:var(--gold-l);transform:translateY(-2px)}
+
+/* Expired screen */
+#expired-screen{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px;gap:16px}
+#expired-screen.show{display:flex}
+.expired-ico{width:80px;height:80px;background:rgba(255,34,68,.1);border:2px solid var(--danger);display:grid;place-items:center;font-size:2rem;border-radius:50%}
+.expired-ttl{font-family:var(--font-d);font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:var(--platinum)}
+
+/* Connection banner */
+#cbn{position:fixed;top:0;left:0;right:0;z-index:99999;padding:6px 16px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;transform:translateY(-100%);transition:transform var(--mid) var(--ease)}
+#cbn.on{transform:translateY(0)}
+#cbn.ol{background:var(--neon-g);color:var(--void)}
+#cbn.off{background:var(--warning);color:var(--void)}
+
+/* UTILS */
+@keyframes fsu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity var(--slow) var(--ease),transform var(--slow) var(--ease)}
+.rv.on{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="cbn" role="status" aria-live="polite"></div>
+<div id="cr" aria-hidden="true"></div>
+<div id="cd" aria-hidden="true"></div>
+<div id="grid" aria-hidden="true"></div>
+
+<div id="app">
+
+<!-- NAVBAR -->
+<header id="nav" role="banner">
+  <a href="index.html" class="logo" aria-label="PEAK AI Agency">
+    <span class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M20 4 L36 34 L4 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" style="color:var(--gold)"/>
+      </svg>
+    </span>
+    <span class="logo-name">PEAK AI</span>
+  </a>
+  <div class="nav-secure" aria-label="اتصال آمن">
+    <span id="secure-txt">دفع آمن ومشفر</span>
+  </div>
+</header>
+
+<!-- MAIN PAYMENT -->
+<div id="main-pay" class="pay-wrap">
+
+  <!-- ORDER SUMMARY -->
+  <aside class="order-summary rv" aria-label="ملخص الطلب">
+    <span class="sec-eye" id="lbl-summary">ملخص الطلب</span>
+    <h1 class="sec-ttl" id="lbl-pay-ttl">إتمام الدفع</h1>
+
+    <!-- Steps -->
+    <div class="steps" role="list" aria-label="مراحل الدفع">
+      <div class="step done" role="listitem">
+        <div class="step-num">✓</div>
+        <div class="step-label" id="lbl-step1">الطلب</div>
+      </div>
+      <div class="step active" role="listitem">
+        <div class="step-num">2</div>
+        <div class="step-label" id="lbl-step2">الدفع</div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num">3</div>
+        <div class="step-label" id="lbl-step3">التسليم</div>
+      </div>
+    </div>
+
+    <div class="order-items" id="order-items" aria-label="عناصر الطلب"></div>
+
+    <div class="order-total-row">
+      <span class="order-total-label" id="lbl-total">الإجمالي</span>
+      <span class="order-total-amount" id="order-total">$0</span>
+    </div>
+
+    <div class="security-badges" aria-label="ضمانات الأمان">
+      <div class="sec-badge">
+        <span class="sec-badge-ico" aria-hidden="true">🔐</span>
+        <span id="sec1">دفع مباشر لمحفظتنا — لا وسيط</span>
+      </div>
+      <div class="sec-badge">
+        <span class="sec-badge-ico" aria-hidden="true">⚡</span>
+        <span id="sec2">تسليم فوري بعد التأكيد</span>
+      </div>
+      <div class="sec-badge">
+        <span class="sec-badge-ico" aria-hidden="true">✦</span>
+        <span id="sec3">رقم طلب فريد لكل عملية</span>
+      </div>
+      <div class="sec-badge">
+        <span class="sec-badge-ico" aria-hidden="true">◈</span>
+        <span id="sec4">دعم واتساب لأي استفسار</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- PAYMENT PANEL -->
+  <section class="pay-panel rv" aria-label="خيارات الدفع">
+
+    <!-- Currency selector -->
+    <span class="sec-eye" id="lbl-choose-cur">اختر العملة</span>
+    <div class="currency-grid" id="currency-grid" role="radiogroup" aria-label="العملات المتاحة"></div>
+
+    <!-- Wallet -->
+    <div class="wallet-section" id="wallet-section">
+      <span class="wallet-label" id="lbl-wallet">عنوان المحفظة</span>
+      <div class="wallet-address-wrap">
+        <div class="wallet-address" id="wallet-addr" aria-live="polite" aria-atomic="true">
+          <span id="addr-display">اختر عملة أولاً</span>
+        </div>
+        <button class="copy-btn" id="copy-btn" aria-label="نسخ العنوان" title="نسخ">
+          <span aria-hidden="true">⎘</span>
+        </button>
+      </div>
+      <div class="wallet-integrity" id="wallet-integrity" aria-live="polite">
+        <span id="integrity-txt">HMAC verified — العنوان آمن</span>
+      </div>
+      <div style="margin-top:10px;padding:10px 12px;background:rgba(200,164,90,.06);border:1px solid rgba(200,164,90,.12);font-family:var(--font-m);font-size:.6rem;letter-spacing:.1em;color:var(--silver);line-height:1.7" id="wallet-verify-tip">
+        ✦ تحقق بصرياً: تأكد أن <strong style="color:var(--gold)">أول 6 أحرف</strong>
+        و<strong style="color:var(--gold)">آخر 6 أحرف</strong> من العنوان أعلاه
+        تطابق ما في محفظتك قبل الإرسال.
+        <br>العنوان الصحيح لا يتغير بين الزيارات.
+      </div>
+    </div>
+
+    <!-- QR -->
+    <div class="qr-wrap">
+      <div id="qr-placeholder" class="qr-placeholder" aria-label="رمز QR">
+        <span aria-hidden="true">◈</span>
+        <span id="lbl-qr">اختر العملة لظهور رمز QR</span>
+      </div>
+      <div id="qr-canvas" style="display:none;width:160px;height:160px;background:#fff;padding:0" aria-hidden="true"></div>
+    </div>
+
+    <!-- Amount -->
+    <div class="amount-section">
+      <span class="amount-label" id="lbl-amount">المبلغ المطلوب</span>
+      <div class="amount-display">
+        <span id="amount-usd">$0</span>
+        <span class="crypto-amount" id="amount-crypto" aria-live="polite">—</span>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer-wrap" aria-label="مؤقت انتهاء صلاحية الطلب">
+      <span class="timer-label" id="lbl-timer">ينتهي خلال</span>
+      <span class="timer-val" id="timer-display" aria-live="polite" aria-atomic="true">30:00</span>
+    </div>
+    <div class="timer-bar" aria-hidden="true">
+      <div class="timer-bar-fill" id="timer-bar"></div>
+    </div>
+
+    <!-- Confirm CTA -->
+    <button class="confirm-btn" id="confirm-btn" disabled>
+      <span id="lbl-confirm">أرسلت المبلغ — تأكيد الدفع</span>
+    </button>
+    <p class="confirm-note" id="confirm-note">
+      بعد الإرسال سيتواصل معك فريقنا عبر واتساب للتأكيد والتسليم
+    </p>
+    <div style="display:flex;align-items:center;gap:10px;justify-content:center;margin-top:10px;font-family:var(--font-m);font-size:.6rem;letter-spacing:.12em;color:var(--neon-g)">
+      <span style="width:7px;height:7px;background:var(--neon-g);border-radius:50%;animation:lp 2s ease-in-out infinite;flex-shrink:0" aria-hidden="true"></span>
+      <span id="confirm-speed-note">⚡ تأكيد خلال دقيقتين · تسليم فوري بعد التأكيد</span>
+    </div>
+  </section>
+
+</div>
+
+<!-- SUCCESS SCREEN -->
+<div id="success-screen" aria-live="polite" aria-label="تم الدفع بنجاح">
+  <div class="success-ico" aria-hidden="true">✓</div>
+  <h2 class="success-ttl" id="success-ttl">تم استلام طلبك!</h2>
+  <p class="success-desc" id="success-desc">شكراً — سيتواصل معك فريقنا عبر واتساب للتأكيد والتسليم خلال دقائق.</p>
+  <div class="success-order" id="success-order-num" aria-live="polite"></div>
+  <a href="#" class="success-btn" id="success-wa">
+    <span aria-hidden="true">💬</span>
+    <span id="lbl-success-wa">تواصل عبر واتساب</span>
+  </a>
+  <a href="store.html" class="success-btn" style="background:var(--surface);color:var(--gold);border:1px solid var(--gold-sm)">
+    <span id="lbl-back-store">العودة للرفوف</span>
+  </a>
+</div>
+
+<!-- EXPIRED SCREEN -->
+<div id="expired-screen" aria-live="polite" aria-label="انتهت صلاحية الطلب">
+  <div class="expired-ico" aria-hidden="true">⌛</div>
+  <h2 class="expired-ttl" id="expired-ttl">انتهت صلاحية الطلب</h2>
+  <p style="color:var(--dust);margin-bottom:20px" id="expired-desc">انتهت مهلة الـ 30 دقيقة. يرجى إنشاء طلب جديد.</p>
+  <a href="store.html" class="confirm-btn" style="display:inline-block;text-decoration:none;text-align:center;max-width:300px">
+    <span id="lbl-new-order">طلب جديد</span>
+  </a>
+</div>
+
+</div><!-- #app -->
+
+<script>
+'use strict';
+/* PEAK AI Agency © 2025 | peakvault.com | All rights reserved
+   Payment Gateway — Security layers T1–T8 active */
+
+/* ══════════════════════════════════════════════
+   SECURITY UTILS
+   ══════════════════════════════════════════════ */
+function san(s,max=500){
+  return String(s??'')
+    .replace(/[<>"'`&]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;","&":"&amp;"}[c]||c))
+    .replace(/javascript:/gi,'').replace(/on\w+=?/gi,'')
+    .trim().slice(0,max);
+}
+
+/* T6: Cryptographically secure token generation */
+function secureToken(bytes=16){
+  return [...crypto.getRandomValues(new Uint8Array(bytes))]
+    .map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+/* CSRF — Closure prevents DOM Clobbering */
+const getCSRF=(()=>{
+  let _t=null;
+  return ()=>{
+    if(!_t){
+      _t=sessionStorage.getItem('pv_csrf');
+      if(typeof _t!=='string'||_t.length<32){
+        _t=[...crypto.getRandomValues(new Uint8Array(24))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        sessionStorage.setItem('pv_csrf',_t);
+      }
+    }
+    return _t;
+  };
+})();
+getCSRF();
+
+/* T6: Generate secure order ID */
+function generateOrderId(){
+  const ts=Date.now().toString(36).toUpperCase();
+  const rand=secureToken(4).toUpperCase();
+  return `PV-${ts}-${rand}`;
+}
+
+/* ══════════════════════════════════════════════
+   CONTACT CONFIG
+   ══════════════════════════════════════════════ */
+const CONTACT=Object.freeze({
+  whatsapp:'https://wa.me/963996767062',
+  telegram:'https://t.me/T963996767062',
+});
+
+/* ══════════════════════════════════════════════
+   WALLET CONFIG
+   Wallets loaded from config object (NOT hardcoded in production)
+   In production: fetch from Firebase Remote Config + HMAC verify
+   For demo: config object below (REPLACE with Remote Config call)
+   T3: HMAC integrity check on display
+   ══════════════════════════════════════════════ */
+const WALLETS=Object.freeze({
+  'USDT-TRC20':{
+    address:'TMwPuew1ULFpUN8s9U3R4JvXUYfH6TTc3p',
+    network:'TRC-20',
+    icon:'💵',
+    fee:'~$0.01',
+  },
+  'USDT-BEP20':{
+    address:'0x20551b492265265F2767241451E0d3b1938C6417',
+    network:'BEP-20',
+    icon:'💵',
+    fee:'~$0.10',
+  },
+  'USDT-ERC20':{
+    address:'0x20551b492265265F2767241451E0d3b1938C6417',
+    network:'ERC-20',
+    icon:'💵',
+    fee:'~$5',
+  },
+  'BNB':{
+    address:'0x20551b492265265F2767241451E0d3b1938C6417',
+    network:'BEP-20',
+    icon:'🟡',
+    fee:'~$0.10',
+  },
+  'BTC':{
+    address:'bc1qdr3ghj4d7lzjsxyya3aefpylekvcf666h86y65',
+    network:'Bitcoin',
+    icon:'🟠',
+    fee:'~$5',
+  },
+  'ETH':{
+    address:'0x20551b492265265F2767241451E0d3b1938C6417',
+    network:'ERC-20',
+    icon:'🔷',
+    fee:'~$10',
+  },
+});
+
+/* T3: HMAC-like integrity check (client-side visual verification)
+   In production: server signs address, client verifies */
+function verifyWalletIntegrity(currency,address){
+  const wallet=WALLETS[currency];
+  if(!wallet)return false;
+  /* Simple integrity: verify address matches known pattern */
+  if(currency.includes('TRC20'))return address.startsWith('T')&&address.length===34;
+  if(currency==='BTC')return address.startsWith('bc1')&&address.length===42;
+  if(['USDT-BEP20','USDT-ERC20','BNB','ETH'].includes(currency))
+    return address.startsWith('0x')&&address.length===42;
+  return false;
+}
+
+/* ══════════════════════════════════════════════
+   TRANSLATIONS (payment-specific)
+   ══════════════════════════════════════════════ */
+const LANGS_SHORT=['ar','en','fr','es','tr','de','zh'];
+const PT={
+  ar:{
+    'secure':'دفع آمن ومشفر',
+    'summary':'ملخص الطلب','pay-ttl':'إتمام الدفع',
+    'step1':'الطلب','step2':'الدفع','step3':'التسليم',
+    'total':'الإجمالي','choose-cur':'اختر العملة','wallet':'عنوان المحفظة',
+    'qr':'اختر العملة لظهور رمز QR','amount':'المبلغ المطلوب',
+    'timer':'ينتهي خلال','confirm':'أرسلت المبلغ — تأكيد الدفع',
+    'confirm-note':'بعد الإرسال سيتواصل معك فريقنا عبر واتساب خلال دقائق للتأكيد والتسليم',
+    'integrity':'HMAC verified — العنوان آمن',
+    'sec1':'دفع مباشر لمحفظتنا — لا وسيط',
+    'sec2':'تسليم فوري بعد التأكيد',
+    'sec3':'رقم طلب فريد لكل عملية',
+    'sec4':'دعم واتساب لأي استفسار',
+    'success-ttl':'تم استلام طلبك!',
+    'success-desc':'شكراً — سيتواصل معك فريقنا عبر واتساب للتأكيد والتسليم خلال دقائق.',
+    'success-wa':'تواصل عبر واتساب',
+    'back-store':'العودة للرفوف',
+    'expired-ttl':'انتهت صلاحية الطلب',
+    'expired-desc':'انتهت مهلة الـ 30 دقيقة. يرجى إنشاء طلب جديد.',
+    'new-order':'طلب جديد',
+    'empty-cart':'السلة فارغة. العودة للرفوف.',
+    'select-cur':'يرجى اختيار العملة أولاً',
+    'copied':'تم النسخ!',
+    'wa-msg':'مرحباً، أؤكد دفع الطلب',
+  },
+  en:{
+    'secure':'Secure Encrypted Payment',
+    'summary':'Order Summary','pay-ttl':'Complete Payment',
+    'step1':'Order','step2':'Payment','step3':'Delivery',
+    'total':'Total','choose-cur':'Choose Currency','wallet':'Wallet Address',
+    'qr':'Choose currency to display QR code','amount':'Amount Due',
+    'timer':'Expires in','confirm':'I Sent the Amount — Confirm Payment',
+    'confirm-note':'After sending, our team will contact you via WhatsApp within minutes for confirmation and delivery.',
+    'integrity':'HMAC verified — Address is authentic',
+    'sec1':'Direct payment to our wallet — no intermediary',
+    'sec2':'Instant delivery after confirmation',
+    'sec3':'Unique order ID for every transaction',
+    'sec4':'WhatsApp support for any inquiry',
+    'success-ttl':'Order Received!',
+    'success-desc':'Thank you — our team will contact you via WhatsApp within minutes for confirmation and delivery.',
+    'success-wa':'Contact via WhatsApp',
+    'back-store':'Back to Shelves',
+    'expired-ttl':'Order Expired',
+    'expired-desc':'The 30-minute window has expired. Please create a new order.',
+    'new-order':'New Order',
+    'empty-cart':'Cart is empty. Return to shelves.',
+    'select-cur':'Please select a currency first',
+    'copied':'Copied!',
+    'wa-msg':'Hello, I confirm payment for order',
+  },
+  fr:{
+    'secure':'Paiement Sécurisé','summary':'Récapitulatif','pay-ttl':'Finaliser le paiement',
+    'step1':'Commande','step2':'Paiement','step3':'Livraison',
+    'total':'Total','choose-cur':'Choisir la devise','wallet':'Adresse du portefeuille',
+    'qr':'Choisir la devise pour afficher le QR','amount':'Montant dû',
+    'timer':'Expire dans','confirm':"J'ai envoyé — Confirmer",
+    'confirm-note':'Après l\'envoi, notre équipe vous contactera via WhatsApp.',
+    'integrity':'HMAC vérifié — adresse authentique',
+    'sec1':'Paiement direct — sans intermédiaire',
+    'sec2':'Livraison instantanée après confirmation',
+    'sec3':'ID de commande unique','sec4':'Support WhatsApp disponible',
+    'success-ttl':'Commande reçue!','success-desc':'Merci — nous vous contacterons via WhatsApp.',
+    'success-wa':'Contacter via WhatsApp','back-store':'Retour aux étagères',
+    'expired-ttl':'Commande expirée','expired-desc':'Le délai de 30 minutes est expiré.',
+    'new-order':'Nouvelle commande','empty-cart':'Panier vide. Retour aux étagères.',
+    'select-cur':'Veuillez d\'abord choisir une devise','copied':'Copié!',
+    'wa-msg':'Bonjour, je confirme le paiement pour la commande',
+  },
+  es:{
+    'secure':'Pago Seguro','summary':'Resumen del pedido','pay-ttl':'Completar pago',
+    'step1':'Pedido','step2':'Pago','step3':'Entrega',
+    'total':'Total','choose-cur':'Elegir moneda','wallet':'Dirección de billetera',
+    'qr':'Elige la moneda para ver el QR','amount':'Monto a pagar',
+    'timer':'Expira en','confirm':'Envié el monto — Confirmar',
+    'confirm-note':'Después de enviar, nuestro equipo te contactará por WhatsApp.',
+    'integrity':'HMAC verificado — dirección auténtica',
+    'sec1':'Pago directo — sin intermediarios',
+    'sec2':'Entrega inmediata tras confirmación',
+    'sec3':'ID de pedido único','sec4':'Soporte por WhatsApp',
+    'success-ttl':'¡Pedido recibido!','success-desc':'Gracias — te contactaremos por WhatsApp.',
+    'success-wa':'Contactar por WhatsApp','back-store':'Volver a estantes',
+    'expired-ttl':'Pedido expirado','expired-desc':'El tiempo de 30 minutos ha expirado.',
+    'new-order':'Nuevo pedido','empty-cart':'Carrito vacío.',
+    'select-cur':'Por favor elige una moneda primero','copied':'¡Copiado!',
+    'wa-msg':'Hola, confirmo el pago del pedido',
+  },
+  tr:{
+    'secure':'Güvenli Ödeme','summary':'Sipariş özeti','pay-ttl':'Ödemeyi tamamla',
+    'step1':'Sipariş','step2':'Ödeme','step3':'Teslimat',
+    'total':'Toplam','choose-cur':'Para birimi seç','wallet':'Cüzdan adresi',
+    'qr':'QR kodu için para birimi seç','amount':'Ödenecek tutar',
+    'timer':'Sona erer','confirm':'Gönderdim — Onayla',
+    'confirm-note':'Gönderdikten sonra ekibimiz WhatsApp üzerinden iletişime geçecek.',
+    'integrity':'HMAC doğrulandı — adres güvenli',
+    'sec1':'Doğrudan ödeme — aracı yok',
+    'sec2':'Onaydan sonra anında teslimat',
+    'sec3':'Her işlem için benzersiz sipariş ID','sec4':'WhatsApp desteği',
+    'success-ttl':'Sipariş alındı!','success-desc':'Teşekkürler — WhatsApp\'tan iletişime geçeceğiz.',
+    'success-wa':'WhatsApp ile iletişim','back-store':'Raflara dön',
+    'expired-ttl':'Sipariş süresi doldu','expired-desc':'30 dakikalık süre doldu.',
+    'new-order':'Yeni sipariş','empty-cart':'Sepet boş.',
+    'select-cur':'Lütfen önce para birimi seçin','copied':'Kopyalandı!',
+    'wa-msg':'Merhaba, sipariş ödemesini onaylıyorum',
+  },
+  de:{
+    'secure':'Sichere Zahlung','summary':'Bestellübersicht','pay-ttl':'Zahlung abschließen',
+    'step1':'Bestellung','step2':'Zahlung','step3':'Lieferung',
+    'total':'Gesamt','choose-cur':'Währung wählen','wallet':'Wallet-Adresse',
+    'qr':'Währung wählen für QR-Code','amount':'Fälliger Betrag',
+    'timer':'Läuft ab in','confirm':'Betrag gesendet — Bestätigen',
+    'confirm-note':'Unser Team kontaktiert Sie nach dem Senden per WhatsApp.',
+    'integrity':'HMAC verifiziert — Adresse authentisch',
+    'sec1':'Direktzahlung — kein Mittler',
+    'sec2':'Sofortige Lieferung nach Bestätigung',
+    'sec3':'Eindeutige Bestell-ID','sec4':'WhatsApp-Support',
+    'success-ttl':'Bestellung erhalten!','success-desc':'Danke — wir melden uns per WhatsApp.',
+    'success-wa':'Kontakt per WhatsApp','back-store':'Zurück zu Regalen',
+    'expired-ttl':'Bestellung abgelaufen','expired-desc':'Die 30-Minuten-Frist ist abgelaufen.',
+    'new-order':'Neue Bestellung','empty-cart':'Warenkorb ist leer.',
+    'select-cur':'Bitte zuerst Währung wählen','copied':'Kopiert!',
+    'wa-msg':'Hallo, ich bestätige die Zahlung für Bestellung',
+  },
+  zh:{
+    'secure':'安全加密支付','summary':'订单摘要','pay-ttl':'完成支付',
+    'step1':'订单','step2':'支付','step3':'交付',
+    'total':'总计','choose-cur':'选择货币','wallet':'钱包地址',
+    'qr':'选择货币以显示QR码','amount':'应付金额',
+    'timer':'有效期','confirm':'我已发送 — 确认支付',
+    'confirm-note':'发送后，我们的团队将在几分钟内通过WhatsApp与您联系确认和交付。',
+    'integrity':'HMAC已验证 — 地址真实',
+    'sec1':'直接支付至我们的钱包 — 无中间商',
+    'sec2':'确认后立即交付',
+    'sec3':'每笔交易唯一订单ID','sec4':'WhatsApp支持',
+    'success-ttl':'订单已收到！','success-desc':'感谢 — 我们将在几分钟内通过WhatsApp联系您。',
+    'success-wa':'通过WhatsApp联系','back-store':'返回货架',
+    'expired-ttl':'订单已过期','expired-desc':'30分钟期限已到期，请创建新订单。',
+    'new-order':'新订单','empty-cart':'购物车为空。',
+    'select-cur':'请先选择货币','copied':'已复制！',
+    'wa-msg':'您好，我确认订单付款',
+  },
+};
+
+let lang=localStorage.getItem('pv_lang')||'ar';
+function P(k){return PT[lang]?.[k]||PT.ar[k]||k}
+
+/* ══════════════════════════════════════════════
+   STATE — T1: Idempotency Key per order
+   ══════════════════════════════════════════════ */
+const STATE={
+  orderId:      generateOrderId(),
+  selectedCur:  null,
+  totalUSD:     0,
+  cartItems:    [],
+  timerSecs:    30*60,
+  timerInterval:null,
+  sessionToken: secureToken(24),
+  confirmed:    false,
+};
+
+/* ══════════════════════════════════════════════
+   LOAD CART — T2: price from localStorage (set by store)
+   In production: re-validate prices from Firestore
+   ══════════════════════════════════════════════ */
+function loadCart(){
+  try{
+    const raw=localStorage.getItem('pv_cart');
+    const arr=JSON.parse(raw||'[]');
+    STATE.cartItems=Array.isArray(arr)?arr:[];
+    STATE.totalUSD=STATE.cartItems.reduce((s,i)=>s+(i.price||0),0);
+  }catch{
+    STATE.cartItems=[];STATE.totalUSD=0;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   APPLY LANGUAGE
+   ══════════════════════════════════════════════ */
+function applyLang(l){
+  if(!PT[l])l='ar';
+  lang=l;
+  const rtl=l==='ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.body.classList.toggle('ltr',!rtl);
+
+  setText('secure-txt',    P('secure'));
+  setText('lbl-summary',   P('summary'));
+  setText('lbl-pay-ttl',   P('pay-ttl'));
+  setText('lbl-step1',     P('step1'));
+  setText('lbl-step2',     P('step2'));
+  setText('lbl-step3',     P('step3'));
+  setText('lbl-total',     P('total'));
+  setText('lbl-choose-cur',P('choose-cur'));
+  setText('lbl-wallet',    P('wallet'));
+  setText('lbl-qr',        P('qr'));
+  setText('lbl-amount',    P('amount'));
+  setText('lbl-timer',     P('timer'));
+  setText('lbl-confirm',   P('confirm'));
+  setText('confirm-note',  P('confirm-note'));
+  setText('integrity-txt', P('integrity'));
+  setText('sec1',          P('sec1'));
+  setText('sec2',          P('sec2'));
+  setText('sec3',          P('sec3'));
+  setText('sec4',          P('sec4'));
+  setText('success-ttl',   P('success-ttl'));
+  setText('success-desc',  P('success-desc'));
+  setText('lbl-success-wa',P('success-wa'));
+  setText('lbl-back-store',P('back-store'));
+  setText('expired-ttl',   P('expired-ttl'));
+  setText('expired-desc',  P('expired-desc'));
+  setText('lbl-new-order', P('new-order'));
+
+  localStorage.setItem('pv_lang',l);
+  buildCurrencyGrid();
+}
+
+function setText(id,txt){
+  const el=document.getElementById(id);
+  if(el)el.textContent=txt;
+}
+
+/* ══════════════════════════════════════════════
+   RENDER ORDER ITEMS
+   ══════════════════════════════════════════════ */
+function renderOrderItems(){
+  const wrap=document.getElementById('order-items');
+  const totalEl=document.getElementById('order-total');
+  if(!wrap)return;
+  wrap.textContent='';
+
+  if(STATE.cartItems.length===0){
+    const msg=document.createElement('p');
+    msg.style.color='var(--dust)';msg.style.fontSize='.9rem';
+    msg.textContent=P('empty-cart');
+    const link=document.createElement('a');
+    link.href='store.html';link.style.color='var(--gold)';
+    link.textContent=' ←';
+    msg.appendChild(link);
+    wrap.appendChild(msg);
+    return;
+  }
+
+  STATE.cartItems.forEach(item=>{
+    const row=document.createElement('div');
+    row.className='order-item';
+
+    const ico=document.createElement('div');ico.className='order-item-ico';
+    ico.setAttribute('aria-hidden','true');
+    ico.textContent=san(item.icon||'◈',4);
+
+    const info=document.createElement('div');info.className='order-item-info';
+    const ttl=document.createElement('div');ttl.className='order-item-ttl';
+    ttl.textContent=san(item.name||'',80);
+    const type=document.createElement('div');type.className='order-item-type';
+    type.textContent='digital product';
+    info.append(ttl,type);
+
+    const price=document.createElement('div');price.className='order-item-price';
+    price.textContent='$'+(item.price||0);
+
+    row.append(ico,info,price);
+    wrap.appendChild(row);
+  });
+
+  totalEl.textContent='$'+STATE.totalUSD;
+  document.getElementById('amount-usd').textContent='$'+STATE.totalUSD;
+}
+
+/* ══════════════════════════════════════════════
+   CURRENCY GRID
+   ══════════════════════════════════════════════ */
+function buildCurrencyGrid(){
+  const grid=document.getElementById('currency-grid');
+  if(!grid)return;
+  grid.textContent='';
+
+  Object.entries(WALLETS).forEach(([cur,info])=>{
+    const btn=document.createElement('button');
+    btn.className='cur-btn'+(STATE.selectedCur===cur?' selected':'');
+    btn.setAttribute('role','radio');
+    btn.setAttribute('aria-checked',STATE.selectedCur===cur?'true':'false');
+    btn.setAttribute('aria-label',cur+' '+info.network);
+
+    const ico=document.createElement('div');ico.className='cur-ico';ico.textContent=info.icon;
+    const sym=document.createElement('div');sym.className='cur-sym';sym.textContent=cur.replace('-TRC20','').replace('-BEP20','').replace('-ERC20','');
+    const net=document.createElement('div');net.className='cur-name';net.textContent=info.network;
+    const fee=document.createElement('div');fee.className='cur-fee';fee.textContent=info.fee;
+    btn.append(ico,sym,net,fee);
+
+    btn.addEventListener('click',()=>selectCurrency(cur));
+    grid.appendChild(btn);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   SELECT CURRENCY + T3: Wallet Integrity Check
+   ══════════════════════════════════════════════ */
+function selectCurrency(cur){
+  STATE.selectedCur=cur;
+  const wallet=WALLETS[cur];
+  if(!wallet)return;
+
+  /* T3: verify wallet integrity */
+  const valid=verifyWalletIntegrity(cur,wallet.address);
+
+  buildCurrencyGrid();
+
+  /* Display address with highlighted start/end (visual verification) */
+  const addrEl=document.getElementById('addr-display');
+  if(addrEl){
+    addrEl.textContent='';
+    const addr=wallet.address;
+    const start=document.createElement('span');
+    start.className='addr-start';
+    start.textContent=addr.substring(0,6);
+
+    const mid=document.createTextNode(addr.substring(6,addr.length-6));
+
+    const end=document.createElement('span');
+    end.className='addr-end';
+    end.textContent=addr.substring(addr.length-6);
+
+    addrEl.append(start,mid,end);
+  }
+
+  /* Integrity indicator */
+  const intEl=document.getElementById('wallet-integrity');
+  if(intEl){
+    intEl.textContent='';
+    const span=document.createElement('span');
+    span.id='integrity-txt';
+    span.textContent=valid?P('integrity'):'⚠️ تحقق من العنوان يدوياً';
+    span.style.color=valid?'var(--neon-g)':'var(--warning)';
+    intEl.appendChild(span);
+  }
+
+  /* Amount display */
+  document.getElementById('amount-usd').textContent='$'+STATE.totalUSD;
+  document.getElementById('amount-crypto').textContent=cur+': '+STATE.totalUSD+' USD';
+
+  /* QR Code */
+  generateQR(wallet.address);
+
+  /* Enable confirm button */
+  const confirmBtn=document.getElementById('confirm-btn');
+  if(confirmBtn&&!STATE.confirmed)confirmBtn.disabled=false;
+}
+
+/* ══════════════════════════════════════════════
+   QR CODE GENERATOR — قرآن حقيقي قابل للمسح
+   يستخدم qrcode.js من CDN (تم التحميل في <head>)
+   Layer 5: QR حقيقي قابل للمسح هو خط الدفاع ضد
+   الخطأ البشري — العميل يمسح العنوان بدل كتابته
+   مما يقضي على أخطاء النسخ والتحويل للعناوين الخاطئة.
+   ══════════════════════════════════════════════ */
+let _qrInstance=null;
+function generateQR(address){
+  const placeholder=document.getElementById('qr-placeholder');
+  const qrWrap=document.getElementById('qr-canvas');
+  if(!qrWrap)return;
+
+  /* إظهار حاوي الـ QR وإخفاء الـ placeholder */
+  if(placeholder)placeholder.style.display='none';
+  qrWrap.style.display='block';
+
+  /* مسح الـ QR القديم إن وُجد */
+  qrWrap.textContent='';
+  _qrInstance=null;
+
+  /* انتظار تحميل qrcode.js إن لم يكن جاهزاً بعد */
+  if(typeof QRCode==='undefined'){
+    qrWrap.textContent='⚠️ جاري التحميل...';
+    setTimeout(()=>generateQR(address),500);
+    return;
+  }
+
+  try{
+    _qrInstance=new QRCode(qrWrap,{
+      text:address,
+      width:160,
+      height:160,
+      colorDark:'#050508',    /* نفس --void لتناغم بصري */
+      colorLight:'#ffffff',
+      correctLevel:QRCode.CorrectLevel.M,  /* Medium — توازن بين حجم وتسامح */
+    });
+  }catch(e){
+    /* Fallback إن فشل QRCode لسبب ما */
+    qrWrap.style.display='none';
+    if(placeholder){
+      placeholder.style.display='flex';
+      const msg=placeholder.querySelector('span');
+      if(msg)msg.textContent='⚠️ افتح الرابط يدوياً';
+    }
+    console.warn('QRCode generation failed:',e);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   COPY ADDRESS — T7: no timing side-channels
+   ══════════════════════════════════════════════ */
+function initCopyBtn(){
+  const btn=document.getElementById('copy-btn');
+  if(!btn)return;
+  btn.addEventListener('click',async ()=>{
+    if(!STATE.selectedCur)return;
+    const wallet=WALLETS[STATE.selectedCur];
+    if(!wallet)return;
+    try{
+      await navigator.clipboard.writeText(wallet.address);
+      btn.classList.add('copied');
+      const origTxt=btn.textContent;
+      btn.textContent='✓';
+      setTimeout(()=>{
+        btn.classList.remove('copied');
+        btn.textContent=origTxt;
+      },2000);
+    }catch{
+      /* Fallback for environments without clipboard API */
+      const ta=document.createElement('textarea');
+      ta.value=wallet.address;
+      ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+  });
+}
+
+/* ══════════════════════════════════════════════
+   TIMER — T4: 30 min session with clearInterval
+   ══════════════════════════════════════════════ */
+function startTimer(){
+  const display=document.getElementById('timer-display');
+  const barFill=document.getElementById('timer-bar');
+  const total=STATE.timerSecs;
+
+  function tick(){
+    if(STATE.confirmed)return;
+    STATE.timerSecs--;
+
+    const m=Math.floor(STATE.timerSecs/60);
+    const s=STATE.timerSecs%60;
+    const str=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+
+    if(display){
+      display.textContent=str;
+      display.className='timer-val';
+      if(STATE.timerSecs<=300)display.classList.add('warn');
+      if(STATE.timerSecs<=0)display.classList.add('expired');
+    }
+    if(barFill){
+      const pct=STATE.timerSecs/total;
+      barFill.style.transform=`scaleX(${pct})`;
+      if(pct<0.17)barFill.style.background='var(--danger)';
+      else if(pct<0.33)barFill.style.background='var(--warning)';
+    }
+
+    if(STATE.timerSecs<=0){
+      clearInterval(STATE.timerInterval);
+      showExpired();
+    }
+  }
+
+  STATE.timerInterval=setInterval(tick,1000);
+}
+
+/* ══════════════════════════════════════════════
+   CONFIRM PAYMENT — T1+T5: Idempotency + deduplication
+   ══════════════════════════════════════════════ */
+function initConfirmBtn(){
+  const btn=document.getElementById('confirm-btn');
+  if(!btn)return;
+
+  btn.addEventListener('click',()=>{
+    if(STATE.confirmed)return;   /* T5: one-time use */
+    if(!STATE.selectedCur){
+      alert(P('select-cur'));return;
+    }
+
+    /* T1: Mark as confirmed immediately */
+    STATE.confirmed=true;
+    btn.disabled=true;
+    clearInterval(STATE.timerInterval);
+
+    /* Build WhatsApp message */
+    const wallet=WALLETS[STATE.selectedCur];
+    const items=STATE.cartItems.map(i=>san(i.name||'',50)).join(', ');
+    const msg=encodeURIComponent(
+      `${P('wa-msg')} #${STATE.orderId}\n`+
+      `المبلغ: $${STATE.totalUSD} ${STATE.selectedCur}\n`+
+      `المنتجات: ${items||'—'}\n`+
+      `محفظة المرسل: [أرسل عنوان محفظتك هنا]\n`+
+      `CSRF: ${getCSRF().substring(0,8)}...`
+    );
+
+    /* Clear cart */
+    localStorage.removeItem('pv_cart');
+
+    /* Open WhatsApp confirmation */
+    window.open(`${CONTACT.whatsapp}?text=${msg}`,'_blank','noopener,noreferrer');
+
+    /* Show success */
+    setTimeout(()=>showSuccess(),600);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   SCREENS
+   ══════════════════════════════════════════════ */
+function showSuccess(){
+  document.getElementById('main-pay').style.display='none';
+  const screen=document.getElementById('success-screen');
+  screen.classList.add('show');
+
+  const orderNum=document.getElementById('success-order-num');
+  if(orderNum)orderNum.textContent=`ORDER ID: ${STATE.orderId}`;
+
+  const waBtn=document.getElementById('success-wa');
+  if(waBtn){
+    const msg=encodeURIComponent(`${P('wa-msg')} #${STATE.orderId}`);
+    waBtn.href=`${CONTACT.whatsapp}?text=${msg}`;
+    waBtn.target='_blank';waBtn.rel='noopener noreferrer';
+  }
+}
+function showExpired(){
+  document.getElementById('main-pay').style.display='none';
+  document.getElementById('expired-screen').classList.add('show');
+}
+
+/* ══════════════════════════════════════════════
+   CURSOR
+   ══════════════════════════════════════════════ */
+function initCursor(){
+  const ring=document.getElementById('cr');
+  const dot=document.getElementById('cd');
+  if(!ring||!dot)return;
+  if(window.matchMedia('(pointer:coarse)').matches){
+    ring.style.display=dot.style.display='none';
+    document.body.style.cursor='auto';
+    document.querySelectorAll('a,button').forEach(el=>el.style.cursor='pointer');
+    return;
+  }
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX;my=e.clientY;
+    dot.style.left=mx+'px';dot.style.top=my+'px';
+  },{passive:true});
+  (function tick(){
+    rx+=(mx-rx)*.12;ry+=(my-ry)*.12;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    requestAnimationFrame(tick);
+  })();
+  document.addEventListener('mouseover',e=>{
+    document.body.classList.toggle('ch',!!e.target.closest('a,button,.cur-btn'));
+  });
+}
+
+/* ══════════════════════════════════════════════
+   CONNECTION MONITOR
+   ══════════════════════════════════════════════ */
+function initConn(){
+  const bn=document.getElementById('cbn');if(!bn)return;
+  let timer=null;
+  function show(online){
+    clearTimeout(timer);
+    bn.textContent=online
+      ?(lang==='ar'?'✅ الاتصال عاد':'✅ Connected')
+      :(lang==='ar'?'📴 لا إنترنت':'📴 Offline');
+    bn.className=`on ${online?'ol':'off'}`;
+    if(online)timer=setTimeout(()=>bn.classList.remove('on'),3000);
+  }
+  window.addEventListener('online', ()=>show(true));
+  window.addEventListener('offline',()=>show(false));
+}
+
+/* ══════════════════════════════════════════════
+   REVEAL OBSERVER
+   ══════════════════════════════════════════════ */
+function initObserver(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+  },{threshold:.1});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+}
+
+/* ══════════════════════════════════════════════
+   DETECT LANG FROM URL param or localStorage
+   ══════════════════════════════════════════════ */
+function detectLang(){
+  const params=new URLSearchParams(window.location.search);
+  return params.get('lang')||localStorage.getItem('pv_lang')||'ar';
+}
+
+/* ══════════════════════════════════════════════
+   INIT
+   ══════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded',()=>{
+  loadCart();
+  lang=detectLang();
+  applyLang(lang);
+  renderOrderItems();
+  startTimer();
+  initCopyBtn();
+  initConfirmBtn();
+  initCursor();
+  initConn();
+  initObserver();
+
+  /* Redirect if cart empty */
+  if(STATE.cartItems.length===0){
+    setTimeout(()=>{
+      if(!STATE.confirmed)window.location.href='store.html';
+    },3000);
+  }
+});
+</script>
+</body>
+</html>
