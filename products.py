@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import List
 
 @dataclass
@@ -14,16 +14,40 @@ class Product:
     is_exclusive: bool = False
 
 PRODUCTS = [
-    Product("replybot","ReplyBot","automation","بوت ردود ذكي 24/7 يفهم اللهجات العربية","ReplyBot يتولى الرد على عملائك في واتساب وتلجرام بدلاً منك على مدار الساعة بلهجتهم وبأسلوب علامتك التجارية.",149,["store","services","other"],"سيتواصل معك فريق PEAK خلال 24 ساعة لجمع بيانات عملك وإعداد البوت خلال 3 أيام عمل."),
-    Product("lexforge","LexForge","legal","يستخرج البنود الخطرة من عقودك في ثوانٍ","LexForge يقرأ عقودك ويحدد البنود الخطرة والالتزامات المالية والمواعيد النهائية بالعربية والإنجليزية.",199,["services","other"],"ستتلقى رابط الأداة على بريدك الإلكتروني خلال ساعة واحدة."),
-    Product("datapulse","DataPulse","analytics","تقارير ذكية تلقائية ثنائية اللغة لقراراتك","DataPulse يحول بياناتك الخام إلى تقارير بصرية ذكية عربي وإنجليزي تلقائية يومية أو أسبوعية.",249,["store","services","social","other"],"جلسة إعداد مدتها 45 دقيقة يجدولها الفريق خلال 48 ساعة."),
-    Product("contentai","ContentAI","content","منشورات وسكريبتات بأسلوب علامتك التجارية","ContentAI يكتب بأسلوبك. أدخل موضوعك وتفاصيل علامتك مرة واحدة ثم احصل على منشورات جاهزة.",99,["store","social","other"],"ستتلقى استبياناً قصيراً لتحديد صوت علامتك التجارية. النظام جاهز خلال 48 ساعة."),
-    Product("storebot","StoreBot","automation","متجر كامل داخل تلجرام — كتالوج، سلة، دفع","StoreBot يحوّل تلجرام إلى متجر إلكتروني حقيقي. العميل يتصفح ويختار ويدفع بدون مغادرة المحادثة.",179,["store"],"سيطلب منك الفريق قائمة منتجاتك. المتجر يعمل خلال 5 أيام عمل."),
-    Product("bookwise","BookWise","automation","جدولة تلقائية مع تذكيرات وإعادة جدولة","BookWise يدير مواعيدك بالكامل — حجز وتذكير وإعادة جدولة تلقائية عند الإلغاء.",129,["services","other"],"ستتلقى رابط لوحة تحكم BookWise خلال ساعتين."),
-    Product("invoiceai","InvoiceAI","financial","فواتير ذكية متوافقة مع الفوترة الإلكترونية السعودية والإماراتية","InvoiceAI ينشئ فواتير متوافقة مع ZATCA السعودية وFTA الإماراتية تلقائياً.",89,["services","store","other"],"رابط النظام جاهز فوراً مع دليل إعداد 5 دقائق."),
-    Product("commentai","CommentAI","content","ردود تعليقات إنستغرام وتيك توك وفيسبوك — تلقائي","CommentAI يراقب تعليقاتك ويرد عليها بأسلوبك 24/7 بكل اللغات واللهجات.",119,["social","store","other"],"خطوات الربط مع الفريق خلال 24 ساعة."),
-    Product("pdf2data","PDF2Data","automation","تحويل PDF إلى JSON أو Excel بدقة 98% — عربي كامل","PDF2Data يستخرج الجداول والبيانات من ملفات PDF العربية والإنجليزية ويحوّلها إلى Excel أو JSON.",149,["services","social","other"],"رابط الأداة جاهز خلال ساعة. حد 500 صفحة هدية للشهر الأول."),
-    Product("trackbot","TrackBot","automation","تنبيهات تلقائية لعملائك في كل مرحلة من الطلب","TrackBot يبلّغ عميلك تلقائياً في كل مرحلة. صفر مكالمات وين طلبي.",169,["store"],"يتكامل مع متجرك الحالي. جلسة ربط مع الفريق خلال 48 ساعة."),
-    Product("gulflaw","محامي AI الخليجي","legal","يفهم قوانين السعودية والإمارات والكويت وقطر والبحرين وعُمان","الاستشارة القانونية الأولى التي تفهم قانون الخليج الستة. إجابات مبنية على التشريع المحلي لكل دولة.",299,["services","other"],"وصول فوري لبوابة المحامي AI مع جلسة تعريفية 20 دقيقة.",True),
-    Product("waccrm","WhatsApp CRM","automation","CRM كامل بواتساب فقط — لا تطبيق، لا تدريب","WhatsApp CRM يحوّل محادثاتك إلى نظام CRM احترافي. كله داخل واتساب بدون تعلم أداة جديدة.",349,["store","services","other"],"إعداد مخصص 7 أيام عمل مع جلسة كيك أوف ساعة.",True),
-    Product("meetingmind","MeetingMind","automation","يستخرج المهام من اجتماعاتك ويعيّنها تلقائياً","Meet
+    Product("replybot","ReplyBot","automation","بوت ردود ذكي 24/7","بوت ردود ذكي يعمل على واتساب وتلجرام",149,["store","services","other"],"سيتواصل معك الفريق خلال 24 ساعة"),
+    Product("lexforge","LexForge","legal","تحليل عقود بالذكاء الاصطناعي","يستخرج البنود الخطرة من عقودك في ثوانٍ",199,["services","other"],"رابط الأداة خلال ساعة"),
+    Product("datapulse","DataPulse","analytics","تقارير ذكية تلقائية","تقارير بصرية ذكية بالعربية والإنجليزية",249,["store","services","social","other"],"جلسة إعداد خلال 48 ساعة"),
+    Product("contentai","ContentAI","content","منشورات بأسلوب علامتك","ينتج منشورات وسكريبتات بأسلوبك",99,["store","social","other"],"جاهز خلال 48 ساعة"),
+    Product("storebot","StoreBot","automation","متجر داخل تلجرام","كتالوج وسلة ودفع داخل المحادثة",179,["store"],"المتجر جاهز خلال 5 أيام"),
+    Product("bookwise","BookWise","automation","جدولة تلقائية للمواعيد","حجز وتذكير وإعادة جدولة تلقائية",129,["services","other"],"رابط لوحة التحكم خلال ساعتين"),
+    Product("invoiceai","InvoiceAI","financial","فواتير إلكترونية ذكية","متوافق مع ZATCA السعودية وFTA الإماراتية",89,["services","store","other"],"جاهز فوراً"),
+    Product("commentai","CommentAI","content","ردود تعليقات تلقائية","يرد على تعليقات انستغرام وتيك توك وفيسبوك",119,["social","store","other"],"الربط خلال 24 ساعة"),
+    Product("pdf2data","PDF2Data","automation","تحويل PDF إلى Excel","دقة 98% مع دعم عربي كامل",149,["services","social","other"],"جاهز خلال ساعة"),
+    Product("trackbot","TrackBot","automation","تتبع الطلبات تلقائياً","تنبيهات في كل مرحلة من مراحل الطلب",169,["store"],"الربط خلال 48 ساعة"),
+    Product("gulflaw","محامي AI الخليجي","legal","قانون الخليج بالكامل","يفهم قوانين السعودية والإمارات والكويت وقطر والبحرين وعُمان",299,["services","other"],"وصول فوري مع جلسة تعريفية",True),
+    Product("waccrm","WhatsApp CRM","automation","CRM بواتساب فقط","نظام CRM كامل بدون تطبيق جديد",349,["store","services","other"],"إعداد خلال 7 أيام",True),
+    Product("meetingmind","MeetingMind","automation","مهام من اجتماعاتك","يستخرج المهام من Zoom ويوزعها تلقائياً",199,["services","other"],"الإعداد خلال 24 ساعة",True),
+    Product("planforge","PlanForge","financial","خطط عمل للبنوك","جاهزة للبنوك والصناديق الخليجية",249,["services","other"],"الخطة جاهزة خلال 5 أيام",True),
+    Product("trainbot","TrainBot","hr","تدريب موظفين ذكي","اختبارات تلقائية ومتابعة تقدم",399,["services","other"],"البرنامج جاهز خلال 10 أيام",True),
+]
+
+BUSINESS_TYPE_MAP = {
+    "store":    ["storebot","replybot","trackbot"],
+    "services": ["bookwise","invoiceai","lexforge"],
+    "social":   ["contentai","commentai","pdf2data"],
+    "other":    ["datapulse","waccrm","meetingmind"],
+}
+
+BUSINESS_TYPE_LABELS = {
+    "store":    "متجر إلكتروني",
+    "services": "مكتب / خدمات",
+    "social":   "محتوى / سوشيال",
+    "other":    "أخرى",
+}
+
+def get_product(product_id):
+    return next((p for p in PRODUCTS if p.id == product_id), None)
+
+def get_recommended_products(business_type):
+    ids = BUSINESS_TYPE_MAP.get(business_type, [])
+    return [p for p in PRODUCTS if p.id in ids]
